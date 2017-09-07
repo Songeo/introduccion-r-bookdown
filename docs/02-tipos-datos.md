@@ -1181,12 +1181,12 @@ muestra_df
 ```
 
 ```
-##   secuencia  aleatorio letras
-## 1         1 -0.3107814      a
-## 2         2  0.8461644      b
-## 3         3 -0.1162359      c
-## 4         4  0.7060592      d
-## 5         5  1.6064234      e
+##   secuencia aleatorio letras
+## 1         1 0.5155110      a
+## 2         2 0.4585894      b
+## 3         3 0.2831169      c
+## 4         4 0.4209744      d
+## 5         5 0.8041278      e
 ```
 
 O bien, se pude transformar una matriz con la misma

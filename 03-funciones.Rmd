@@ -5,6 +5,17 @@
 > Si todo lo que existe en R es un objeto, 
 todo lo que pasa en R es una función.
 
+R es un lenguaje de programación funcional. Es decir, 
+proporciona muchas herramientas para la creación y 
+manupilación de funciones. 
+
+En R las funciones, al igual que los vectores, se
+pueden asignar a variables, guardarlas en listas, 
+usarlas como argumentos en otras funciones. 
+crearlas dentro de otras funciones, e incluso
+regresar como resultado de una función funciones.
+
+
 
 ### Una caja negra {-}
 
