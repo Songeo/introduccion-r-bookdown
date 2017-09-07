@@ -17,6 +17,10 @@ En R existen cinco tipos de datos básicos:
 
 
 
+<img src="figures/data-estructure.png" width="50%" style="display: block; margin: auto;" />
+
+
+<img src="figures/estructura-objetos.png" width="90%" style="display: block; margin: auto;" />
 
 
 
@@ -462,14 +466,14 @@ crear gráficas usando vectores numéricos.
 plot(x = poker_gan)
 ```
 
-<img src="02-tipos-datos_files/figure-html/unnamed-chunk-31-1.png" width="480" />
+<img src="02-tipos-datos_files/figure-html/unnamed-chunk-33-1.png" width="480" />
 
 
 ```r
 plot(x = poker_gan, y = ruleta_gan)
 ```
 
-<img src="02-tipos-datos_files/figure-html/unnamed-chunk-32-1.png" width="480" />
+<img src="02-tipos-datos_files/figure-html/unnamed-chunk-34-1.png" width="480" />
 
 Un histograma del vector se
 crea con la función `hist()`.
@@ -479,7 +483,7 @@ crea con la función `hist()`.
 hist(x = poker_gan)
 ```
 
-<img src="02-tipos-datos_files/figure-html/unnamed-chunk-33-1.png" width="480" />
+<img src="02-tipos-datos_files/figure-html/unnamed-chunk-35-1.png" width="480" />
 
 
 <br>
@@ -500,7 +504,7 @@ norm_vec <- rnorm(n = 100, mean = 0, sd = 10)
 hist(norm_vec)
 ```
 
-<img src="02-tipos-datos_files/figure-html/unnamed-chunk-34-1.png" width="576" />
+<img src="02-tipos-datos_files/figure-html/unnamed-chunk-36-1.png" width="576" />
 
 - Distribución Uniforme:
 
@@ -509,7 +513,7 @@ unif_vec <- runif(n = 100, min = 10, max = 100)
 hist(unif_vec)
 ```
 
-<img src="02-tipos-datos_files/figure-html/unnamed-chunk-35-1.png" width="576" />
+<img src="02-tipos-datos_files/figure-html/unnamed-chunk-37-1.png" width="576" />
 
 
 <br>
@@ -1181,12 +1185,12 @@ muestra_df
 ```
 
 ```
-##   secuencia aleatorio letras
-## 1         1 0.5155110      a
-## 2         2 0.4585894      b
-## 3         3 0.2831169      c
-## 4         4 0.4209744      d
-## 5         5 0.8041278      e
+##   secuencia  aleatorio letras
+## 1         1 -1.2099655      a
+## 2         2 -0.6938419      b
+## 3         3  0.7265087      c
+## 4         4  0.7811252      d
+## 5         5 -0.5868908      e
 ```
 
 O bien, se pude transformar una matriz con la misma

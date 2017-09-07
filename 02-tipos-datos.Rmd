@@ -17,9 +17,15 @@ En R existen cinco tipos de datos básicos:
 
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(fig.pos = 'center')
+```{r, fig.align='center', out.width='50%', echo=FALSE}
+knitr::include_graphics("figures/data-estructure.png")
 ```
+
+
+```{r, fig.align='center', out.width='90%', echo=FALSE}
+knitr::include_graphics("figures/estructura-objetos.png")
+```
+
 
 
 ## Vectores {#vectores}
