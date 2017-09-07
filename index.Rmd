@@ -1,0 +1,48 @@
+--- 
+title: "Taller de Introducción a R"
+author: "Sonia Mendizábal"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+biblio-style: apalike
+link-citations: yes
+github-repo: songeo/intro-r-bookdown
+description: "Material del taller de introducción a R."
+---
+
+# Introducción al taller
+
+```{r, echo = F}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, fig.align='center', out.width='100%'}
+knitr::include_graphics("figures/rchainsheets.jpeg")
+```
+ 
+
+<br>
+
+---
+ 
+### Programa {-}
+
+  **I.** [Introducción a Herramientas]
+  
+  **II.** [Tipos de Datos]
+  
+  **III.** [Funciones]
+  
+  **IV. Interaciones**
+  
+  **V. Visualización**
+  
+  **VI. Manipulación**
+  
+  **VII. Caso Práctico**
+  
+<br>
+  
+---  
