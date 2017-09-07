@@ -1,0 +1,161 @@
+Curso de Introducción a R
+========================================================
+author: SGMC
+date: 7 de septiembre de 2017
+autosize: false
+
+```{r, echo = F}
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r, fig.align='center', out.width='70%'}
+knitr::include_graphics("figures/rchainsheets.jpeg")
+```
+
+
+
+
+
+Plan de trabajo
+=====
+
+  **I. Introducción a herramientas**
+  
+  **II. Tipos de datos**
+  
+  **III. Funciones e interaciones**
+  
+  **IV. Visualización**
+  
+  **V. Manipulación**
+  
+  **VI. Caso Práctico**
+  
+  
+  
+¿Qué es R?
+========================================================
+
+
+**Es un lenguaje de programación con enfoque al análisis estadístico.**
+
+- Software libre (no dice qué puedes o no hacer con el software)
+
+- De código abierto (todo el código de R se inspecciona)
+
+- Funcionalidad adicional está en **paquetes** que la comunidad contribuye.
+
+```{r, fig.align='center', out.width='20%'}
+knitr::include_graphics("figures/Rlogo.png")
+```
+
+
+R Console
+========================================================
+
+```{r, fig.align='center', out.width='80%'}
+knitr::include_graphics("figures/rconsole.png")
+```
+
+
+RStudio 
+========================================================
+title: false
+
+```{r, fig.align='left', out.width='30%'}
+knitr::include_graphics("figures/RStudio-Logo-Blue-Gray-125.png")
+```
+
+RStudio es una compañía que crea productos relacionados
+a R.
+
+El producto más conocido es el ambiente de desarrollo: 
+**RStudioIDE (Integrated Development Environment)**
+
+```{r, fig.align='center', out.width='80%'}
+knitr::include_graphics("figures/rstudio-types-2.png")
+```
+
+
+
+Descarga e instalación
+========================================================
+title: false
+
+```{r, fig.align='left', out.width='30%'}
+knitr::include_graphics("figures/free-download.png")
+```
+
+
+Necesitamos instalar:
+
+* R: **Comprenhensive R Archive Network** (CRAN)
+
+https://cran.r-project.org/
+
+* RStudio IDE
+
+https://www.rstudio.com/products/rstudio/download/
+
+
+  
+  
+Paneles RStudio
+=====
+
+```{r, fig.align='center', out.width='100%'}
+knitr::include_graphics("figures/console-descr.png")
+```
+
+
+1. Consola
+=====
+
+Escribir en línea de comandos.
+
+**Shortcuts:**
+```{r, fig.align='center', out.width='100%'}
+knitr::include_graphics("figures/shortcuts-commandline.png")
+```
+
+2. Código
+=====
+
+Desarrollo de código.
+
+Documento **RScript**
+
+**Shortcuts:**
+
+```{r, fig.align='center', out.width='100%'}
+knitr::include_graphics("figures/shortcuts-code.png")
+```
+
+
+
+Shorcuts para escribir
+==== 
+title: false
+
+**Writting shortcuts:**
+
+```{r, fig.align='center', out.width='100%'}
+knitr::include_graphics("figures/shortcuts-writting.png")
+```
+
+
+
+
+
+TIPOS DE DATOS
+===
+
+En R existen cinco tipos de datos básicos:
+  
+    1. Vector
+    2. Matriz
+    3. Factor
+    4. Dataframe
+    5. Lista
+
