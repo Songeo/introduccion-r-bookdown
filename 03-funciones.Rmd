@@ -401,7 +401,7 @@ y es reproducible.
 
 
 ```{r, echo=F, fig.align="center"}
-knitr::include_graphics("figures/rpackages.png")
+knitr::include_graphics("figures/rstudiopackages.png")
 ```
 
 

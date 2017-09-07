@@ -229,7 +229,7 @@ lanza_dado()
 ```
 
 ```
-## [1] 5
+## [1] 6
 ```
 
 
@@ -238,7 +238,7 @@ lanza_dado()
 ```
 
 ```
-## [1] 4
+## [1] 2
 ```
 
 Cada lanzamiento obtiene un resultado diferente.
@@ -476,7 +476,7 @@ paquetes es abierto, incluyen documentación,
 y es reproducible. 
 
 
-<img src="figures/rpackages.png" style="display: block; margin: auto;" />
+<img src="figures/rstudiopackages.png" style="display: block; margin: auto;" />
 
 
 
