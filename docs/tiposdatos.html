@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Taller de Introducción a R</title>
+  <meta name="description" content="Material del taller de introducción a R.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Taller de Introducción a R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Material del taller de introducción a R." />
+  <meta name="github-repo" content="songeo/intro-r-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Taller de Introducción a R" />
+  
+  <meta name="twitter:description" content="Material del taller de introducción a R." />
+  
+
+<meta name="author" content="Sonia Mendizábal">
+
+
+<meta name="date" content="2017-09-07">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="rstudio-layout.html">
+<link rel="next" href="vectores.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Taller de Introducción a R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción al taller</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programa"><i class="fa fa-check"></i>Programa</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html"><i class="fa fa-check"></i><b>2</b> Introducción a Herramientas</a><ul>
+<li class="chapter" data-level="" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html#que-es-r"><i class="fa fa-check"></i>¿Qué es R?</a></li>
+<li class="chapter" data-level="2.1" data-path="r-console.html"><a href="r-console.html"><i class="fa fa-check"></i><b>2.1</b> R Console</a></li>
+<li class="chapter" data-level="2.2" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>2.2</b> RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="descarga.html"><a href="descarga.html"><i class="fa fa-check"></i><b>2.3</b> Descarga</a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-layout.html"><a href="rstudio-layout.html"><i class="fa fa-check"></i><b>2.4</b> RStudio Layout</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tiposdatos.html"><a href="tiposdatos.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3.1</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="vectores.html"><a href="vectores.html#tipo-de-vectores"><i class="fa fa-check"></i><b>3.1.1</b> Tipo de vectores</a></li>
+<li class="chapter" data-level="3.1.2" data-path="vectores.html"><a href="vectores.html#nombres-de-vectores"><i class="fa fa-check"></i><b>3.1.2</b> Nombres de vectores</a></li>
+<li class="chapter" data-level="3.1.3" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-en-vectores"><i class="fa fa-check"></i><b>3.1.3</b> Selección de elementos en vectores</a></li>
+<li class="chapter" data-level="3.1.4" data-path="vectores.html"><a href="vectores.html#que-pasa-si-sumamos-los-dias-de-fin-de-semana"><i class="fa fa-check"></i><b>3.1.4</b> ¿Qué pasa si sumamos los días de fin de semana?</a></li>
+<li class="chapter" data-level="3.1.5" data-path="vectores.html"><a href="vectores.html#comparacion-de-elementos"><i class="fa fa-check"></i><b>3.1.5</b> Comparación de elementos</a></li>
+<li class="chapter" data-level="3.1.6" data-path="vectores.html"><a href="vectores.html#grafica-de-vectores"><i class="fa fa-check"></i><b>3.1.6</b> Gráfica de vectores</a></li>
+<li class="chapter" data-level="3.1.7" data-path="vectores.html"><a href="vectores.html#vectores-de-distribuciones"><i class="fa fa-check"></i><b>3.1.7</b> Vectores de distribuciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>3.2</b> Matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="matrices.html"><a href="matrices.html#crear-una-matriz"><i class="fa fa-check"></i><b>3.2.1</b> Crear una matriz</a></li>
+<li class="chapter" data-level="3.2.2" data-path="matrices.html"><a href="matrices.html#nombres-de-matrices"><i class="fa fa-check"></i><b>3.2.2</b> Nombres de matrices</a></li>
+<li class="chapter" data-level="3.2.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-elementos-en-una-matriz"><i class="fa fa-check"></i><b>3.2.3</b> Selección de elementos en una matriz</a></li>
+<li class="chapter" data-level="3.2.4" data-path="matrices.html"><a href="matrices.html#operaciones-en-matrices"><i class="fa fa-check"></i><b>3.2.4</b> Operaciones en matrices</a></li>
+<li class="chapter" data-level="3.2.5" data-path="matrices.html"><a href="matrices.html#operaciones-por-dimensiones"><i class="fa fa-check"></i><b>3.2.5</b> Operaciones por dimensiones</a></li>
+<li class="chapter" data-level="3.2.6" data-path="matrices.html"><a href="matrices.html#nuevos-valores"><i class="fa fa-check"></i><b>3.2.6</b> Nuevos valores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>3.3</b> Factores</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="factores.html"><a href="factores.html#variable-categorica-nominal"><i class="fa fa-check"></i><b>3.3.1</b> Variable categórica nominal</a></li>
+<li class="chapter" data-level="3.3.2" data-path="factores.html"><a href="factores.html#variable-categorica-ordinal"><i class="fa fa-check"></i><b>3.3.2</b> Variable categórica ordinal</a></li>
+<li class="chapter" data-level="3.3.3" data-path="factores.html"><a href="factores.html#resumen-de-factores"><i class="fa fa-check"></i><b>3.3.3</b> Resúmen de factores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="dataframe.html"><a href="dataframe.html"><i class="fa fa-check"></i><b>3.4</b> Dataframe</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="dataframe.html"><a href="dataframe.html#crear-un-dataframe"><i class="fa fa-check"></i><b>3.4.1</b> Crear un dataframe</a></li>
+<li class="chapter" data-level="3.4.2" data-path="dataframe.html"><a href="dataframe.html#nombres-de-dimensiones"><i class="fa fa-check"></i><b>3.4.2</b> Nombres de dimensiones</a></li>
+<li class="chapter" data-level="3.4.3" data-path="dataframe.html"><a href="dataframe.html#seleccion-de-elementos"><i class="fa fa-check"></i><b>3.4.3</b> Seleccion de elementos</a></li>
+<li class="chapter" data-level="3.4.4" data-path="dataframe.html"><a href="dataframe.html#orden-de-posiciones"><i class="fa fa-check"></i><b>3.4.4</b> Orden de posiciones</a></li>
+<li class="chapter" data-level="3.4.5" data-path="dataframe.html"><a href="dataframe.html#funciones-utiles-para-data-frames"><i class="fa fa-check"></i><b>3.4.5</b> Funciones útiles para data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>3.5</b> Listas</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="listas.html"><a href="listas.html#crear-una-lista"><i class="fa fa-check"></i><b>3.5.1</b> Crear una lista</a></li>
+<li class="chapter" data-level="3.5.2" data-path="listas.html"><a href="listas.html#nombres-de-elementos"><i class="fa fa-check"></i><b>3.5.2</b> Nombres de elementos</a></li>
+<li class="chapter" data-level="3.5.3" data-path="listas.html"><a href="listas.html#seleccion-de-elementos-en-una-lista"><i class="fa fa-check"></i><b>3.5.3</b> Selección de elementos en una lista</a></li>
+<li class="chapter" data-level="3.5.4" data-path="listas.html"><a href="listas.html#nuevos-valores-a-la-lista"><i class="fa fa-check"></i><b>3.5.4</b> Nuevos valores a la lista</a></li>
+<li class="chapter" data-level="3.5.5" data-path="listas.html"><a href="listas.html#funciones-utiles-para-listas"><i class="fa fa-check"></i><b>3.5.5</b> Funciones útiles para listas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="" data-path="funciones.html"><a href="funciones.html#una-caja-negra"><i class="fa fa-check"></i>Una caja negra</a></li>
+<li class="chapter" data-level="4.1" data-path="escibir-una-funcion.html"><a href="escibir-una-funcion.html"><i class="fa fa-check"></i><b>4.1</b> Escibir una función</a></li>
+<li class="chapter" data-level="4.2" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html"><i class="fa fa-check"></i><b>4.2</b> Argumentos de funciones</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html#argumentos-predeterminados"><i class="fa fa-check"></i><b>4.2.1</b> Argumentos predeterminados</a></li>
+<li class="chapter" data-level="4.2.2" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html#argumentos-nulos"><i class="fa fa-check"></i><b>4.2.2</b> Argumentos nulos</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="alcance-de-la-funcion.html"><a href="alcance-de-la-funcion.html"><i class="fa fa-check"></i><b>4.3</b> Alcance de la función</a></li>
+<li class="chapter" data-level="4.4" data-path="funciones-para-funciones.html"><a href="funciones-para-funciones.html"><i class="fa fa-check"></i><b>4.4</b> Funciones para funciones</a></li>
+<li class="chapter" data-level="4.5" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4.5</b> R Packages</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="r-packages.html"><a href="r-packages.html#paquetes-predeterminados"><i class="fa fa-check"></i><b>4.5.1</b> Paquetes predeterminados</a></li>
+<li class="chapter" data-level="4.5.2" data-path="r-packages.html"><a href="r-packages.html#instalar-paquetes"><i class="fa fa-check"></i><b>4.5.2</b> Instalar paquetes</a></li>
+<li class="chapter" data-level="4.5.3" data-path="r-packages.html"><a href="r-packages.html#cargar-paquetes"><i class="fa fa-check"></i><b>4.5.3</b> Cargar paquetes</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Taller de Introducción a R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="tiposdatos" class="section level1">
+<h1><span class="header-section-number">Capítulo 3</span> Tipos de Datos</h1>
+<p>En R existen cinco tipos de datos básicos:</p>
+<p><a href="vectores.html#vectores">3.1</a> Vector</p>
+<p><a href="matrices.html#matrices">3.2</a> Matriz</p>
+<p><a href="factores.html#factores">3.3</a> Factor</p>
+<p><a href="dataframe.html#dataframe">3.4</a> Data frame</p>
+<p><a href="listas.html#listas">3.5</a> Lista</p> 
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="rstudio-layout.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="vectores.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+<!-- </html> -->
