@@ -1,0 +1,14 @@
+bookdown::gitbook:
+  split_by: section
+  css: [style.css, toc.css, font-awesome.min.css]
+  config:
+    toc:
+      collapse: subsection
+      before: |
+        <li><a href="./">Taller de Introducción a R</a></li>
+      after: |
+        <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+bookdown::pdf_book:
+  keep_tex: yes
+bookdown::html_book:
+  css: toc.css

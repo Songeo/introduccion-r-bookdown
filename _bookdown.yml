@@ -1,0 +1,7 @@
+book_filename: "intro-r-bookdown"
+chapter_name: "Capítulo "
+repo: https://github.com/Songeo/intro-r-bookdown
+output_dir: docs
+rmd_files: ["index.Rmd", "01-intro.Rmd", "02-tipos-datos.Rmd", "03-funciones.Rmd"]
+clean: [packages.bib, bookdown.bbl]
+new_session: yes
