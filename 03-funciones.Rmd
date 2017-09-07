@@ -11,9 +11,9 @@ manupilación de funciones.
 
 En R las funciones, al igual que los vectores, se
 pueden asignar a variables, guardarlas en listas, 
-usarlas como argumentos en otras funciones. 
+usarlas como argumentos en otras funciones, 
 crearlas dentro de otras funciones, e incluso
-regresar como resultado de una función funciones.
+regresar como resultado de una función más funciones.
 
 
 
