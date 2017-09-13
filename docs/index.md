@@ -1,7 +1,7 @@
 --- 
 title: "Taller de Introducción a R"
 author: "Sonia Mendizábal"
-date: "2017-09-07"
+date: "2017-09-12"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
@@ -30,7 +30,7 @@ description: "Material del taller de introducción a R."
   
   **III.** [Funciones]
   
-  **IV. Interaciones**
+  **IV.** [Iteraciones]
   
   **V. Visualización**
   

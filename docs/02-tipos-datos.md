@@ -11,7 +11,7 @@ En R existen cinco tipos de datos básicos:
   
   \@ref(factores) Factor
   
-  \@ref(dataframe) Data frame
+  \@ref(data-frame) Data frame
   
   \@ref(listas) Lista
 
@@ -1152,7 +1152,7 @@ las variable numéricas y las variables categóricas.</div>\EndKnitrBlock{warnin
 
 ---
 
-## Dataframe {#dataframe}
+## Dataframe {#data-frame}
 
 \BeginKnitrBlock{information}<div class="information">Un dataframe es un objeto de dos dimensiones en R.
 Puede verse como un arreglo de vectores de la misma 
@@ -1186,11 +1186,11 @@ muestra_df
 
 ```
 ##   secuencia  aleatorio letras
-## 1         1 -0.4114319      a
-## 2         2 -2.0738067      b
-## 3         3  0.9591770      c
-## 4         4  0.1614436      d
-## 5         5 -0.5974338      e
+## 1         1 -0.4301201      a
+## 2         2  0.8254868      b
+## 3         3  0.3546985      c
+## 4         4 -0.3965217      d
+## 5         5  0.1361696      e
 ```
 
 O bien, se pude transformar una matriz con la misma

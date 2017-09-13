@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Taller de Introducción a R</title>
+  <meta name="description" content="Material del taller de introducción a R.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Taller de Introducción a R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Material del taller de introducción a R." />
+  <meta name="github-repo" content="songeo/intro-r-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Taller de Introducción a R" />
+  
+  <meta name="twitter:description" content="Material del taller de introducción a R." />
+  
+
+<meta name="author" content="Sonia Mendizábal">
+
+
+<meta name="date" content="2017-09-12">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="factores.html">
+<link rel="next" href="listas.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Taller de Introducción a R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción al taller</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programa"><i class="fa fa-check"></i>Programa</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html"><i class="fa fa-check"></i><b>2</b> Introducción a Herramientas</a><ul>
+<li class="chapter" data-level="" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html#que-es-r"><i class="fa fa-check"></i>¿Qué es R?</a></li>
+<li class="chapter" data-level="2.1" data-path="r-console.html"><a href="r-console.html"><i class="fa fa-check"></i><b>2.1</b> R Console</a></li>
+<li class="chapter" data-level="2.2" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>2.2</b> RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="descarga.html"><a href="descarga.html"><i class="fa fa-check"></i><b>2.3</b> Descarga</a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-layout.html"><a href="rstudio-layout.html"><i class="fa fa-check"></i><b>2.4</b> RStudio Layout</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tiposdatos.html"><a href="tiposdatos.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3.1</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="vectores.html"><a href="vectores.html#tipo-de-vectores"><i class="fa fa-check"></i><b>3.1.1</b> Tipo de vectores</a></li>
+<li class="chapter" data-level="3.1.2" data-path="vectores.html"><a href="vectores.html#nombres-de-vectores"><i class="fa fa-check"></i><b>3.1.2</b> Nombres de vectores</a></li>
+<li class="chapter" data-level="3.1.3" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-en-vectores"><i class="fa fa-check"></i><b>3.1.3</b> Selección de elementos en vectores</a></li>
+<li class="chapter" data-level="3.1.4" data-path="vectores.html"><a href="vectores.html#que-pasa-si-sumamos-los-dias-de-fin-de-semana"><i class="fa fa-check"></i><b>3.1.4</b> ¿Qué pasa si sumamos los días de fin de semana?</a></li>
+<li class="chapter" data-level="3.1.5" data-path="vectores.html"><a href="vectores.html#comparacion-de-elementos"><i class="fa fa-check"></i><b>3.1.5</b> Comparación de elementos</a></li>
+<li class="chapter" data-level="3.1.6" data-path="vectores.html"><a href="vectores.html#grafica-de-vectores"><i class="fa fa-check"></i><b>3.1.6</b> Gráfica de vectores</a></li>
+<li class="chapter" data-level="3.1.7" data-path="vectores.html"><a href="vectores.html#vectores-de-distribuciones"><i class="fa fa-check"></i><b>3.1.7</b> Vectores de distribuciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>3.2</b> Matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="matrices.html"><a href="matrices.html#crear-una-matriz"><i class="fa fa-check"></i><b>3.2.1</b> Crear una matriz</a></li>
+<li class="chapter" data-level="3.2.2" data-path="matrices.html"><a href="matrices.html#nombres-de-matrices"><i class="fa fa-check"></i><b>3.2.2</b> Nombres de matrices</a></li>
+<li class="chapter" data-level="3.2.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-elementos-en-una-matriz"><i class="fa fa-check"></i><b>3.2.3</b> Selección de elementos en una matriz</a></li>
+<li class="chapter" data-level="3.2.4" data-path="matrices.html"><a href="matrices.html#operaciones-en-matrices"><i class="fa fa-check"></i><b>3.2.4</b> Operaciones en matrices</a></li>
+<li class="chapter" data-level="3.2.5" data-path="matrices.html"><a href="matrices.html#operaciones-por-dimensiones"><i class="fa fa-check"></i><b>3.2.5</b> Operaciones por dimensiones</a></li>
+<li class="chapter" data-level="3.2.6" data-path="matrices.html"><a href="matrices.html#nuevos-valores"><i class="fa fa-check"></i><b>3.2.6</b> Nuevos valores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>3.3</b> Factores</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="factores.html"><a href="factores.html#variable-categorica-nominal"><i class="fa fa-check"></i><b>3.3.1</b> Variable categórica nominal</a></li>
+<li class="chapter" data-level="3.3.2" data-path="factores.html"><a href="factores.html#variable-categorica-ordinal"><i class="fa fa-check"></i><b>3.3.2</b> Variable categórica ordinal</a></li>
+<li class="chapter" data-level="3.3.3" data-path="factores.html"><a href="factores.html#resumen-de-factores"><i class="fa fa-check"></i><b>3.3.3</b> Resúmen de factores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>3.4</b> Dataframe</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="data-frame.html"><a href="data-frame.html#crear-un-dataframe"><i class="fa fa-check"></i><b>3.4.1</b> Crear un dataframe</a></li>
+<li class="chapter" data-level="3.4.2" data-path="data-frame.html"><a href="data-frame.html#nombres-de-dimensiones"><i class="fa fa-check"></i><b>3.4.2</b> Nombres de dimensiones</a></li>
+<li class="chapter" data-level="3.4.3" data-path="data-frame.html"><a href="data-frame.html#seleccion-de-elementos"><i class="fa fa-check"></i><b>3.4.3</b> Seleccion de elementos</a></li>
+<li class="chapter" data-level="3.4.4" data-path="data-frame.html"><a href="data-frame.html#orden-de-posiciones"><i class="fa fa-check"></i><b>3.4.4</b> Orden de posiciones</a></li>
+<li class="chapter" data-level="3.4.5" data-path="data-frame.html"><a href="data-frame.html#funciones-utiles-para-data-frames"><i class="fa fa-check"></i><b>3.4.5</b> Funciones útiles para data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>3.5</b> Listas</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="listas.html"><a href="listas.html#crear-una-lista"><i class="fa fa-check"></i><b>3.5.1</b> Crear una lista</a></li>
+<li class="chapter" data-level="3.5.2" data-path="listas.html"><a href="listas.html#nombres-de-elementos"><i class="fa fa-check"></i><b>3.5.2</b> Nombres de elementos</a></li>
+<li class="chapter" data-level="3.5.3" data-path="listas.html"><a href="listas.html#seleccion-de-elementos-en-una-lista"><i class="fa fa-check"></i><b>3.5.3</b> Selección de elementos en una lista</a></li>
+<li class="chapter" data-level="3.5.4" data-path="listas.html"><a href="listas.html#nuevos-valores-a-la-lista"><i class="fa fa-check"></i><b>3.5.4</b> Nuevos valores a la lista</a></li>
+<li class="chapter" data-level="3.5.5" data-path="listas.html"><a href="listas.html#funciones-utiles-para-listas"><i class="fa fa-check"></i><b>3.5.5</b> Funciones útiles para listas</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="" data-path="funciones.html"><a href="funciones.html#una-caja-negra"><i class="fa fa-check"></i>Una caja negra</a></li>
+<li class="chapter" data-level="4.1" data-path="escibir-una-funcion.html"><a href="escibir-una-funcion.html"><i class="fa fa-check"></i><b>4.1</b> Escibir una función</a></li>
+<li class="chapter" data-level="4.2" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html"><i class="fa fa-check"></i><b>4.2</b> Argumentos de funciones</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html#argumentos-predeterminados"><i class="fa fa-check"></i><b>4.2.1</b> Argumentos predeterminados</a></li>
+<li class="chapter" data-level="4.2.2" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html#argumentos-nulos"><i class="fa fa-check"></i><b>4.2.2</b> Argumentos nulos</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="alcance-de-la-funcion.html"><a href="alcance-de-la-funcion.html"><i class="fa fa-check"></i><b>4.3</b> Alcance de la función</a></li>
+<li class="chapter" data-level="4.4" data-path="funciones-para-funciones.html"><a href="funciones-para-funciones.html"><i class="fa fa-check"></i><b>4.4</b> Funciones para funciones</a></li>
+<li class="chapter" data-level="4.5" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4.5</b> R Packages</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="r-packages.html"><a href="r-packages.html#paquetes-predeterminados"><i class="fa fa-check"></i><b>4.5.1</b> Paquetes predeterminados</a></li>
+<li class="chapter" data-level="4.5.2" data-path="r-packages.html"><a href="r-packages.html#instalar-paquetes"><i class="fa fa-check"></i><b>4.5.2</b> Instalar paquetes</a></li>
+<li class="chapter" data-level="4.5.3" data-path="r-packages.html"><a href="r-packages.html#cargar-paquetes"><i class="fa fa-check"></i><b>4.5.3</b> Cargar paquetes</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="iteraciones.html"><a href="iteraciones.html"><i class="fa fa-check"></i><b>5</b> Iteraciones</a><ul>
+<li class="chapter" data-level="5.1" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html"><i class="fa fa-check"></i><b>5.1</b> For loop y familia Apply</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#apply"><i class="fa fa-check"></i><b>5.1.1</b> apply()</a></li>
+<li class="chapter" data-level="5.1.2" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#lapply"><i class="fa fa-check"></i><b>5.1.2</b> lapply()</a></li>
+<li class="chapter" data-level="5.1.3" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#sapply"><i class="fa fa-check"></i><b>5.1.3</b> sapply()</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="while-loop.html"><a href="while-loop.html"><i class="fa fa-check"></i><b>5.2</b> While Loop</a></li>
+<li class="chapter" data-level="5.3" data-path="ejercicios.html"><a href="ejercicios.html"><i class="fa fa-check"></i><b>5.3</b> Ejercicios</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Taller de Introducción a R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="data-frame" class="section level2">
+<h2><span class="header-section-number">3.4</span> Dataframe</h2>
+
+<div class="information">
+<p>Un dataframe es un objeto de dos dimensiones en R. Puede verse como un arreglo de vectores de la misma dimensión, similar a una matriz.</p>
+La ventaja de un dataframe, es que a diferencia de una matriz, los vectores o columnas pueden ser de diferentes tipos.
+</div>
+<p></p>
+<p>En general, funcionan para guardar tablas de datos. Donde las columnas representan variables y los renglones observaciones. Es similar a la carga de datos en paquetes estadísticos como SAS y SPSS.</p>
+<p><br></p>
+<div id="crear-un-dataframe" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Crear un dataframe</h3>
+<p>En R se crean dataframes con la función <code>data.frame()</code>.</p>
+<p>Una forma de crear un dataframe es asignando vectores.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">muestra_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">secuencia =</span> <span class="dv">1</span>:<span class="dv">5</span>,
+                         <span class="dt">aleatorio =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>),
+                         <span class="dt">letras =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;e&quot;</span>))
+muestra_df</code></pre></div>
+<pre><code>##   secuencia  aleatorio letras
+## 1         1 -0.4301201      a
+## 2         2  0.8254868      b
+## 3         3  0.3546985      c
+## 4         4 -0.3965217      d
+## 5         5  0.1361696      e</code></pre>
+<p>O bien, se pude transformar una matriz con la misma función. Tomemos los datos de los ingresos de las películas de la saga de HP y hagamos una matriz.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(sales_mat)
+sales_df</code></pre></div>
+<pre><code>##                                          total release_date
+## 1. HP and the Sorcerer&#39;s Stone       497066400    141823200
+## 8. HP and the Deathly Hallows Part 2 426630300    189432500
+## 4. HP and the Goblet of Fire         401608200    142414700
+## 2. HP and the Chamber of Secrets     399302200    135197600
+## 5. HP and the Order of the Phoenix   377314200     99635700
+## 6. HP and the Half-Blood Prince      359788300     92756000
+## 3. HP and the Prisoner of Azkaban    357233500    134119300
+## 7. HP and the Deathly Hallows Part 1 328833900    138752100</code></pre>
+<p><br></p>
+<hr />
+</div>
+<div id="nombres-de-dimensiones" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Nombres de dimensiones</h3>
+<p>Al igual que matrices, las funciones <code>rownames()</code> y <code>colnames()</code> permiten nombrar los renglones y columnas del objeto.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">colnames</span>(sales_df) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;total_grosses&quot;</span>, <span class="st">&quot;opening_grosses&quot;</span>)
+sales_df</code></pre></div>
+<pre><code>##                                      total_grosses opening_grosses
+## 1. HP and the Sorcerer&#39;s Stone           497066400       141823200
+## 8. HP and the Deathly Hallows Part 2     426630300       189432500
+## 4. HP and the Goblet of Fire             401608200       142414700
+## 2. HP and the Chamber of Secrets         399302200       135197600
+## 5. HP and the Order of the Phoenix       377314200        99635700
+## 6. HP and the Half-Blood Prince          359788300        92756000
+## 3. HP and the Prisoner of Azkaban        357233500       134119300
+## 7. HP and the Deathly Hallows Part 1     328833900       138752100</code></pre>
+<p><br></p>
+<hr />
+</div>
+<div id="seleccion-de-elementos" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Seleccion de elementos</h3>
+<p>Para dataframes, ademas de seleccionar posiciones de renglones y columnas con <code>[ , ]</code>, se puede usar el signo <code>$</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df$total_grosses</code></pre></div>
+<pre><code>## [1] 497066400 426630300 401608200 399302200 377314200 359788300 357233500
+## [8] 328833900</code></pre>
+<p>Usando este mismo signo se pueden agregar nuevas columnas al objeto.</p>
+<p>Por ejemplo, tomemos los títulos que se heredaron de la matriz como nombres de columnas. Incluyamos una variable al dataframe de los títulos como un factor.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df$title &lt;-<span class="st"> </span><span class="kw">factor</span>(<span class="kw">rownames</span>(sales_df))
+sales_df</code></pre></div>
+<pre><code>##                                      total_grosses opening_grosses
+## 1. HP and the Sorcerer&#39;s Stone           497066400       141823200
+## 8. HP and the Deathly Hallows Part 2     426630300       189432500
+## 4. HP and the Goblet of Fire             401608200       142414700
+## 2. HP and the Chamber of Secrets         399302200       135197600
+## 5. HP and the Order of the Phoenix       377314200        99635700
+## 6. HP and the Half-Blood Prince          359788300        92756000
+## 3. HP and the Prisoner of Azkaban        357233500       134119300
+## 7. HP and the Deathly Hallows Part 1     328833900       138752100
+##                                                                     title
+## 1. HP and the Sorcerer&#39;s Stone             1. HP and the Sorcerer&#39;s Stone
+## 8. HP and the Deathly Hallows Part 2 8. HP and the Deathly Hallows Part 2
+## 4. HP and the Goblet of Fire                 4. HP and the Goblet of Fire
+## 2. HP and the Chamber of Secrets         2. HP and the Chamber of Secrets
+## 5. HP and the Order of the Phoenix     5. HP and the Order of the Phoenix
+## 6. HP and the Half-Blood Prince           6. HP and the Half-Blood Prince
+## 3. HP and the Prisoner of Azkaban       3. HP and the Prisoner of Azkaban
+## 7. HP and the Deathly Hallows Part 1 7. HP and the Deathly Hallows Part 1</code></pre>
+<p>Ahora los títulos de las películas son un factor con los siguientes niveles:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">levels</span>(sales_df$title)</code></pre></div>
+<pre><code>## [1] &quot;1. HP and the Sorcerer&#39;s Stone&quot;      
+## [2] &quot;2. HP and the Chamber of Secrets&quot;    
+## [3] &quot;3. HP and the Prisoner of Azkaban&quot;   
+## [4] &quot;4. HP and the Goblet of Fire&quot;        
+## [5] &quot;5. HP and the Order of the Phoenix&quot;  
+## [6] &quot;6. HP and the Half-Blood Prince&quot;     
+## [7] &quot;7. HP and the Deathly Hallows Part 1&quot;
+## [8] &quot;8. HP and the Deathly Hallows Part 2&quot;</code></pre>
+<p>Como los títulos ya los tenemos como una variable podemos borrar los nombres de los renglones usando <code>NULL</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">rownames</span>(sales_df) &lt;-<span class="st"> </span><span class="ot">NULL</span>
+sales_df</code></pre></div>
+<pre><code>##   total_grosses opening_grosses                                title
+## 1     497066400       141823200       1. HP and the Sorcerer&#39;s Stone
+## 2     426630300       189432500 8. HP and the Deathly Hallows Part 2
+## 3     401608200       142414700         4. HP and the Goblet of Fire
+## 4     399302200       135197600     2. HP and the Chamber of Secrets
+## 5     377314200        99635700   5. HP and the Order of the Phoenix
+## 6     359788300        92756000      6. HP and the Half-Blood Prince
+## 7     357233500       134119300    3. HP and the Prisoner of Azkaban
+## 8     328833900       138752100 7. HP and the Deathly Hallows Part 1</code></pre>
+<p><br></p>
+<div id="ej-salas-de-cine" class="section level4 unnumbered">
+<h4>Ej: Salas de cine</h4>
+<p>Agrega una columna con el número de cines en los que se exhibió la película usando el vector que generamos antes <code>theaters_vec</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df$theaters &lt;-<span class="st"> </span>
+sales_df</code></pre></div>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="orden-de-posiciones" class="section level3">
+<h3><span class="header-section-number">3.4.4</span> Orden de posiciones</h3>
+<p>La función <code>order()</code> ordena el vector y regresa la posición de los elementos ordenados de menor a mayor.</p>
+<p>Siguiendo con el ejemplo de los ingresos de la saga, obtengamos el vector de posiciones de las películas ordenado por el total de ingresos.</p>
+<p>El vector de total de ingresos es el siguiente:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df$total_grosses</code></pre></div>
+<pre><code>## [1] 497066400 426630300 401608200 399302200 377314200 359788300 357233500
+## [8] 328833900</code></pre>
+<p>El vector con las posiciones ordenadas</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">total_order &lt;-<span class="st"> </span><span class="kw">order</span>(sales_df$total_grosses)
+total_order</code></pre></div>
+<pre><code>## [1] 8 7 6 5 4 3 2 1</code></pre>
+<p>Seleccionamos las posiciones del total de ingresos en el orden que nos dice el vector ordenado <code>total_order</code> para obtener el vector de ingresos ordenado.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df$total_grosses[total_order]</code></pre></div>
+<pre><code>## [1] 328833900 357233500 359788300 377314200 399302200 401608200 426630300
+## [8] 497066400</code></pre>
+<p>De la misma forma, es posible ordenar el dataframe:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_order_df &lt;-<span class="st"> </span>sales_df[ total_order , <span class="kw">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">2</span>)]
+sales_order_df</code></pre></div>
+<pre><code>##                                  title total_grosses opening_grosses
+## 8 7. HP and the Deathly Hallows Part 1     328833900       138752100
+## 7    3. HP and the Prisoner of Azkaban     357233500       134119300
+## 6      6. HP and the Half-Blood Prince     359788300        92756000
+## 5   5. HP and the Order of the Phoenix     377314200        99635700
+## 4     2. HP and the Chamber of Secrets     399302200       135197600
+## 3         4. HP and the Goblet of Fire     401608200       142414700
+## 2 8. HP and the Deathly Hallows Part 2     426630300       189432500
+## 1       1. HP and the Sorcerer&#39;s Stone     497066400       141823200</code></pre>
+<p><br></p>
+<div id="ej-fechas-de-lanzamiento" class="section level4 unnumbered">
+<h4>Ej: Fechas de lanzamiento</h4>
+<p>Agrega otra columna al dataframe <code>sales_order_df</code> con las fechas de lanzamiento del vector que se presenta a continuación.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">release_hp &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;11/16/01&quot;</span>, <span class="st">&quot;7/15/11&quot;</span>, <span class="st">&quot;11/18/05&quot;</span>, <span class="st">&quot;11/15/02&quot;</span>, <span class="st">&quot;7/11/07&quot;</span>, <span class="st">&quot;7/15/09&quot;</span>, <span class="st">&quot;6/4/04&quot;</span>, <span class="st">&quot;11/19/10&quot;</span>)
+<span class="kw">names</span>(release_hp) &lt;-<span class="st">  </span>titles_hp
+release_hp</code></pre></div>
+<pre><code>##       1. HP and the Sorcerer&#39;s Stone 8. HP and the Deathly Hallows Part 2 
+##                           &quot;11/16/01&quot;                            &quot;7/15/11&quot; 
+##         4. HP and the Goblet of Fire     2. HP and the Chamber of Secrets 
+##                           &quot;11/18/05&quot;                           &quot;11/15/02&quot; 
+##   5. HP and the Order of the Phoenix      6. HP and the Half-Blood Prince 
+##                            &quot;7/11/07&quot;                            &quot;7/15/09&quot; 
+##    3. HP and the Prisoner of Azkaban 7. HP and the Deathly Hallows Part 1 
+##                             &quot;6/4/04&quot;                           &quot;11/19/10&quot;</code></pre>
+<p>Existe un problema con este vector. Tiene el orden de la matriz original.</p>
+<p>Usando la función <code>order()</code> arregla la posición del vector con el orden de los títulos y este vector arreglado inclúyelo, finalmente, al df.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_order_df$release_date &lt;-<span class="st"> </span>release_hp[]
+sales_order_df</code></pre></div>
+<pre><code>##                                  title total_grosses opening_grosses
+## 8 7. HP and the Deathly Hallows Part 1     328833900       138752100
+## 7    3. HP and the Prisoner of Azkaban     357233500       134119300
+## 6      6. HP and the Half-Blood Prince     359788300        92756000
+## 5   5. HP and the Order of the Phoenix     377314200        99635700
+## 4     2. HP and the Chamber of Secrets     399302200       135197600
+## 3         4. HP and the Goblet of Fire     401608200       142414700
+## 2 8. HP and the Deathly Hallows Part 2     426630300       189432500
+## 1       1. HP and the Sorcerer&#39;s Stone     497066400       141823200
+##   release_date
+## 8     11/19/10
+## 7       6/4/04
+## 6      7/15/09
+## 5      7/11/07
+## 4     11/15/02
+## 3     11/18/05
+## 2      7/15/11
+## 1     11/16/01</code></pre>
+<p><br></p>
+<hr />
+</div>
+</div>
+<div id="funciones-utiles-para-data-frames" class="section level3">
+<h3><span class="header-section-number">3.4.5</span> Funciones útiles para data frames</h3>
+<p>Existen algunas que ayudan a tratar dataframes.</p>
+<ul>
+<li><code>head()</code> y <code>tail()</code>:</li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(sales_order_df)</code></pre></div>
+<pre><code>##                                  title total_grosses opening_grosses
+## 8 7. HP and the Deathly Hallows Part 1     328833900       138752100
+## 7    3. HP and the Prisoner of Azkaban     357233500       134119300
+## 6      6. HP and the Half-Blood Prince     359788300        92756000
+## 5   5. HP and the Order of the Phoenix     377314200        99635700
+## 4     2. HP and the Chamber of Secrets     399302200       135197600
+## 3         4. HP and the Goblet of Fire     401608200       142414700
+##   release_date
+## 8     11/19/10
+## 7       6/4/04
+## 6      7/15/09
+## 5      7/11/07
+## 4     11/15/02
+## 3     11/18/05</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tail</span>(sales_order_df)</code></pre></div>
+<pre><code>##                                  title total_grosses opening_grosses
+## 6      6. HP and the Half-Blood Prince     359788300        92756000
+## 5   5. HP and the Order of the Phoenix     377314200        99635700
+## 4     2. HP and the Chamber of Secrets     399302200       135197600
+## 3         4. HP and the Goblet of Fire     401608200       142414700
+## 2 8. HP and the Deathly Hallows Part 2     426630300       189432500
+## 1       1. HP and the Sorcerer&#39;s Stone     497066400       141823200
+##   release_date
+## 6      7/15/09
+## 5      7/11/07
+## 4     11/15/02
+## 3     11/18/05
+## 2      7/15/11
+## 1     11/16/01</code></pre>
+<ul>
+<li><code>str()</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(sales_order_df)</code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    8 obs. of  4 variables:
+##  $ title          : Factor w/ 8 levels &quot;1. HP and the Sorcerer&#39;s Stone&quot;,..: 7 3 6 5 2 4 8 1
+##  $ total_grosses  : num  3.29e+08 3.57e+08 3.60e+08 3.77e+08 3.99e+08 ...
+##  $ opening_grosses: num  1.39e+08 1.34e+08 9.28e+07 9.96e+07 1.35e+08 ...
+##  $ release_date   : chr  &quot;11/19/10&quot; &quot;6/4/04&quot; &quot;7/15/09&quot; &quot;7/11/07&quot; ...</code></pre>
+<ul>
+<li><code>dim()</code>, <code>nrow()</code> y <code>ncol()</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">nrow</span>(sales_order_df)</code></pre></div>
+<pre><code>## [1] 8</code></pre>
+<ul>
+<li><code>subset()</code></li>
+</ul>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">avg_total_gr &lt;-<span class="st"> </span><span class="kw">mean</span>(sales_order_df$total_grosses)
+<span class="kw">subset</span>(sales_order_df, total_grosses &gt;<span class="st"> </span>avg_total_gr)</code></pre></div>
+<pre><code>##                                  title total_grosses opening_grosses
+## 4     2. HP and the Chamber of Secrets     399302200       135197600
+## 3         4. HP and the Goblet of Fire     401608200       142414700
+## 2 8. HP and the Deathly Hallows Part 2     426630300       189432500
+## 1       1. HP and the Sorcerer&#39;s Stone     497066400       141823200
+##   release_date
+## 4     11/15/02
+## 3     11/18/05
+## 2      7/15/11
+## 1     11/16/01</code></pre>
+<p><br></p>
+<hr />
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="factores.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="listas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+<!-- </html> -->

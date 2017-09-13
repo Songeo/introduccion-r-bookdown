@@ -11,7 +11,7 @@ En R existen cinco tipos de datos básicos:
   
   \@ref(factores) Factor
   
-  \@ref(dataframe) Data frame
+  \@ref(data-frame) Data frame
   
   \@ref(listas) Lista
 
@@ -881,7 +881,7 @@ las variable numéricas y las variables categóricas.
 
 ---
 
-## Dataframe {#dataframe}
+## Dataframe {#data-frame}
 
 ```{block2, type = "information"}
 Un dataframe es un objeto de dos dimensiones en R.

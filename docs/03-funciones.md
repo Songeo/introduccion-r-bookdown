@@ -229,7 +229,7 @@ lanza_dado()
 ```
 
 ```
-## [1] 6
+## [1] 3
 ```
 
 
@@ -238,7 +238,7 @@ lanza_dado()
 ```
 
 ```
-## [1] 2
+## [1] 6
 ```
 
 Cada lanzamiento obtiene un resultado diferente.

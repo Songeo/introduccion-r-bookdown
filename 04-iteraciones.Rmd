@@ -25,6 +25,12 @@ Existen dos tipos de iteraciones o loops:
 número de veces fijo, controlado por un
 contador o índice que se incrementa con cada ciclo.
 
+
+```{r, echo = F, fig.align='center'}
+knitr::include_graphics("figures/forloop.png")
+```
+
+
 ```{r}
 for(k in 1:5){
   print( paste("Iteración", k) )
@@ -32,10 +38,13 @@ for(k in 1:5){
 ```
 
 
-
 - `While`:  iteración limitada a repetirse hasta que se 
 cumple una condición lógica.
 
+
+```{r, echo = F, fig.align='center'}
+knitr::include_graphics("figures/whileloop.png")
+```
 
 
 ```{r}
@@ -59,16 +68,19 @@ Las funciones de esta familia son: [apply()],
 [lapply()], [sapply()], `vapply()`, `mapply()`, 
 `rapply()`, and `tapply()`.
 
+```{block2, type = "comentario"}
 La estructura de los datos de entrada y el formato del resultado o salida
 determinarán cual función usar. 
+```
 
 En este taller solo se verán las primeras tres funciones. 
 
+---
 
 ### apply()
 
-Esta es la función que manipula arreglos homogeneos, por ejemplo,
-vectores y matrices. 
+Esta es la función que manipula arreglos homogeneos, en particular, 
+se revisa el caso de matrices que son arreglos de dos dimensiones.
 
 La función tiene los siguientes argumentos:
 `apply(X, MARGIN, FUN, ...)`
@@ -83,66 +95,80 @@ se va a resumir la información. Donde **1 = renglon o primera dimensión** y
 Tomemos la siguiente matriz de simulaciones
 ```{r}
 set.seed(1)
-mat_norm <- matrix(rnorm(16, mean = 10, sd = 1), nrow = 4)
+mat_norm <- matrix(rnorm(24, mean = 0, sd = 1), nrow = 4, ncol = 6)
 mat_norm
 ```
 
+<br>
 
-Supongamos que deseamos obtener el promedio 
-de cada renglón de la matriz.
+**Deseamos obtener la suma 
+de cada columna de la matriz.**
 
-El primer metodo, quizá mas intuitivo, es 
-obtener cada elemento o renglón, aplicar la función 
+<br>
+
+El primer metodo, quizá el mas intuitivo en este momento, es 
+obtener cada elemento o columna, aplicar la función a cada elemento 
 y concantenar:
 ```{r}
-prom_row_m1 <- c(mean(mat_norm[1, ]), 
-                mean(mat_norm[2, ]), 
-                mean(mat_norm[3, ]), 
-                mean(mat_norm[4, ]))
-prom_row_m1
+prom_col_m1 <- c(sum(mat_norm[, 1]), 
+                 sum(mat_norm[, 2]), 
+                 sum(mat_norm[, 3]), 
+                 sum(mat_norm[, 4]),
+                 sum(mat_norm[, 5]),
+                 sum(mat_norm[, 6]))
+prom_col_m1
 ```
 
 
 Segundo metodo
 ```{r}
-prom_row_m2 <- vector( length = nrow(mat_norm))
-for(i in 1:nrow(mat_norm)){
-  prom_row_m2[i] <- mean(mat_norm[i,])
+prom_col_m2 <- vector( length = ncol(mat_norm))
+for(j in 1:ncol(mat_norm)){
+  prom_col_m2[j] <- sum(mat_norm[, j])
 }
-prom_row_m2
+prom_col_m2
 ```
 
 Tercer metodo
+
+```{r, echo = F, fig.align='center'}
+knitr::include_graphics("figures/applycol.png")
+```
+
+
 ```{r}
-prom_row_m3 <- apply(mat_norm, 1, mean)
-prom_row_m3
+prom_col_m3 <- apply(X = mat_norm, MARGIN = 2, FUN = sum)
+prom_col_m3
 ```
 
 
 Cuarto método
 ```{r}
-prom_row_m4 <- rowMeans(mat_norm)
-prom_row_m4
+prom_col_m4 <- colSums(mat_norm)
+prom_col_m4
 ```
 
 
+<br>
 
-Si quisieramos obtener ahora los promedios 
-por columna, por el tercer método únicamente 
+Ahora, para obtener la suma
+por renglón usando el tercer método de la función
+`apply()`, únicamente 
 es necesario cambiar la dimensión sobre
-la que voy a resumir con el argumento `MARGIN = 2`.
+la que voy a resumir con el argumento `MARGIN = 1`.
 
 ```{r}
-prom_col_m3 <- apply(mat_norm, 2, mean)
+prom_row_m3 <- apply(mat_norm, 1, sum)
+prom_row_m3
 ```
 
-Que es similar al primer método que usamos.
+Que es equivalente al primer método que usamos.
 ```{r}
-prom_col_m1 <- c(mean(mat_norm[, 1]), 
-                mean(mat_norm[, 2]), 
-                mean(mat_norm[, 3]), 
-                mean(mat_norm[, 4]))
-prom_col_m1
+prom_row_m1 <- c(sum(mat_norm[1, ]), 
+                 sum(mat_norm[2, ]), 
+                 sum(mat_norm[3, ]), 
+                 sum(mat_norm[4, ]))
+prom_row_m1
 ```
 
 
@@ -155,25 +181,86 @@ apply(mat_norm, 1, sd)
 ```
 
 
-O bien, una crear una función propia con 
+O bien, una crear una función propia (definida por el usuario) con 
 la función `function()`
 ```{r}
 cv_vec_m3 <- apply(mat_norm, 1, function(reng){
-  mean(reng)/sd(reng)
+  cv <- mean(reng)/sd(reng)
+  return(cv)
 })
 cv_vec_m3
 ```
 
+```{block2, type = "nota"}
+**Funciones Anónimas:**
+
+A este tipo de funciones se les llama
+**funciones anónimas** porque no se nombran ni guardan en
+el ambiente de R
+y únicamente funcionan dentro del
+comando que las llama.
+```
 
 
+
+---
 
 ### lapply()
 
+La función `lapply()` aplica una función sobre
+una lista o un vector y regresa el resultado en 
+otra lista.
+
+
+Usando el vector de ciudades,
+```{r}
+ciudades_vec <- c("Aguascalientes", "Monterrey", "Guadalajara", "México")
+ciudades_vec
+```
+
+
+```{r}
+res_nchar_l <- lapply(ciudades_vec, nchar)
+res_nchar_l
+```
+
+
+```{block2, type = "comentario"}
+Esta función permite implementar funciones que regresen
+objetos de diferentes tipos, porque la listas permiten
+almacenar contenido heterogéneo.
+```
+
+
+<br>
+
+---
 
 ### sapply()
 
 
+La función `sapply()` aplica una función sobre
+una lista o un vector y regresa el resultado en 
+un arreglo.
 
+```{block2, type = "comentario"}
+El nombres de esta función surge de __*simplified apply*__ porque
+simplifica el resultado en arreglos de una o dos dimensiones. 
+```
+
+
+```{r}
+res_nchar_s <- sapply(ciudades_vec, nchar)
+res_nchar_s
+```
+
+
+```{block2, type = "warning"}
+Esta función es *peligrosa* ya que únicamente simplifica
+la estructura del resultado
+cuando es posible, de lo contrario, regresará una lista
+igual que `lapply()`.
+```
 
 
 
@@ -214,4 +301,11 @@ while(ctr <= 7){
 ```
 
 
+
+
+
+
+---
+
+## Ejercicios
 
