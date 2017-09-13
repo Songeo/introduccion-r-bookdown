@@ -1,0 +1,217 @@
+
+
+
+
+# Iteraciones 
+
+```{block2, type = "nota"}
+**Definición:** Acto de repetir un proceso con la 
+intención de alcanzar un objetivo o resultado. 
+
+Replica *automatizada* de instrucciones. 
+
+A cada repetición del proceso se le denomina una **iteración**.
+
+*Looping*, *ciclar*, *iterar*
+```
+
+
+
+<br>
+
+Existen dos tipos de iteraciones o loops:
+
+- `For`: iteración condicionada a repetirse un
+número de veces fijo, controlado por un
+contador o índice que se incrementa con cada ciclo.
+
+```{r}
+for(k in 1:5){
+  print( paste("Iteración", k) )
+}
+```
+
+
+
+- `While`:  iteración limitada a repetirse hasta que se 
+cumple una condición lógica.
+
+
+
+```{r}
+k <- 1
+while(k <= 5){
+  print( paste("Iteración", k) )
+  k <-  k + 1
+}
+```
+
+
+
+
+
+## For loop y familia Apply 
+
+La familia de funciones **apply** pertence a la librería `base` en R y
+facilitan la manipulación de datos de forma repetitiva.
+
+Las funciones de esta familia son: [apply()], 
+[lapply()], [sapply()], `vapply()`, `mapply()`, 
+`rapply()`, and `tapply()`.
+
+La estructura de los datos de entrada y el formato del resultado o salida
+determinarán cual función usar. 
+
+En este taller solo se verán las primeras tres funciones. 
+
+
+### apply()
+
+Esta es la función que manipula arreglos homogeneos, por ejemplo,
+vectores y matrices. 
+
+La función tiene los siguientes argumentos:
+`apply(X, MARGIN, FUN, ...)`
+
+- `X` representa el arreglo de dos dimensiones.
+- `MARGIN` representa la dimensión sobre la que 
+se va a resumir la información. Donde **1 = renglon o primera dimensión** y 
+**2 = columna o segunda dimensión**.
+- `FUN` representa la función que resume la información.
+
+
+Tomemos la siguiente matriz de simulaciones
+```{r}
+set.seed(1)
+mat_norm <- matrix(rnorm(16, mean = 10, sd = 1), nrow = 4)
+mat_norm
+```
+
+
+Supongamos que deseamos obtener el promedio 
+de cada renglón de la matriz.
+
+El primer metodo, quizá mas intuitivo, es 
+obtener cada elemento o renglón, aplicar la función 
+y concantenar:
+```{r}
+prom_row_m1 <- c(mean(mat_norm[1, ]), 
+                mean(mat_norm[2, ]), 
+                mean(mat_norm[3, ]), 
+                mean(mat_norm[4, ]))
+prom_row_m1
+```
+
+
+Segundo metodo
+```{r}
+prom_row_m2 <- vector( length = nrow(mat_norm))
+for(i in 1:nrow(mat_norm)){
+  prom_row_m2[i] <- mean(mat_norm[i,])
+}
+prom_row_m2
+```
+
+Tercer metodo
+```{r}
+prom_row_m3 <- apply(mat_norm, 1, mean)
+prom_row_m3
+```
+
+
+Cuarto método
+```{r}
+prom_row_m4 <- rowMeans(mat_norm)
+prom_row_m4
+```
+
+
+
+Si quisieramos obtener ahora los promedios 
+por columna, por el tercer método únicamente 
+es necesario cambiar la dimensión sobre
+la que voy a resumir con el argumento `MARGIN = 2`.
+
+```{r}
+prom_col_m3 <- apply(mat_norm, 2, mean)
+```
+
+Que es similar al primer método que usamos.
+```{r}
+prom_col_m1 <- c(mean(mat_norm[, 1]), 
+                mean(mat_norm[, 2]), 
+                mean(mat_norm[, 3]), 
+                mean(mat_norm[, 4]))
+prom_col_m1
+```
+
+
+La ventaja de usar la función `apply()` es que 
+se puede usar cualquier función.
+Por ejemplo, obtener la desviación 
+estándar.
+```{r}
+apply(mat_norm, 1, sd)
+```
+
+
+O bien, una crear una función propia con 
+la función `function()`
+```{r}
+cv_vec_m3 <- apply(mat_norm, 1, function(reng){
+  mean(reng)/sd(reng)
+})
+cv_vec_m3
+```
+
+
+
+
+### lapply()
+
+
+### sapply()
+
+
+
+
+
+
+
+---
+
+## While Loop
+
+Implementar un proceso hasta que una condición se cumpla
+
+```{r}
+ctr <- 0
+while(ctr <= 7){
+  
+  print( paste("El valor de ctr", ctr))
+  print( paste("El resultado de la condicion", ctr <= 7))
+  print(ctr)
+  
+  ctr = ctr + 1
+}
+```
+
+
+Break statement `break()`
+
+
+```{r}
+ctr <- 1
+while(ctr <= 7){
+  print( paste("El valor de ctr", ctr))
+  print( paste("El resultado de la condicion", ctr <= 7))
+  
+  if((ctr %% 5) == 0){
+    break()
+  }
+  ctr = ctr + 1
+}
+```
+
+
+
