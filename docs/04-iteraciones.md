@@ -73,7 +73,7 @@ while(k <= 5){
 
 ## For loop y familia Apply 
 
-La familia de funciones **apply** pertence a la librería `base` en R y
+La familia de funciones **apply** pertenece a la librería `base` en R y
 facilitan la manipulación de datos de forma repetitiva.
 
 Las funciones de esta familia son: [apply()], 
@@ -89,7 +89,7 @@ En este taller solo se verán las primeras tres funciones.
 
 ### apply()
 
-Esta es la función que manipula arreglos homogeneos, en particular, 
+Esta es la función que manipula arreglos homogéneos, en particular, 
 se revisa el caso de matrices que son arreglos de dos dimensiones.
 
 La función tiene los siguientes argumentos:
@@ -125,9 +125,9 @@ de cada columna de la matriz.**
 
 <br>
 
-El primer metodo, quizá el mas intuitivo en este momento, es 
+El primer método, quizá el mas intuitivo en este momento, es 
 obtener cada elemento o columna, aplicar la función a cada elemento 
-y concantenar:
+y concatenar:
 
 ```r
 prom_col_m1 <- c(sum(mat_norm[, 1]), 
@@ -144,7 +144,7 @@ prom_col_m1
 ```
 
 
-Segundo metodo
+Segundo método
 
 ```r
 prom_col_m2 <- vector( length = ncol(mat_norm))
@@ -158,7 +158,7 @@ prom_col_m2
 ## [1]  0.3168417  0.7347931  2.1720174 -1.7559432  2.3427685 -0.2136730
 ```
 
-Tercer metodo
+Tercer método
 
 <img src="figures/applycol.png" style="display: block; margin: auto;" />
 
@@ -304,6 +304,75 @@ res_nchar_l
 objetos de diferentes tipos, porque la listas permiten
 almacenar contenido heterogéneo.</div>\EndKnitrBlock{comentario}
 
+<br>
+
+La función `lapply()` permite incluir 
+argumentos de las funciones que implementa. 
+Estos argumentos se incluyen dentro 
+de `lapply()` despues de la función a implementar.
+
+Por ejemplo, usamos la función potencia que 
+se creó antes.
+
+
+```r
+potencia_fun <- function(base, exponente){
+  base^exponente
+}
+```
+
+El objetivo es aplicar a cada elemento de la 
+siguiente lista la función potencia y elevarlo al cubo. 
+
+```r
+nums_lista <- list(1, 3, 4)
+nums_lista
+```
+
+```
+## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 3
+## 
+## [[3]]
+## [1] 4
+```
+
+En la función `lapply()` se agrega el argumento `exponente = 3`
+como último argumento. 
+
+```r
+potencia_lista <- lapply(nums_lista, potencia_fun, exponente = 3)
+potencia_lista
+```
+
+```
+## [[1]]
+## [1] 1
+## 
+## [[2]]
+## [1] 27
+## 
+## [[3]]
+## [1] 64
+```
+
+
+Una forma de reducir la lista obtenida a un 
+vector es con la función `unlist()` que vimos antes.
+
+
+```r
+unlist(potencia_lista)
+```
+
+```
+## [1]  1 27 64
+```
+
+
 
 <br>
 
@@ -312,12 +381,13 @@ almacenar contenido heterogéneo.</div>\EndKnitrBlock{comentario}
 ### sapply()
 
 
-La función `sapply()` aplica una función sobre
-una lista o un vector y regresa el resultado en 
-un arreglo.
+La función `sapply()` es muy similar a `lapply()`. 
+La única diferencia es la **s** que surge de 
+**simplified apply**. 
 
-\BeginKnitrBlock{comentario}<div class="comentario">El nombres de esta función surge de __*simplified apply*__ porque
-simplifica el resultado en arreglos de una o dos dimensiones. </div>\EndKnitrBlock{comentario}
+Al igual que `lapply()` aplica una función sobre
+una lista o un vector pero simplifica el resultado en
+un arreglo.
 
 
 
@@ -344,8 +414,10 @@ igual que `lapply()`.</div>\EndKnitrBlock{warning}
 
 ## While Loop
 
-Implementar un proceso hasta que una condición se cumpla
+Este tipo de iteraciones 
+implementan un proceso hasta que una condición se cumple.
 
+Por ejemplo:
 
 ```r
 ctr <- 0
@@ -387,8 +459,11 @@ while(ctr <= 7){
 ```
 
 
-Break statement `break()`
-
+Existen ocasiones en las que la condición 
+puede tardar mucho en cimplirse o incluso no cumplirse y 
+queremos **interrumpir** el loop. 
+La función `break()` o *break statement*
+nos permite hacerlo.
 
 
 ```r
@@ -425,4 +500,334 @@ while(ctr <= 7){
 ---
 
 ## Ejercicios
+
+
+### Ej: Ciudad de México
+
+Considerando la lista siguiente,
+
+
+```r
+cdmx_list <- list(
+  pop = 8918653,
+  delegaciones = c("Alvaro Obregón", "Azcapotzalco" ,"Benito Juárez" ,
+                   "Coyoacán" ,"Cuajimalpa de Morelos" ,"Cuauhtémoc" ,
+                   "Gustavo A. Madero" ,
+                   "Iztacalco" ,"Iztapalapa" ,
+                   "Magdalena Contreras" ,"Miguel Hidalgo" ,"Milpa Alta" ,
+                   "Tláhuac" ,"Tlalpan" ,
+                   "Venustiano Carranza" ,"Xochimilco"),
+  capital = TRUE
+)
+```
+
+
+obten la clase 
+de cada elemento con la función `lapply()`.
+
+
+```r
+lapply( , class)
+```
+
+
+---
+
+### Ej: Mínimo y máximo
+
+La siguiente función extrae la letra de menor posicion
+y mayor posicion en orden alfabético. 
+
+```r
+min_max_fun <- function(nombre){
+  nombre_sinespacios <- gsub(" ", "", nombre)
+  letras <- strsplit(nombre_sinespacios, split = "")[[1]]
+  c(minimo = min(letras), maximo = max(letras))
+}
+```
+
+Es decir, si incluímos las letras `abcz` la letra 
+*mínima* es a y la *máxima* es z.
+
+```r
+min_max_fun("abcz")
+```
+
+```
+## minimo maximo 
+##    "a"    "z"
+```
+
+
+El siguiente vector incluye el nombre 
+de las 16 delegaciones de la Ciudad de México.
+
+```r
+delegaciones <- c("Alvaro Obregon", "Azcapotzalco" ,"Benito Juarez" ,
+                   "Coyoacan" ,"Cuajimalpa de Morelos" ,"Cuauhtemoc" ,
+                   "Gustavo Madero" ,
+                   "Iztacalco" ,"Iztapalapa" ,
+                   "Magdalena Contreras" ,"Miguel Hidalgo" ,"Milpa Alta" ,
+                   "Tlahuac" ,"Tlalpan" ,
+                   "Venustiano Carranza" ,"Xochimilco")
+```
+
+
+Aplica la función `sapply()` para obtener un 
+arreglo con la letra máxima y mínima de cada nombre. 
+
+
+```r
+sapply(, )
+```
+
+
+
+
+---
+
+
+### Ej: Precio de la gasolina
+
+El siguiente vector incluye el precio de la
+gasolina en diferentes estados del país en julio 
+de 2017. 
+
+
+```r
+gas_cdmx <- c(15.82, 15.77, 15.83, 15.23, 14.95, 15.42, 15.55)
+gas_cdmx
+```
+
+```
+## [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55
+```
+
+
+1. Crea una función que convierta el precio a dolares
+suponiendo que un dolar equivale a 17.76 pesos.
+
+
+```r
+conv_fun <- function(precio){
+  /17.76
+  return()
+}
+```
+
+
+
+2. Usando la función `lapply()`
+convierte el precio de la gasolina a dolares.
+
+
+```r
+gas_cdmx_usd_lista <- lapply(, conv_fun)
+```
+
+
+
+3. Usa la función `unlist()` para convertir la 
+lista a un vector. 
+
+
+
+```r
+gas_cdmx_usd <- unlist()
+print(gas_cdmx_usd)
+```
+
+
+
+
+
+
+---
+
+
+### Ej: Estadísticos importantes
+
+
+
+```r
+estadisticos <- c("GAUSS:1777", "BAYES:1702", "FISHER:1890", "PEARSON:1857")
+split_estadisticos <- strsplit(estadisticos, split = ":")
+split_estadisticos
+```
+
+```
+## [[1]]
+## [1] "GAUSS" "1777" 
+## 
+## [[2]]
+## [1] "BAYES" "1702" 
+## 
+## [[3]]
+## [1] "FISHER" "1890"  
+## 
+## [[4]]
+## [1] "PEARSON" "1857"
+```
+
+Usa la función predefinida `tolower()` y 
+`lapply()` para convertir a minúsculas 
+cada letra de la lista `split_estadisticos`.
+
+
+```r
+split_lower <- lapply( , )
+print(split_lower)
+```
+
+
+---
+
+### Ej: Nombres y fechas
+
+Usando el vector `split_estadísticos` del 
+ejercicio anterior.
+
+1. Crea una función que regrese la 
+primera posición. 
+
+
+```r
+primera_pos_fun <- function(lista){
+  
+}
+```
+
+2. Crea una función que 
+regrese la segunda posición.
+
+```r
+segunda_pos_fun <- function(lista){
+  
+}
+```
+
+
+3. Usando `lapply()` crea una lista con los
+nombres de los estadísticos
+y otra con la fecha de nacimiento. 
+
+
+```r
+nombres <- lapply()
+fechas <- lapply()
+```
+
+
+
+---
+
+
+### Ej: Función anónima
+
+Usando una función anónima y el vector `split_estadísticos` 
+en un solo `lapply()` o `sapply()` obten 
+un vector compuesto de la primera posición, es decir el nombre,
+en minúsculas. 
+
+Tip: si usas `lapply()` recuerda usar la función `unlist()`.
+
+
+```r
+nombre_estadisticos <- (split_estadisticos, function(elemento){
+  tolower()
+})
+nombre_estadisticos
+```
+
+
+---
+
+### Ej: Tempraturas
+
+En la siguiente lista se presenta el registro 
+de temperatura de tres ciudades
+a las 07:00 am, 10:00 am, 01:00 pm, 
+04:00 pm y  07:00 pm.
+
+```r
+temp_lista <- list(
+  cdmx = c(13, 15, 19, 22, 20),
+  guadalajara = c(18, 18, 22, 26, 27),
+  tuxtla_gtz = c(22, 24, 29, 32, 28)
+)
+str(temp_lista)
+```
+
+```
+## List of 3
+##  $ cdmx       : num [1:5] 13 15 19 22 20
+##  $ guadalajara: num [1:5] 18 18 22 26 27
+##  $ tuxtla_gtz : num [1:5] 22 24 29 32 28
+```
+
+Completa la siguiente función que obtiene el promedio entre
+el valor mínimo y máximo registrados. 
+
+```r
+promedio_extremos_fun <-  function(x) {
+  ( min() + max() ) / 2
+}
+```
+
+Implementa la función a la lista y obten
+la temperatura promedio de extremos para cada
+ciudad usando `lapply()` y `sapply()`.
+
+
+```r
+lapply(,)
+```
+
+
+```r
+sapply(,)
+```
+
+
+
+
+
+
+
+
+---
+
+### Ej: Reducción de velocidad
+
+Crea una función del tipo `while` en la que 
+mientras la velocidad sea mayor a 50 km/hr 
+se reduzca de la siguiente forma:
+
+- Si es mayor a 80 km/hr se reducen 20 km/hr e imprime
+**¡Demasido rápido!**.
+
+- Si es menor o igual a 80km/hr se reducen únicamente 
+5 km/hr.
+
+
+
+```r
+velocidad_act <- 140
+while(velocidad_act > ){
+  
+  if(velocidad_act > ){
+    print()
+    velocidad_act <- 
+  }
+  if(velocidad_act < ){
+    velocidad_act <- 
+  }
+  
+  velocidad_act
+}
+```
+
+
+
+
 

@@ -1168,7 +1168,7 @@ ejem_list
 
 ### Nombres de elementos
 
-Similar a un vector, la función `names()` permite
+Equivalente a un vector, la función `names()` permite
 extraer el nombre de cada elemento de la lista.
 
 ```{r}
@@ -1189,10 +1189,103 @@ dice cuantos elementos tiene la lista.
 length(ejem_list)
 ```
 
+
+
+<br>
+
+---
+
+### Selección de elementos en una lista
+
+La selección de elementos de una lista puede 
+realizarse de tres maneras: 
+
+1. `[ ]`
+
+
+```{r}
+ejem_list[1]
+```
+
+2. `[[ ]]`
+
+```{r}
+ejem_list[[1]]
+```
+
+3. `$`
+
+```{r}
+ejem_list$vector
+```
+
+<br>
+
+---
+
+### Nuevos valores a la lista
+
+Existen dos formas de agregar nuevos valores a la 
+lista. 
+
+Supongamos que deseamos agregar a la 
+lista de ejemplos 
+un número aleatorio de la distribución normal.
+
+```{r}
+rand_num <- rnorm(1)
+rand_num
+```
+
+
+Una forma es usando la función combine `c()`,
+similar a un vector: 
+```{r}
+ejem_list_random <- c(ejem_list, 
+                           random = rand_num)
+ejem_list_random
+```
+
+
+La segunda es usando el signo `$` 
+
+```{r}
+ejem_list_random$random_num <- rand_num
+ejem_list_random
+```
+
+
+<br>
+
+---
+
+### Funciones útiles para listas
+
+Algunas funciones que pueden ayudarte en un futuro 
+para manipular listas son:
+
+- `unlist()`
+
+```{r}
+unlist(ejem_list)
+```
+
+- `str()`
+
+```{r}
+str(ejem_list)
+```
+
+
+
 <br>
 
 
-#### Ej: Hidden Figures IMDB {-}
+---
+
+## Ejercicios 
+
+### Ej: Hidden Figures IMDB
 
 Usando los siguientes objetos crea una lista 
 de tres elementos con nombres: director, stars y reviews.
@@ -1215,8 +1308,12 @@ reviews_hf <- data.frame(
 La lista se llama `hidden_figures`:
 
 ```{r, eval = F}
-hidden_figures <- list()
-hidden_figures
+hidden_figures <- list(
+  director = ,
+  stars = ,
+  reviews = 
+)
+str(hidden_figures)
 ```
 
 
@@ -1228,71 +1325,14 @@ hidden_figures <- list(
 )
 ```
 
-<br>
+
+
+
+
 
 ---
 
-### Selección de elementos en una lista
-
-La selección de elementos de una lista puede 
-realizarse de tres maneras: 
-
-1. `[ ]`
-
-```{r}
-hidden_figures[1]
-```
-
-2. `[[ ]]`
-
-```{r}
-hidden_figures[[1]]
-```
-
-3. `$`
-
-```{r}
-hidden_figures$director
-```
-
-<br>
-
----
-
-### Nuevos valores a la lista
-
-Existen dos formas de agregar nuevos valores a la 
-lista. 
-
-Supongamos que deseamos agregar a la 
-lista de Hidden Figures 
-el presupuesto de la película.
-
-```{r}
-budget_hf <- 25000000
-```
-
-
-Una forma es usando la función combine `c()`,
-similar a un vector: 
-```{r}
-hidden_figures_budget <- c(hidden_figures, 
-                           budget = budget_hf)
-hidden_figures_budget
-```
-
-
-La segunda es usando el signo `$` 
-
-```{r}
-hidden_figures_budget$budget_millions <- budget_hf/1e6
-hidden_figures_budget
-```
-
-
-<br>
-
-#### Ej: Calificación promedio {-}
+### Ej: Calificación promedio
 
 Extrae los scores de la película `hidden_figures` y 
 con la función `mean()` calcula el promedio. 
@@ -1300,6 +1340,11 @@ con la función `mean()` calcula el promedio.
 1. Primero deberás extraer el elemento que contiene los scores. Es un dataframe.
 2. Después deberás seleccionar la columna de *scores*.
 3. Por último calcular el promedio y asignarlo a `avg_reviews_hf`.
+
+
+Tip: Usando la función `str()` sobre la lista ubica el nivel
+en el que esta el valor *scores*.
+
 
 ```{r, eval = F}
 reviews_df <- hidden_figures
@@ -1315,28 +1360,35 @@ avg_reviews_hf <- mean(reviews_vec) # 7.5
 ```
 
 
-
-<br>
-
 ---
 
-### Funciones útiles para listas
+### Ej: Pesos a dolares
 
-Algunas funciones que pueden ayudarte en un futuro 
-para manipular listas son:
-
-- `unlist()`
+El siguiente vector presenta el precio de 
+la gasolina en diferentes localidades. 
 
 ```{r}
-unlist(hidden_figures)
+gas_cdmx <- c(15.82, 15.77, 15.83, 15.23, 14.95, 15.42, 15.55)
+gas_cdmx
+```
+"¡Demasido rápido!"
+Usando la siguiente lista de tipo de cambio por mes:
+
+- Julio: 17.3808 
+- Agosto: 17.6084  
+- Septiembre: 17.7659 
+
+Crea un dataframe donde cada 
+variable/columnda sea el precio en dolares 
+por cada mes. 
+
+```{r, eval = F}
+gas_usd_df <- data.frame(
+  julio = gas_cdmx/
+  agosto = 
+  septiembre = 
+)
+print(gas_usd_df)
 ```
 
-- `str()`
 
-```{r}
-str(hidden_figures)
-```
-
-
-
-<br>

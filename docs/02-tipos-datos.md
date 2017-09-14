@@ -1186,11 +1186,11 @@ muestra_df
 
 ```
 ##   secuencia  aleatorio letras
-## 1         1 -0.4301201      a
-## 2         2  0.8254868      b
-## 3         3  0.3546985      c
-## 4         4 -0.3965217      d
-## 5         5  0.1361696      e
+## 1         1 -0.7527286      a
+## 2         2 -0.2960406      b
+## 3         3  0.1069921      c
+## 4         4  0.7068984      d
+## 5         5  0.1953435      e
 ```
 
 O bien, se pude transformar una matriz con la misma
@@ -1667,7 +1667,7 @@ ejem_list
 
 ### Nombres de elementos
 
-Similar a un vector, la función `names()` permite
+Equivalente a un vector, la función `names()` permite
 extraer el nombre de cada elemento de la lista.
 
 
@@ -1718,10 +1718,216 @@ length(ejem_list)
 ## [1] 3
 ```
 
+
+
+<br>
+
+---
+
+### Selección de elementos en una lista
+
+La selección de elementos de una lista puede 
+realizarse de tres maneras: 
+
+1. `[ ]`
+
+
+
+```r
+ejem_list[1]
+```
+
+```
+## $vec
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+2. `[[ ]]`
+
+
+```r
+ejem_list[[1]]
+```
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+3. `$`
+
+
+```r
+ejem_list$vector
+```
+
+```
+## NULL
+```
+
+<br>
+
+---
+
+### Nuevos valores a la lista
+
+Existen dos formas de agregar nuevos valores a la 
+lista. 
+
+Supongamos que deseamos agregar a la 
+lista de ejemplos 
+un número aleatorio de la distribución normal.
+
+
+```r
+rand_num <- rnorm(1)
+rand_num
+```
+
+```
+## [1] 0.9364734
+```
+
+
+Una forma es usando la función combine `c()`,
+similar a un vector: 
+
+```r
+ejem_list_random <- c(ejem_list, 
+                           random = rand_num)
+ejem_list_random
+```
+
+```
+## $vec
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $mat
+##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9
+## 
+## $df
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## 
+## $random
+## [1] 0.9364734
+```
+
+
+La segunda es usando el signo `$` 
+
+
+```r
+ejem_list_random$random_num <- rand_num
+ejem_list_random
+```
+
+```
+## $vec
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## 
+## $mat
+##      [,1] [,2] [,3]
+## [1,]    1    4    7
+## [2,]    2    5    8
+## [3,]    3    6    9
+## 
+## $df
+##                    mpg cyl disp  hp drat    wt  qsec vs am gear carb
+## Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+## Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+## Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+## Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+## 
+## $random
+## [1] 0.9364734
+## 
+## $random_num
+## [1] 0.9364734
+```
+
+
+<br>
+
+---
+
+### Funciones útiles para listas
+
+Algunas funciones que pueden ayudarte en un futuro 
+para manipular listas son:
+
+- `unlist()`
+
+
+```r
+unlist(ejem_list)
+```
+
+```
+##     vec1     vec2     vec3     vec4     vec5     vec6     vec7     vec8 
+##    1.000    2.000    3.000    4.000    5.000    6.000    7.000    8.000 
+##     vec9    vec10     mat1     mat2     mat3     mat4     mat5     mat6 
+##    9.000   10.000    1.000    2.000    3.000    4.000    5.000    6.000 
+##     mat7     mat8     mat9  df.mpg1  df.mpg2  df.mpg3  df.mpg4  df.mpg5 
+##    7.000    8.000    9.000   21.000   21.000   22.800   21.400   18.700 
+##  df.cyl1  df.cyl2  df.cyl3  df.cyl4  df.cyl5 df.disp1 df.disp2 df.disp3 
+##    6.000    6.000    4.000    6.000    8.000  160.000  160.000  108.000 
+## df.disp4 df.disp5   df.hp1   df.hp2   df.hp3   df.hp4   df.hp5 df.drat1 
+##  258.000  360.000  110.000  110.000   93.000  110.000  175.000    3.900 
+## df.drat2 df.drat3 df.drat4 df.drat5   df.wt1   df.wt2   df.wt3   df.wt4 
+##    3.900    3.850    3.080    3.150    2.620    2.875    2.320    3.215 
+##   df.wt5 df.qsec1 df.qsec2 df.qsec3 df.qsec4 df.qsec5   df.vs1   df.vs2 
+##    3.440   16.460   17.020   18.610   19.440   17.020    0.000    0.000 
+##   df.vs3   df.vs4   df.vs5   df.am1   df.am2   df.am3   df.am4   df.am5 
+##    1.000    1.000    0.000    1.000    1.000    1.000    0.000    0.000 
+## df.gear1 df.gear2 df.gear3 df.gear4 df.gear5 df.carb1 df.carb2 df.carb3 
+##    4.000    4.000    4.000    3.000    3.000    4.000    4.000    1.000 
+## df.carb4 df.carb5 
+##    1.000    2.000
+```
+
+- `str()`
+
+
+```r
+str(ejem_list)
+```
+
+```
+## List of 3
+##  $ vec: int [1:10] 1 2 3 4 5 6 7 8 9 10
+##  $ mat: int [1:3, 1:3] 1 2 3 4 5 6 7 8 9
+##  $ df :'data.frame':	5 obs. of  11 variables:
+##   ..$ mpg : num [1:5] 21 21 22.8 21.4 18.7
+##   ..$ cyl : num [1:5] 6 6 4 6 8
+##   ..$ disp: num [1:5] 160 160 108 258 360
+##   ..$ hp  : num [1:5] 110 110 93 110 175
+##   ..$ drat: num [1:5] 3.9 3.9 3.85 3.08 3.15
+##   ..$ wt  : num [1:5] 2.62 2.88 2.32 3.21 3.44
+##   ..$ qsec: num [1:5] 16.5 17 18.6 19.4 17
+##   ..$ vs  : num [1:5] 0 0 1 1 0
+##   ..$ am  : num [1:5] 1 1 1 0 0
+##   ..$ gear: num [1:5] 4 4 4 3 3
+##   ..$ carb: num [1:5] 4 4 1 1 2
+```
+
+
+
 <br>
 
 
-#### Ej: Hidden Figures IMDB {-}
+---
+
+## Ejercicios 
+
+### Ej: Hidden Figures IMDB
 
 Usando los siguientes objetos crea una lista 
 de tres elementos con nombres: director, stars y reviews.
@@ -1746,140 +1952,25 @@ La lista se llama `hidden_figures`:
 
 
 ```r
-hidden_figures <- list()
-hidden_figures
+hidden_figures <- list(
+  director = ,
+  stars = ,
+  reviews = 
+)
+str(hidden_figures)
 ```
 
 
 
 
-<br>
+
+
+
+
 
 ---
 
-### Selección de elementos en una lista
-
-La selección de elementos de una lista puede 
-realizarse de tres maneras: 
-
-1. `[ ]`
-
-
-```r
-hidden_figures[1]
-```
-
-```
-## $director
-## [1] "Theodore Melfi"
-```
-
-2. `[[ ]]`
-
-
-```r
-hidden_figures[[1]]
-```
-
-```
-## [1] "Theodore Melfi"
-```
-
-3. `$`
-
-
-```r
-hidden_figures$director
-```
-
-```
-## [1] "Theodore Melfi"
-```
-
-<br>
-
----
-
-### Nuevos valores a la lista
-
-Existen dos formas de agregar nuevos valores a la 
-lista. 
-
-Supongamos que deseamos agregar a la 
-lista de Hidden Figures 
-el presupuesto de la película.
-
-
-```r
-budget_hf <- 25000000
-```
-
-
-Una forma es usando la función combine `c()`,
-similar a un vector: 
-
-```r
-hidden_figures_budget <- c(hidden_figures, 
-                           budget = budget_hf)
-hidden_figures_budget
-```
-
-```
-## $director
-## [1] "Theodore Melfi"
-## 
-## $stars
-## [1] "Taraji P. Henson" "Octavia Spencer"  "Janelle Monáe"   
-## [4] "Kirsten Dunst"    "Kevin Costner"    "Jim Parsons"     
-## [7] "Mahershala Ali"  
-## 
-## $reviews
-##   scores source                                               comments
-## 1      9   IMDB It made for an old-fashioned movie going experience...
-## 2      6   IMDB                         Evident Heroism, Hidden Doubts
-## 3      5   IMDB                             OK, but very disappointing
-## 4     10   IMDB         Don't let Hidden Figures be a hidden treasure!
-## 
-## $budget
-## [1] 2.5e+07
-```
-
-
-La segunda es usando el signo `$` 
-
-
-```r
-hidden_figures_budget$budget_millions <- budget_hf/1e6
-hidden_figures_budget
-```
-
-```
-## $director
-## [1] "Theodore Melfi"
-## 
-## $stars
-## [1] "Taraji P. Henson" "Octavia Spencer"  "Janelle Monáe"   
-## [4] "Kirsten Dunst"    "Kevin Costner"    "Jim Parsons"     
-## [7] "Mahershala Ali"  
-## 
-## $reviews
-##   scores source                                               comments
-## 1      9   IMDB It made for an old-fashioned movie going experience...
-## 2      6   IMDB                         Evident Heroism, Hidden Doubts
-## 3      5   IMDB                             OK, but very disappointing
-## 4     10   IMDB         Don't let Hidden Figures be a hidden treasure!
-## 
-## $budget
-## [1] 2.5e+07
-## 
-## $budget_millions
-## [1] 25
-```
-
-
-<br>
-
-#### Ej: Calificación promedio {-}
+### Ej: Calificación promedio
 
 Extrae los scores de la película `hidden_figures` y 
 con la función `mean()` calcula el promedio. 
@@ -1887,6 +1978,11 @@ con la función `mean()` calcula el promedio.
 1. Primero deberás extraer el elemento que contiene los scores. Es un dataframe.
 2. Después deberás seleccionar la columna de *scores*.
 3. Por último calcular el promedio y asignarlo a `avg_reviews_hf`.
+
+
+Tip: Usando la función `str()` sobre la lista ubica el nivel
+en el que esta el valor *scores*.
+
 
 
 ```r
@@ -1899,57 +1995,41 @@ avg_reviews_hf
 
 
 
-
-<br>
-
 ---
 
-### Funciones útiles para listas
+### Ej: Pesos a dolares
 
-Algunas funciones que pueden ayudarte en un futuro 
-para manipular listas son:
-
-- `unlist()`
+El siguiente vector presenta el precio de 
+la gasolina en diferentes localidades. 
 
 
 ```r
-unlist(hidden_figures)
+gas_cdmx <- c(15.82, 15.77, 15.83, 15.23, 14.95, 15.42, 15.55)
+gas_cdmx
 ```
 
 ```
-##           director             stars1             stars2 
-##   "Theodore Melfi" "Taraji P. Henson"  "Octavia Spencer" 
-##             stars3             stars4             stars5 
-##    "Janelle Monáe"    "Kirsten Dunst"    "Kevin Costner" 
-##             stars6             stars7    reviews.scores1 
-##      "Jim Parsons"   "Mahershala Ali"                "9" 
-##    reviews.scores2    reviews.scores3    reviews.scores4 
-##                "6"                "5"               "10" 
-##    reviews.source1    reviews.source2    reviews.source3 
-##                "1"                "1"                "1" 
-##    reviews.source4  reviews.comments1  reviews.comments2 
-##                "1"                "3"                "2" 
-##  reviews.comments3  reviews.comments4 
-##                "4"                "1"
+## [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55
 ```
+"¡Demasido rápido!"
+Usando la siguiente lista de tipo de cambio por mes:
 
-- `str()`
+- Julio: 17.3808 
+- Agosto: 17.6084  
+- Septiembre: 17.7659 
+
+Crea un dataframe donde cada 
+variable/columnda sea el precio en dolares 
+por cada mes. 
 
 
 ```r
-str(hidden_figures)
-```
-
-```
-## List of 3
-##  $ director: chr "Theodore Melfi"
-##  $ stars   : chr [1:7] "Taraji P. Henson" "Octavia Spencer" "Janelle Monáe" "Kirsten Dunst" ...
-##  $ reviews :'data.frame':	4 obs. of  3 variables:
-##   ..$ scores  : num [1:4] 9 6 5 10
-##   ..$ source  : Factor w/ 1 level "IMDB": 1 1 1 1
-##   ..$ comments: Factor w/ 4 levels "Don't let Hidden Figures be a hidden treasure!",..: 3 2 4 1
+gas_usd_df <- data.frame(
+  julio = gas_cdmx/
+  agosto = 
+  septiembre = 
+)
+print(gas_usd_df)
 ```
 
 
-
-<br>

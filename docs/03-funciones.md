@@ -7,7 +7,7 @@ todo lo que pasa en R es una función.
 
 R es un lenguaje de programación funcional. Es decir, 
 proporciona muchas herramientas para la creación y 
-manupilación de funciones. 
+manipulación de funciones. 
 
 En R las funciones, al igual que los vectores, se
 pueden asignar a variables, guardarlas en listas, 
@@ -20,8 +20,9 @@ regresar como resultado de una función más funciones.
 ### Una caja negra {-}
 
 \BeginKnitrBlock{information}<div class="information">Una función puede verse como una caja negra
-que realiza un proceso dado algun valor de entrada
-y regresa una salida. </div>\EndKnitrBlock{information}
+que realiza un proceso o serie de instrucciones
+condicionadas a un valor de entrada
+cuyo resultas es un valor de salida. </div>\EndKnitrBlock{information}
 
 
 <img src="figures/functions-blackbox.png" style="display: block; margin: auto;" />
@@ -43,6 +44,8 @@ output
 ```
 
 
+Sin embargo, también es posible escribir nuestras propias
+funciones. 
 
 <br>
 
@@ -54,12 +57,13 @@ En R es posible escribir funciones y es muy recomendable
 para dar soluciones a problemas simples. 
 
 Existen ocasiones en las que al programar
-repites cierto código varias veces para una meta en especial. 
+copias y pegas cierto código varias veces
+para una meta en especial. 
 En ese momento, es necesario 
 pasar el código a una función. 
 
 
-\BeginKnitrBlock{nota}<div class="nota">Una función soluciona un problema definido en particular. </div>\EndKnitrBlock{nota}
+\BeginKnitrBlock{nota}<div class="nota">Una función soluciona un problema en particular. </div>\EndKnitrBlock{nota}
 
 
 La función `function()` nos permite 
@@ -74,6 +78,9 @@ my_fun <- function( arg1 ){
   return()
 }
 ```
+
+\BeginKnitrBlock{warning}<div class="warning">En general, esta estructura se respeta en las funciones
+predeterminadas de R.</div>\EndKnitrBlock{warning}
 
 
 
@@ -98,7 +105,8 @@ suma_uno_fun(5)
 ## [1] 6
 ```
 
-Podemos ver que en nuestra sesión ya existe la función.
+Podemos ver que en nuestra sesión ya existe la función con 
+la función `ls()`. 
 
 ```r
 ls()
@@ -108,33 +116,12 @@ ls()
 ## [1] "input"        "output"       "suma_uno_fun"
 ```
 
+Esta función en lista los objetos 
+existente en la sesión actual.
 
 <br>
 
-#### Ej: Suma de valores absolutos {-}
 
-Crea una función que sume los valores
-absolutos de dos números. Los argumentos 
-deben ser estos números. 
-
-Tip: Usa la función `abs()` para obtener 
-el valor absoluto de la función.
-
-
-```r
-suma_abs_fun <- function(a, b){
-  
-}
-suma_abs_fun(-4, 2) 
-```
-
-
-```
-## [1] 6
-```
-
-
-<br>
 
 ---
 
@@ -142,7 +129,7 @@ suma_abs_fun(-4, 2)
 ## Argumentos de funciones
 
 En R los argumentos de las funciones pueden llamarse por
-posición o nombre. 
+**posición** o **nombre**. 
 
 Por ejemplo, considerando la siguiente función
 en la que se eleva un numero 
@@ -181,7 +168,7 @@ potencia_fun(exponente = 2, base = 3)
 ### Argumentos predeterminados
 
 En una función es posible asignar 
-valores predeterminados a los argumentos
+valores predeterminados a los argumentos.
 
 Por ejemplo, modificamos la función
 para asignar un valor predeterminado 
@@ -194,7 +181,8 @@ potencia_default_fun <- function(base, exponente = 2){
 ```
 
 Al llamar la función, no es necesario 
-definir un valor para el exponente.
+definir un valor para el exponente y 
+en automático tomará el valor `exponente = 2`.
 
 
 ```r
@@ -211,9 +199,9 @@ potencia_default_fun(2)
 Una función puede no tener argumentos y 
 simplemente correr un proceso. 
 
-En este caso, la función `sample()` elige una
+En este caso, usaremos la función `sample()` que elige una
 muestra aleatoria de tamaño 1 de un vector de 1 a 6
-imitando un dado.
+imitando un dado dentro la la función `lanza_dado()`.
 
 ```r
 lanza_dado <- function() {
@@ -224,24 +212,27 @@ lanza_dado <- function() {
 
 Ahora tiraremos dos veces los dados.
 
-```r
-lanza_dado()
-```
-
-```
-## [1] 3
-```
-
+**Primer lanzamiento:**
 
 ```r
 lanza_dado()
 ```
 
 ```
-## [1] 6
+## [1] 4
 ```
 
-Cada lanzamiento obtiene un resultado diferente.
+**Segundo lanzamiento:**
+
+```r
+lanza_dado()
+```
+
+```
+## [1] 5
+```
+
+
 
 
 
@@ -300,8 +291,36 @@ ys_fun(2)
 ## [1] 20
 ```
 
-O bien, si la función está contenida en otra función, primero buscará
-en el ambiente local de la función superior y luego en el ambiente global.
+Si la función está contenida en otra función, primero buscará
+en el ambiente local, después en el ambiente local
+de la función superior y luego en el 
+ambiente global.
+
+Por ejemplo:
+
+```r
+y <- 10
+mas_uno_fun <- function(a){
+  c <- 1
+  y <- 1
+  ys_add_fun <- function(a){
+    a*y + c
+  }
+  ys_add_fun(a)
+}
+```
+
+Si llamamos la función con un valor `a = 2` al igual que 
+en el ejemplo anterior, ¿por qué da el siguiente resultado y no 21 o 20?
+
+```r
+mas_uno_fun(a = 2)
+```
+
+```
+## [1] 3
+```
+
 
 
 
@@ -365,7 +384,7 @@ args(mean.default)
 - `if()`
 
 Una función que se usa al programar funciones
-es la función `if()` que permite
+es `if()` que permite
 agregar una condición. 
 
 
@@ -380,7 +399,7 @@ divide_fun <- function(num, den){
 ```
 
 Al ejecutar la función y tener cero en el denominador
-obtenemos un caracter.
+imprime el string.
 
 ```r
 divide_fun(10, 0)
@@ -404,59 +423,6 @@ divide_fun(10, 2)
 
 
 
-<br> 
-
-#### Ej: Likes {-}
-
-Considerando el siguiente vector de likes
-de cada día de la semana.
-
-
-```r
-likes <- c(16, 7, 9, 20, 2, 17, 11)
-names(likes) <-  c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
-likes
-```
-
-```
-## Mon Tue Wed Thu Fri Sat Sun 
-##  16   7   9  20   2  17  11
-```
-
-Crea una función en la
-imprima *Hoy fuiste popular* si
-los likes del día fueron mayores a 15 y
-regrese el número de likes.
-
-Si el número de likes es menor a 15, entonces
-imprime *:(* y regresa 0.
-
-Usa la función `print()`.
-
-
-```r
-likes_fun <- function(num) {
-  if (num > ) {
-    print()
-    return()
-  } else {
-    print()    
-    return()
-  }
-}
-```
-
-Prueba la función para el primer elemento 
-del vector `likes`.
-
-```r
-likes_fun(likes[1])
-```
-
-
-
-
-
 <br>
 
 ---
@@ -465,7 +431,7 @@ likes_fun(likes[1])
 
 Una de las ventajas de R es que se mantiene
 actualizado gracias a que tiene una activa comunidad. 
-Solo en CRAN hay cerca de 4000 paquetes lo que 
+Solo en CRAN hay cerca de 4000 paquetes, lo que 
 le da a R gran funcionalidad.
 
 Aprovechar la funcionalidad de R es la mejor
@@ -587,7 +553,218 @@ de R.</div>\EndKnitrBlock{warning}
 <br>
 
 
-#### Ej: Instala y carga {-}
+
+
+
+---
+
+
+
+## Ayuda en R
+  
+Existen diferentes formas de pedir ayuda en R.
+
+* `help.start()`: ayuda en general
+* `help(fun)` o `?fun`: ayuda sobre la función *fun*
+* `apropos("fun")`: lista de funciones que contiene la palabra *fun*
+* `example(fun)`: muestra un ejemplo de la función *fun*
+  
+
+```r
+help(read_csv)
+?read_csv2
+```
+
+
+### Vignettes
+
+En general los paquetes incluyen viñetas o *vignettes* de las
+funciones. 
+
+\BeginKnitrBlock{nota}<div class="nota">Vignettes es documentación de temas o funciones sobre el paquete y en ocasiones 
+incluyen algunos ejemplos.</div>\EndKnitrBlock{nota}
+
+Para consultar viñetas:
+  
+* `vignette()`: muestra las viñetas disponibles sobre los paquetes instalados.
+* `vignette("nombre_de_librería")`: muestra la viñetas incluidas en la librería.
+
+Por ejemplo:
+
+```r
+vignette('ggplot2-specs')
+```
+
+
+---
+
+
+### Más referencias
+
+Si lo anterior no funciona se presentan los siguientes recursos:
+  
+- Buscar ayuda: Google, [StackOverflow](http://stackoverflow.com/questions/tagged/r).
+
+- [Cheat sheets de RStudio](https://www.rstudio.com/resources/cheatsheets/)
+
+- Para aprender programación avanzada en R, el libro gratuito 
+[Advanced R](http://adv-r.had.co.nz/) de Hadley Wickham 
+es una buena referencia. En particular es conveniente leer 
+la guía de estilo (para todos: principiantes, intermedios y avanzados).
+
+- Para aprender programación en R enfocada a la ciencia de 
+datos, el libro gratuito 
+[R for Data Science](http://r4ds.had.co.nz//) de Hadley Wickham.
+
+- Para mantenerse al tanto de las noticias de la comunidad de 
+[R](https://cran.r-project.org) pueden visitar [R-bloggers](http://www.r-bloggers.com/).
+
+- Para entretenerse en una tarde domingo pueden navegar 
+los reportes en [RPubs](https://rpubs.com/).
+
+
+
+---
+
+## Ejercicios
+
+
+
+### Ej: Suma de valores absolutos 
+
+Crea una función que sume los valores
+absolutos de dos números. Los argumentos 
+deben ser estos números. 
+
+Tip: Usa la función `abs()` para obtener 
+el valor absoluto de la función.
+
+
+```r
+suma_abs_fun <- function(a, b){
+  
+}
+suma_abs_fun(-4, 2) 
+```
+
+
+```
+## [1] 6
+```
+
+
+---
+
+
+
+
+### Ej: Likes 
+
+Considerando el siguiente vector de likes
+de cada día de la semana.
+
+
+```r
+likes <- c(16, 7, 9, 20, 2, 17, 11)
+names(likes) <-  c("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+likes
+```
+
+```
+## Mon Tue Wed Thu Fri Sat Sun 
+##  16   7   9  20   2  17  11
+```
+
+Crea una función en la
+imprima *Hoy fuiste popular* si
+los likes del día fueron mayores a 15 y
+regrese el número de likes.
+
+Si el número de likes es menor a 15, entonces
+imprime *:(* y regresa 0.
+
+Usa la función `print()`.
+
+
+```r
+likes_fun <- function(num) {
+  if (num > ) {
+    print()
+    return()
+  } else {
+    print()    
+    return()
+  }
+}
+```
+
+Prueba la función para el primer elemento 
+del vector `likes`.
+
+```r
+likes_fun(likes[1])
+```
+
+
+
+
+
+
+---
+
+### Ej: Grafica de gasolina
+
+El siguiente vector presenta el precio de 
+la gasolina en diferentes localidades. 
+
+
+```r
+gas_cdmx <- c(15.82, 15.77, 15.83, 15.23, 14.95, 15.42, 15.55)
+gas_cdmx
+```
+
+```
+## [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55
+```
+
+Completa la siguiente función tal que 
+considerando el argumento tipo de cambio, 
+imprima una grafica del vector en dolares y regrese este vector.
+
+
+```r
+grafica_dolar_fun <- function(precio, tipo_cambio){
+  precio_en_dolar <- precio/
+  print(plot())
+  return()
+}
+```
+
+
+
+
+Considerando el tipo de cambio 
+de los siguientes meses obten
+el vector y la grafica de cada mes. 
+
+- Julio: 17.3808 
+- Agosto: 17.6084  
+
+
+
+```r
+gas_dolar_julio <- grafica_dolar_fun(, 17.3808)
+gas_dolar_agosto <- grafica_dolar_fun(, 17.6084)
+```
+
+
+
+
+
+---
+
+
+### Ej: Instala y carga 
 
 Instala y carga en tu computadora los paquetes
 en listados antes.
@@ -616,24 +793,15 @@ library(ggplot)
 ```
 
 
-<br>
-
-
-\BeginKnitrBlock{information}<div class="information">En general los paquetes incluyen viñetas o *vignettes* de las
-funciones. 
-
-Esto es, documentación de temas o funciones sobre el paquete y en ocasiones 
-describen ejemplos. Para consultar viñetas:
-  
-* `vignette()`: muestra las viñetas disponibles sobre los paquetes instalados.
-* `vignette("nombre_del_paquete")`: muestra la viñetas del incluídas en el paquete.</div>\EndKnitrBlock{information}
-
-
-```r
-vignette('ggplot2-specs')
-```
-
-
 ---
+
+
+
+### Ej: Search 
+
+Después de cargar los paquetes 
+llama el comando `search()`
+
+¿Observas las nuevas librerías de la sesión?
 
 

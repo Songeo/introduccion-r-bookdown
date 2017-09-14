@@ -35,7 +35,7 @@ knitr::include_graphics("figures/rchainsheets.jpeg")
   
   **III.** [Funciones]
   
-  **IV. Interaciones**
+  **IV.** [Iteraciones]
   
   **V. Visualización**
   
