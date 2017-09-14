@@ -1371,7 +1371,8 @@ la gasolina en diferentes localidades.
 gas_cdmx <- c(15.82, 15.77, 15.83, 15.23, 14.95, 15.42, 15.55)
 gas_cdmx
 ```
-"¡Demasido rápido!"
+
+
 Usando la siguiente lista de tipo de cambio por mes:
 
 - Julio: 17.3808 
@@ -1379,7 +1380,7 @@ Usando la siguiente lista de tipo de cambio por mes:
 - Septiembre: 17.7659 
 
 Crea un dataframe donde cada 
-variable/columnda sea el precio en dolares 
+variable/columna sea el precio en dolares 
 por cada mes. 
 
 ```{r, eval = F}

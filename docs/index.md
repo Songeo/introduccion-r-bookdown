@@ -1,7 +1,7 @@
 --- 
 title: "Taller de Introducción a R"
 author: "Sonia Mendizábal"
-date: "2017-09-13"
+date: "2017-09-14"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book

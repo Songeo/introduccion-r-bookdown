@@ -514,10 +514,15 @@ print(split_lower)
 Usando el vector `split_estadísticos` del 
 ejercicio anterior.
 
+```{r}
+str(split_estadisticos)
+```
+
+
 1. Crea una función que regrese la 
 primera posición. 
 
-```{r}
+```{r, eval = F}
 primera_pos_fun <- function(lista){
   
 }
@@ -616,7 +621,7 @@ sapply(temp_lista, promedio_extremos_fun)
 
 ---
 
-### Ej: Reducción de velocidad
+### Ej: ¡Demasiado Rápido!
 
 Crea una función del tipo `while` en la que 
 mientras la velocidad sea mayor a 50 km/hr 

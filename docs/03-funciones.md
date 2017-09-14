@@ -229,10 +229,83 @@ lanza_dado()
 ```
 
 ```
-## [1] 5
+## [1] 4
+```
+
+---
+
+## Valores faltantes
+
+En R los datos faltantes se expresan como `NA`.
+La función `is.na()` regresa un vector lógico
+sobre los valores que son o no `NA`.
+
+
+```r
+is.na(c(4, 2, NA))
+```
+
+```
+## [1] FALSE FALSE  TRUE
+```
+
+\BeginKnitrBlock{comentario}<div class="comentario">El default de R es propagar los valores faltantes, esto es, 
+si se desconoce el valor de una de las componentes de un vector, 
+también se desconoce la suma del mismo, en general, cualquier operación.</div>\EndKnitrBlock{comentario}
+
+
+```r
+sum(c(4, 2, NA))
+```
+
+```
+## [1] NA
 ```
 
 
+```r
+mean(c(4, 2, NA))
+```
+
+```
+## [1] NA
+```
+
+
+```r
+3 > NA
+```
+
+```
+## [1] NA
+```
+
+
+```r
+(NA == NA)
+```
+
+```
+## [1] NA
+```
+
+Sin embargo, muchas funciones tienen un argumento `na.rm` para removerlos. 
+
+```r
+sum(c(4, 2, NA), na.rm = T)
+```
+
+```
+## [1] 6
+```
+
+```r
+mean(c(4, 2, NA), na.rm = T)
+```
+
+```
+## [1] 3
+```
 
 
 

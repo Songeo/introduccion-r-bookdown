@@ -687,6 +687,20 @@ print(split_lower)
 Usando el vector `split_estadísticos` del 
 ejercicio anterior.
 
+
+```r
+str(split_estadisticos)
+```
+
+```
+## List of 4
+##  $ : chr [1:2] "GAUSS" "1777"
+##  $ : chr [1:2] "BAYES" "1702"
+##  $ : chr [1:2] "FISHER" "1890"
+##  $ : chr [1:2] "PEARSON" "1857"
+```
+
+
 1. Crea una función que regrese la 
 primera posición. 
 
@@ -797,7 +811,7 @@ sapply(,)
 
 ---
 
-### Ej: Reducción de velocidad
+### Ej: ¡Demasiado Rápido!
 
 Crea una función del tipo `while` en la que 
 mientras la velocidad sea mayor a 50 km/hr 

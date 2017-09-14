@@ -1186,11 +1186,11 @@ muestra_df
 
 ```
 ##   secuencia  aleatorio letras
-## 1         1 -0.7527286      a
-## 2         2 -0.2960406      b
-## 3         3  0.1069921      c
-## 4         4  0.7068984      d
-## 5         5  0.1953435      e
+## 1         1 -2.2857973      a
+## 2         2 -0.8180733      b
+## 3         3 -1.8880964      c
+## 4         4  1.0328324      d
+## 5         5 -1.2481793      e
 ```
 
 O bien, se pude transformar una matriz con la misma
@@ -1784,7 +1784,7 @@ rand_num
 ```
 
 ```
-## [1] 0.9364734
+## [1] -0.2460343
 ```
 
 
@@ -1816,7 +1816,7 @@ ejem_list_random
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 ## 
 ## $random
-## [1] 0.9364734
+## [1] -0.2460343
 ```
 
 
@@ -1847,10 +1847,10 @@ ejem_list_random
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 ## 
 ## $random
-## [1] 0.9364734
+## [1] -0.2460343
 ## 
 ## $random_num
-## [1] 0.9364734
+## [1] -0.2460343
 ```
 
 
@@ -2011,7 +2011,8 @@ gas_cdmx
 ```
 ## [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55
 ```
-"¡Demasido rápido!"
+
+
 Usando la siguiente lista de tipo de cambio por mes:
 
 - Julio: 17.3808 
@@ -2019,7 +2020,7 @@ Usando la siguiente lista de tipo de cambio por mes:
 - Septiembre: 17.7659 
 
 Crea un dataframe donde cada 
-variable/columnda sea el precio en dolares 
+variable/columna sea el precio en dolares 
 por cada mes. 
 
 
