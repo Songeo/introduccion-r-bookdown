@@ -309,7 +309,7 @@ almacenar contenido heterogéneo.</div>\EndKnitrBlock{comentario}
 La función `lapply()` permite incluir 
 argumentos de las funciones que implementa. 
 Estos argumentos se incluyen dentro 
-de `lapply()` despues de la función a implementar.
+de `lapply()` después de la función a implementar.
 
 Por ejemplo, usamos la función potencia que 
 se creó antes.
@@ -460,7 +460,7 @@ while(ctr <= 7){
 
 
 Existen ocasiones en las que la condición 
-puede tardar mucho en cimplirse o incluso no cumplirse y 
+puede tardar mucho en cumplirse o incluso no cumplirse y 
 queremos **interrumpir** el loop. 
 La función `break()` o *break statement*
 nos permite hacerlo.
@@ -522,7 +522,7 @@ cdmx_list <- list(
 ```
 
 
-obten la clase 
+obtén la clase 
 de cada elemento con la función `lapply()`.
 
 
@@ -535,8 +535,8 @@ lapply( , class)
 
 ### Ej: Mínimo y máximo
 
-La siguiente función extrae la letra de menor posicion
-y mayor posicion en orden alfabético. 
+La siguiente función extrae la letra de menor posición
+y mayor posición en orden alfabético. 
 
 ```r
 min_max_fun <- function(nombre){
@@ -546,7 +546,7 @@ min_max_fun <- function(nombre){
 }
 ```
 
-Es decir, si incluímos las letras `abcz` la letra 
+Es decir, si incluimos las letras `abcz` la letra 
 *mínima* es a y la *máxima* es z.
 
 ```r
@@ -739,7 +739,7 @@ fechas <- lapply()
 ### Ej: Función anónima
 
 Usando una función anónima y el vector `split_estadísticos` 
-en un solo `lapply()` o `sapply()` obten 
+en un solo `lapply()` o `sapply()` obtén 
 un vector compuesto de la primera posición, es decir el nombre,
 en minúsculas. 
 
@@ -788,7 +788,7 @@ promedio_extremos_fun <-  function(x) {
 }
 ```
 
-Implementa la función a la lista y obten
+Implementa la función a la lista y obtén
 la temperatura promedio de extremos para cada
 ciudad usando `lapply()` y `sapply()`.
 

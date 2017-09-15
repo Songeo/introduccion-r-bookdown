@@ -241,12 +241,12 @@ La ventaja de un dataframe, es que a diferencia de una matriz, los vectores o co
                          <span class="dt">aleatorio =</span> <span class="kw">rnorm</span>(<span class="dv">5</span>),
                          <span class="dt">letras =</span> <span class="kw">c</span>(<span class="st">&quot;a&quot;</span>, <span class="st">&quot;b&quot;</span>, <span class="st">&quot;c&quot;</span>, <span class="st">&quot;d&quot;</span>, <span class="st">&quot;e&quot;</span>))
 muestra_df</code></pre></div>
-<pre><code>##   secuencia  aleatorio letras
-## 1         1 -2.2857973      a
-## 2         2 -0.8180733      b
-## 3         3 -1.8880964      c
-## 4         4  1.0328324      d
-## 5         5 -1.2481793      e</code></pre>
+<pre><code>##   secuencia   aleatorio letras
+## 1         1 -0.56290278      a
+## 2         2  1.14120397      b
+## 3         3 -1.37928505      c
+## 4         4 -0.09001855      d
+## 5         5 -2.35306246      e</code></pre>
 <p>O bien, se pude transformar una matriz con la misma función. Tomemos los datos de los ingresos de las películas de la saga de HP y hagamos una matriz.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sales_df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(sales_mat)
 sales_df</code></pre></div>

@@ -325,7 +325,7 @@ ejem_list</code></pre></div>
 <p>Supongamos que deseamos agregar a la lista de ejemplos un número aleatorio de la distribución normal.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">rand_num &lt;-<span class="st"> </span><span class="kw">rnorm</span>(<span class="dv">1</span>)
 rand_num</code></pre></div>
-<pre><code>## [1] -0.2460343</code></pre>
+<pre><code>## [1] 0.7589467</code></pre>
 <p>Una forma es usando la función combine <code>c()</code>, similar a un vector:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ejem_list_random &lt;-<span class="st"> </span><span class="kw">c</span>(ejem_list, 
                            <span class="dt">random =</span> rand_num)
@@ -348,7 +348,7 @@ ejem_list_random</code></pre></div>
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 ## 
 ## $random
-## [1] -0.2460343</code></pre>
+## [1] 0.7589467</code></pre>
 <p>La segunda es usando el signo <code>$</code></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ejem_list_random$random_num &lt;-<span class="st"> </span>rand_num
 ejem_list_random</code></pre></div>
@@ -370,10 +370,10 @@ ejem_list_random</code></pre></div>
 ## Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
 ## 
 ## $random
-## [1] -0.2460343
+## [1] 0.7589467
 ## 
 ## $random_num
-## [1] -0.2460343</code></pre>
+## [1] 0.7589467</code></pre>
 <p><br></p>
 <hr />
 </div>

@@ -219,7 +219,7 @@ lanza_dado()
 ```
 
 ```
-## [1] 4
+## [1] 6
 ```
 
 **Segundo lanzamiento:**
@@ -802,7 +802,7 @@ gas_cdmx
 
 Completa la siguiente función tal que 
 considerando el argumento tipo de cambio, 
-imprima una grafica del vector en dolares y regrese este vector.
+imprima una gráfica del vector en dolares y regrese este vector.
 
 
 ```r
@@ -817,8 +817,8 @@ grafica_dolar_fun <- function(precio, tipo_cambio){
 
 
 Considerando el tipo de cambio 
-de los siguientes meses obten
-el vector y la grafica de cada mes. 
+de los siguientes meses obtén
+el vector y la gráfica de cada mes. 
 
 - Julio: 17.3808 
 - Agosto: 17.6084  

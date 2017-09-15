@@ -239,19 +239,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
                    <span class="st">&quot;Venustiano Carranza&quot;</span> ,<span class="st">&quot;Xochimilco&quot;</span>),
   <span class="dt">capital =</span> <span class="ot">TRUE</span>
 )</code></pre></div>
-<p>obten la clase de cada elemento con la función <code>lapply()</code>.</p>
+<p>obtén la clase de cada elemento con la función <code>lapply()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>( , class)</code></pre></div>
 <hr />
 </div>
 <div id="ej-minimo-y-maximo" class="section level3">
 <h3><span class="header-section-number">5.3.2</span> Ej: Mínimo y máximo</h3>
-<p>La siguiente función extrae la letra de menor posicion y mayor posicion en orden alfabético.</p>
+<p>La siguiente función extrae la letra de menor posición y mayor posición en orden alfabético.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">min_max_fun &lt;-<span class="st"> </span>function(nombre){
   nombre_sinespacios &lt;-<span class="st"> </span><span class="kw">gsub</span>(<span class="st">&quot; &quot;</span>, <span class="st">&quot;&quot;</span>, nombre)
   letras &lt;-<span class="st"> </span><span class="kw">strsplit</span>(nombre_sinespacios, <span class="dt">split =</span> <span class="st">&quot;&quot;</span>)[[<span class="dv">1</span>]]
   <span class="kw">c</span>(<span class="dt">minimo =</span> <span class="kw">min</span>(letras), <span class="dt">maximo =</span> <span class="kw">max</span>(letras))
 }</code></pre></div>
-<p>Es decir, si incluímos las letras <code>abcz</code> la letra <em>mínima</em> es a y la <em>máxima</em> es z.</p>
+<p>Es decir, si incluimos las letras <code>abcz</code> la letra <em>mínima</em> es a y la <em>máxima</em> es z.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">min_max_fun</span>(<span class="st">&quot;abcz&quot;</span>)</code></pre></div>
 <pre><code>## minimo maximo 
 ##    &quot;a&quot;    &quot;z&quot;</code></pre>
@@ -342,7 +342,7 @@ fechas &lt;-<span class="st"> </span><span class="kw">lapply</span>()</code></pr
 </div>
 <div id="ej-funcion-anonima" class="section level3">
 <h3><span class="header-section-number">5.3.6</span> Ej: Función anónima</h3>
-<p>Usando una función anónima y el vector <code>split_estadísticos</code> en un solo <code>lapply()</code> o <code>sapply()</code> obten un vector compuesto de la primera posición, es decir el nombre, en minúsculas.</p>
+<p>Usando una función anónima y el vector <code>split_estadísticos</code> en un solo <code>lapply()</code> o <code>sapply()</code> obtén un vector compuesto de la primera posición, es decir el nombre, en minúsculas.</p>
 <p>Tip: si usas <code>lapply()</code> recuerda usar la función <code>unlist()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">nombre_estadisticos &lt;-<span class="st"> </span>(split_estadisticos, function(elemento){
   <span class="kw">tolower</span>()
@@ -367,7 +367,7 @@ nombre_estadisticos</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">promedio_extremos_fun &lt;-<span class="st">  </span>function(x) {
   ( <span class="kw">min</span>() +<span class="st"> </span><span class="kw">max</span>() ) /<span class="st"> </span><span class="dv">2</span>
 }</code></pre></div>
-<p>Implementa la función a la lista y obten la temperatura promedio de extremos para cada ciudad usando <code>lapply()</code> y <code>sapply()</code>.</p>
+<p>Implementa la función a la lista y obtén la temperatura promedio de extremos para cada ciudad usando <code>lapply()</code> y <code>sapply()</code>.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(,)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(,)</code></pre></div>
 <hr />

@@ -41,3 +41,9 @@ description: "Material del taller de introducción a R."
 <br>
   
 ---  
+
+mail: sonia.gmcl@gmail.com
+
+bookdown:  https://songeo.github.io/introduccion-r-bookdown/
+
+material: https://github.com/Songeo/introduccion-r-material
