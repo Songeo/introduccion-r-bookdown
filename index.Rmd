@@ -37,9 +37,9 @@ knitr::include_graphics("figures/rchainsheets.jpeg")
   
   **IV.** [Iteraciones]
   
-  **V. Visualización**
+  **V.**  [Manipulación]
   
-  **VI. Manipulación**
+  **VI.** [Visualización]
   
   **VII. Caso Práctico**
   

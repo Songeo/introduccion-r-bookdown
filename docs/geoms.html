@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Taller de Introducción a R</title>
+  <meta name="description" content="Material del taller de introducción a R.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Taller de Introducción a R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Material del taller de introducción a R." />
+  <meta name="github-repo" content="songeo/intro-r-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Taller de Introducción a R" />
+  
+  <meta name="twitter:description" content="Material del taller de introducción a R." />
+  
+
+<meta name="author" content="Sonia Mendizábal">
+
+
+<meta name="date" content="2017-10-05">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="elementos.html">
+<link rel="next" href="quick-plots.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Taller de Introducción a R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción al taller</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programa"><i class="fa fa-check"></i>Programa</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html"><i class="fa fa-check"></i><b>2</b> Introducción a Herramientas</a><ul>
+<li class="chapter" data-level="" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html#que-es-r"><i class="fa fa-check"></i>¿Qué es R?</a></li>
+<li class="chapter" data-level="2.1" data-path="r-console.html"><a href="r-console.html"><i class="fa fa-check"></i><b>2.1</b> R Console</a></li>
+<li class="chapter" data-level="2.2" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>2.2</b> RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="descarga.html"><a href="descarga.html"><i class="fa fa-check"></i><b>2.3</b> Descarga</a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-layout.html"><a href="rstudio-layout.html"><i class="fa fa-check"></i><b>2.4</b> RStudio Layout</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tiposdatos.html"><a href="tiposdatos.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3.1</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="vectores.html"><a href="vectores.html#tipo-de-vectores"><i class="fa fa-check"></i><b>3.1.1</b> Tipo de vectores</a></li>
+<li class="chapter" data-level="3.1.2" data-path="vectores.html"><a href="vectores.html#nombres-de-vectores"><i class="fa fa-check"></i><b>3.1.2</b> Nombres de vectores</a></li>
+<li class="chapter" data-level="3.1.3" data-path="vectores.html"><a href="vectores.html#seleccion-de-elementos-en-vectores"><i class="fa fa-check"></i><b>3.1.3</b> Selección de elementos en vectores</a></li>
+<li class="chapter" data-level="3.1.4" data-path="vectores.html"><a href="vectores.html#que-pasa-si-sumamos-los-dias-de-fin-de-semana"><i class="fa fa-check"></i><b>3.1.4</b> ¿Qué pasa si sumamos los días de fin de semana?</a></li>
+<li class="chapter" data-level="3.1.5" data-path="vectores.html"><a href="vectores.html#comparacion-de-elementos"><i class="fa fa-check"></i><b>3.1.5</b> Comparación de elementos</a></li>
+<li class="chapter" data-level="3.1.6" data-path="vectores.html"><a href="vectores.html#grafica-de-vectores"><i class="fa fa-check"></i><b>3.1.6</b> Gráfica de vectores</a></li>
+<li class="chapter" data-level="3.1.7" data-path="vectores.html"><a href="vectores.html#vectores-de-distribuciones"><i class="fa fa-check"></i><b>3.1.7</b> Vectores de distribuciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>3.2</b> Matrices</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="matrices.html"><a href="matrices.html#crear-una-matriz"><i class="fa fa-check"></i><b>3.2.1</b> Crear una matriz</a></li>
+<li class="chapter" data-level="3.2.2" data-path="matrices.html"><a href="matrices.html#nombres-de-matrices"><i class="fa fa-check"></i><b>3.2.2</b> Nombres de matrices</a></li>
+<li class="chapter" data-level="3.2.3" data-path="matrices.html"><a href="matrices.html#seleccion-de-elementos-en-una-matriz"><i class="fa fa-check"></i><b>3.2.3</b> Selección de elementos en una matriz</a></li>
+<li class="chapter" data-level="3.2.4" data-path="matrices.html"><a href="matrices.html#operaciones-en-matrices"><i class="fa fa-check"></i><b>3.2.4</b> Operaciones en matrices</a></li>
+<li class="chapter" data-level="3.2.5" data-path="matrices.html"><a href="matrices.html#operaciones-por-dimensiones"><i class="fa fa-check"></i><b>3.2.5</b> Operaciones por dimensiones</a></li>
+<li class="chapter" data-level="3.2.6" data-path="matrices.html"><a href="matrices.html#nuevos-valores"><i class="fa fa-check"></i><b>3.2.6</b> Nuevos valores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>3.3</b> Factores</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="factores.html"><a href="factores.html#variable-categorica-nominal"><i class="fa fa-check"></i><b>3.3.1</b> Variable categórica nominal</a></li>
+<li class="chapter" data-level="3.3.2" data-path="factores.html"><a href="factores.html#variable-categorica-ordinal"><i class="fa fa-check"></i><b>3.3.2</b> Variable categórica ordinal</a></li>
+<li class="chapter" data-level="3.3.3" data-path="factores.html"><a href="factores.html#resumen-de-factores"><i class="fa fa-check"></i><b>3.3.3</b> Resúmen de factores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>3.4</b> Dataframe</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="data-frame.html"><a href="data-frame.html#crear-un-dataframe"><i class="fa fa-check"></i><b>3.4.1</b> Crear un dataframe</a></li>
+<li class="chapter" data-level="3.4.2" data-path="data-frame.html"><a href="data-frame.html#nombres-de-dimensiones"><i class="fa fa-check"></i><b>3.4.2</b> Nombres de dimensiones</a></li>
+<li class="chapter" data-level="3.4.3" data-path="data-frame.html"><a href="data-frame.html#seleccion-de-elementos"><i class="fa fa-check"></i><b>3.4.3</b> Seleccion de elementos</a></li>
+<li class="chapter" data-level="3.4.4" data-path="data-frame.html"><a href="data-frame.html#orden-de-posiciones"><i class="fa fa-check"></i><b>3.4.4</b> Orden de posiciones</a></li>
+<li class="chapter" data-level="3.4.5" data-path="data-frame.html"><a href="data-frame.html#funciones-utiles-para-data-frames"><i class="fa fa-check"></i><b>3.4.5</b> Funciones útiles para data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>3.5</b> Listas</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="listas.html"><a href="listas.html#crear-una-lista"><i class="fa fa-check"></i><b>3.5.1</b> Crear una lista</a></li>
+<li class="chapter" data-level="3.5.2" data-path="listas.html"><a href="listas.html#nombres-de-elementos"><i class="fa fa-check"></i><b>3.5.2</b> Nombres de elementos</a></li>
+<li class="chapter" data-level="3.5.3" data-path="listas.html"><a href="listas.html#seleccion-de-elementos-en-una-lista"><i class="fa fa-check"></i><b>3.5.3</b> Selección de elementos en una lista</a></li>
+<li class="chapter" data-level="3.5.4" data-path="listas.html"><a href="listas.html#nuevos-valores-a-la-lista"><i class="fa fa-check"></i><b>3.5.4</b> Nuevos valores a la lista</a></li>
+<li class="chapter" data-level="3.5.5" data-path="listas.html"><a href="listas.html#funciones-utiles-para-listas"><i class="fa fa-check"></i><b>3.5.5</b> Funciones útiles para listas</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="ejercicios.html"><a href="ejercicios.html"><i class="fa fa-check"></i><b>3.6</b> Ejercicios</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="ejercicios.html"><a href="ejercicios.html#ej-hidden-figures-imdb"><i class="fa fa-check"></i><b>3.6.1</b> Ej: Hidden Figures IMDB</a></li>
+<li class="chapter" data-level="3.6.2" data-path="ejercicios.html"><a href="ejercicios.html#ej-calificacion-promedio"><i class="fa fa-check"></i><b>3.6.2</b> Ej: Calificación promedio</a></li>
+<li class="chapter" data-level="3.6.3" data-path="ejercicios.html"><a href="ejercicios.html#ej-pesos-a-dolares"><i class="fa fa-check"></i><b>3.6.3</b> Ej: Pesos a dolares</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="" data-path="funciones.html"><a href="funciones.html#una-caja-negra"><i class="fa fa-check"></i>Una caja negra</a></li>
+<li class="chapter" data-level="4.1" data-path="escibir-una-funcion.html"><a href="escibir-una-funcion.html"><i class="fa fa-check"></i><b>4.1</b> Escibir una función</a></li>
+<li class="chapter" data-level="4.2" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html"><i class="fa fa-check"></i><b>4.2</b> Argumentos de funciones</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html#argumentos-predeterminados"><i class="fa fa-check"></i><b>4.2.1</b> Argumentos predeterminados</a></li>
+<li class="chapter" data-level="4.2.2" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html#argumentos-nulos"><i class="fa fa-check"></i><b>4.2.2</b> Argumentos nulos</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="valores-faltantes.html"><a href="valores-faltantes.html"><i class="fa fa-check"></i><b>4.3</b> Valores faltantes</a></li>
+<li class="chapter" data-level="4.4" data-path="alcance-de-la-funcion.html"><a href="alcance-de-la-funcion.html"><i class="fa fa-check"></i><b>4.4</b> Alcance de la función</a></li>
+<li class="chapter" data-level="4.5" data-path="funciones-para-funciones.html"><a href="funciones-para-funciones.html"><i class="fa fa-check"></i><b>4.5</b> Funciones para funciones</a></li>
+<li class="chapter" data-level="4.6" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4.6</b> R Packages</a><ul>
+<li class="chapter" data-level="4.6.1" data-path="r-packages.html"><a href="r-packages.html#paquetes-predeterminados"><i class="fa fa-check"></i><b>4.6.1</b> Paquetes predeterminados</a></li>
+<li class="chapter" data-level="4.6.2" data-path="r-packages.html"><a href="r-packages.html#instalar-paquetes"><i class="fa fa-check"></i><b>4.6.2</b> Instalar paquetes</a></li>
+<li class="chapter" data-level="4.6.3" data-path="r-packages.html"><a href="r-packages.html#cargar-paquetes"><i class="fa fa-check"></i><b>4.6.3</b> Cargar paquetes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="ayuda-en-r.html"><a href="ayuda-en-r.html"><i class="fa fa-check"></i><b>4.7</b> Ayuda en R</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="ayuda-en-r.html"><a href="ayuda-en-r.html#vignettes"><i class="fa fa-check"></i><b>4.7.1</b> Vignettes</a></li>
+<li class="chapter" data-level="4.7.2" data-path="ayuda-en-r.html"><a href="ayuda-en-r.html#mas-referencias"><i class="fa fa-check"></i><b>4.7.2</b> Más referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="ejercicios-1.html"><a href="ejercicios-1.html"><i class="fa fa-check"></i><b>4.8</b> Ejercicios</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="ejercicios-1.html"><a href="ejercicios-1.html#ej-suma-de-valores-absolutos"><i class="fa fa-check"></i><b>4.8.1</b> Ej: Suma de valores absolutos</a></li>
+<li class="chapter" data-level="4.8.2" data-path="ejercicios-1.html"><a href="ejercicios-1.html#ej-likes"><i class="fa fa-check"></i><b>4.8.2</b> Ej: Likes</a></li>
+<li class="chapter" data-level="4.8.3" data-path="ejercicios-1.html"><a href="ejercicios-1.html#ej-grafica-de-gasolina"><i class="fa fa-check"></i><b>4.8.3</b> Ej: Grafica de gasolina</a></li>
+<li class="chapter" data-level="4.8.4" data-path="ejercicios-1.html"><a href="ejercicios-1.html#ej-instala-y-carga"><i class="fa fa-check"></i><b>4.8.4</b> Ej: Instala y carga</a></li>
+<li class="chapter" data-level="4.8.5" data-path="ejercicios-1.html"><a href="ejercicios-1.html#ej-search"><i class="fa fa-check"></i><b>4.8.5</b> Ej: Search</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="iteraciones.html"><a href="iteraciones.html"><i class="fa fa-check"></i><b>5</b> Iteraciones</a><ul>
+<li class="chapter" data-level="5.1" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html"><i class="fa fa-check"></i><b>5.1</b> For loop y familia Apply</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#apply"><i class="fa fa-check"></i><b>5.1.1</b> apply()</a></li>
+<li class="chapter" data-level="5.1.2" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#lapply"><i class="fa fa-check"></i><b>5.1.2</b> lapply()</a></li>
+<li class="chapter" data-level="5.1.3" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#sapply"><i class="fa fa-check"></i><b>5.1.3</b> sapply()</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="while-loop.html"><a href="while-loop.html"><i class="fa fa-check"></i><b>5.2</b> While Loop</a></li>
+<li class="chapter" data-level="5.3" data-path="ejercicios-2.html"><a href="ejercicios-2.html"><i class="fa fa-check"></i><b>5.3</b> Ejercicios</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-ciudad-de-mexico"><i class="fa fa-check"></i><b>5.3.1</b> Ej: Ciudad de México</a></li>
+<li class="chapter" data-level="5.3.2" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-minimo-y-maximo"><i class="fa fa-check"></i><b>5.3.2</b> Ej: Mínimo y máximo</a></li>
+<li class="chapter" data-level="5.3.3" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-precio-de-la-gasolina"><i class="fa fa-check"></i><b>5.3.3</b> Ej: Precio de la gasolina</a></li>
+<li class="chapter" data-level="5.3.4" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-estadisticos-importantes"><i class="fa fa-check"></i><b>5.3.4</b> Ej: Estadísticos importantes</a></li>
+<li class="chapter" data-level="5.3.5" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-nombres-y-fechas"><i class="fa fa-check"></i><b>5.3.5</b> Ej: Nombres y fechas</a></li>
+<li class="chapter" data-level="5.3.6" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-funcion-anonima"><i class="fa fa-check"></i><b>5.3.6</b> Ej: Función anónima</a></li>
+<li class="chapter" data-level="5.3.7" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-tempraturas"><i class="fa fa-check"></i><b>5.3.7</b> Ej: Tempraturas</a></li>
+<li class="chapter" data-level="5.3.8" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-demasiado-rapido"><i class="fa fa-check"></i><b>5.3.8</b> Ej: ¡Demasiado Rápido!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="manipulacion.html"><a href="manipulacion.html"><i class="fa fa-check"></i><b>6</b> Manipulación</a><ul>
+<li class="chapter" data-level="" data-path="manipulacion.html"><a href="manipulacion.html#proceso-estandar"><i class="fa fa-check"></i>Proceso estándar</a></li>
+<li class="chapter" data-level="6.1" data-path="importacion-y-exportacion-de-datos.html"><a href="importacion-y-exportacion-de-datos.html"><i class="fa fa-check"></i><b>6.1</b> Importación y exportación de datos</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="importacion-y-exportacion-de-datos.html"><a href="importacion-y-exportacion-de-datos.html#working-directory"><i class="fa fa-check"></i><b>6.1.1</b> Working directory</a></li>
+<li class="chapter" data-level="6.1.2" data-path="importacion-y-exportacion-de-datos.html"><a href="importacion-y-exportacion-de-datos.html#importar-datos-locales"><i class="fa fa-check"></i><b>6.1.2</b> Importar datos locales</a></li>
+<li class="chapter" data-level="6.1.3" data-path="importacion-y-exportacion-de-datos.html"><a href="importacion-y-exportacion-de-datos.html#importar-datos-en-linea"><i class="fa fa-check"></i><b>6.1.3</b> Importar datos en línea</a></li>
+<li class="chapter" data-level="6.1.4" data-path="importacion-y-exportacion-de-datos.html"><a href="importacion-y-exportacion-de-datos.html#exportar-datos"><i class="fa fa-check"></i><b>6.1.4</b> Exportar datos</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="pipes.html"><a href="pipes.html"><i class="fa fa-check"></i><b>6.2</b> Pipes</a></li>
+<li class="chapter" data-level="6.3" data-path="limpieza-y-reestructura.html"><a href="limpieza-y-reestructura.html"><i class="fa fa-check"></i><b>6.3</b> Limpieza y reestructura</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="limpieza-y-reestructura.html"><a href="limpieza-y-reestructura.html#principios-de-datos-limpios"><i class="fa fa-check"></i><b>6.3.1</b> Principios de datos limpios</a></li>
+<li class="chapter" data-level="6.3.2" data-path="limpieza-y-reestructura.html"><a href="limpieza-y-reestructura.html#problemas-mas-comunes"><i class="fa fa-check"></i><b>6.3.2</b> Problemas más comunes</a></li>
+<li class="chapter" data-level="6.3.3" data-path="limpieza-y-reestructura.html"><a href="limpieza-y-reestructura.html#funciones-de-reestructura"><i class="fa fa-check"></i><b>6.3.3</b> Funciones de reestructura</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="split-apply-combine.html"><a href="split-apply-combine.html"><i class="fa fa-check"></i><b>6.4</b> <em>Split-apply-combine</em></a></li>
+<li class="chapter" data-level="6.5" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>6.5</b> Referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="visualizacion.html"><a href="visualizacion.html"><i class="fa fa-check"></i><b>7</b> Visualización</a><ul>
+<li class="chapter" data-level="" data-path="visualizacion.html"><a href="visualizacion.html#the-grammar-of-graphics-gg"><i class="fa fa-check"></i>The Grammar of Graphics (gg)</a></li>
+<li class="chapter" data-level="" data-path="visualizacion.html"><a href="visualizacion.html#ggplot2"><i class="fa fa-check"></i>ggplot2</a></li>
+<li class="chapter" data-level="7.1" data-path="elementos.html"><a href="elementos.html"><i class="fa fa-check"></i><b>7.1</b> Elementos</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="elementos.html"><a href="elementos.html#base"><i class="fa fa-check"></i><b>7.1.1</b> Base</a></li>
+<li class="chapter" data-level="7.1.2" data-path="elementos.html"><a href="elementos.html#colores-formas-y-tamanos"><i class="fa fa-check"></i><b>7.1.2</b> Colores, formas y tamaños</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="geoms.html"><a href="geoms.html"><i class="fa fa-check"></i><b>7.2</b> Geoms</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="geoms.html"><a href="geoms.html#suavizamiento"><i class="fa fa-check"></i><b>7.2.1</b> Suavizamiento</a></li>
+<li class="chapter" data-level="7.2.2" data-path="geoms.html"><a href="geoms.html#boxplot"><i class="fa fa-check"></i><b>7.2.2</b> Boxplot</a></li>
+<li class="chapter" data-level="7.2.3" data-path="geoms.html"><a href="geoms.html#histogramas"><i class="fa fa-check"></i><b>7.2.3</b> Histogramas</a></li>
+<li class="chapter" data-level="7.2.4" data-path="geoms.html"><a href="geoms.html#barras"><i class="fa fa-check"></i><b>7.2.4</b> Barras</a></li>
+<li class="chapter" data-level="7.2.5" data-path="geoms.html"><a href="geoms.html#series-de-tiempo"><i class="fa fa-check"></i><b>7.2.5</b> Series de tiempo</a></li>
+<li class="chapter" data-level="7.2.6" data-path="geoms.html"><a href="geoms.html#informacion-estadistica"><i class="fa fa-check"></i><b>7.2.6</b> Información estadística</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="quick-plots.html"><a href="quick-plots.html"><i class="fa fa-check"></i><b>7.3</b> Quick plots</a></li>
+<li class="chapter" data-level="7.4" data-path="ejercicios-3.html"><a href="ejercicios-3.html"><i class="fa fa-check"></i><b>7.4</b> Ejercicios</a></li>
+<li class="chapter" data-level="7.5" data-path="referencias-1.html"><a href="referencias-1.html"><i class="fa fa-check"></i><b>7.5</b> Referencias</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Taller de Introducción a R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="geoms" class="section level2">
+<h2><span class="header-section-number">7.2</span> Geoms</h2>
+<p>Existen muchos objetos geométricos para diferentes tipos de gráficas dependiendo del tipo de variable a graficar.</p>
+<p>En la <a href="http://ggplot2.tidyverse.org/reference/">referencia de ggplot</a> se presenta una descripción de los elementos disponibles en <code>ggplot2</code> así como otras características que no se tratarán en este taller.</p>
+<p>A continuación, se presentan algunos ejemplos de gráficos comunes.</p>
+<p><br></p>
+<hr />
+<div id="suavizamiento" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> Suavizamiento</h3>
+<p>En este caso, se busca agregar una línea <em>suavizada</em> o tendencia al gráfico de dispersión anterior.</p>
+<p>Este objeto geométrico ajusta un modelo para suavizar las observaciones. En el caso del ejemplo, por defecto ajusta un modelo no paramétrico llamado loess. La función para realizar esto es <code>geom_smooth()</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_smooth</span>()</code></pre></div>
+<pre><code>## `geom_smooth()` using method = &#39;loess&#39;</code></pre>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Sin embargo, esto se puede modificar a un método de regresión lineal <code>lm</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(<span class="dt">x =</span> displ, <span class="dt">y =</span> hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_point</span>() +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_smooth</span>(<span class="dt">method =</span> <span class="st">&quot;lm&quot;</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="boxplot" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> Boxplot</h3>
+<p>El gráfico de caja y brazos o <em>boxplot</em> se crea con la función <code>geom_boxplot()</code>.</p>
+
+<div class="nota">
+<p><strong>Boxplot</strong></p>
+El gráfico compara una variable categórica y una numérica.
+</div>
+<p></p>
+<p>En este caso se gráfica el rendimiento de gasolina en carretera (hwy) por cada tipo de auto (class).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(<span class="dt">x =</span> class, <span class="dt">y =</span> hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">width =</span> .<span class="dv">3</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>El gráfico de violín es muy parecido pero muestra la distribución de las observaciones. La función para este objeto geométrico es <code>geom_violin()</code>.</p>
+<p>En este caso se agrega otro mapeo estético <code>fill = class</code> que indica que cada gráfico de violín debe tener un color de relleno por clase de auto.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(class, hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_violin</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> class))</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>En ggplot es posible juntar ambos gráficos aprovechando la funcionalidad de <em>capas</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(class, hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_violin</span>(<span class="kw">aes</span>(<span class="dt">fill =</span> class)) +
+<span class="st">  </span><span class="kw">geom_boxplot</span>(<span class="dt">width =</span> .<span class="dv">3</span>) </code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="histogramas" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> Histogramas</h3>
+<p>El objeto geométrico para crear histogramas es <code>geom_histogram()</code>.</p>
+
+<div class="nota">
+<p><strong>Histogramas</strong></p>
+<p>Los histogramas muestran la distribución de una variable numérica.</p>
+Consiste en cortar la variable y contar el número de observaciones en cada corte.
+</div>
+<p></p>
+<p>En la función es posible controlar el número de cortes con el argumento <code>bins</code>. Se recomienda probar diferentes números de cortes dependiendo de la variable.</p>
+<p>En el siguiente ejemplo se muestra el histograma del rendimiento de gasolina en carretera (hwy) con 5 cortes.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">5</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>O bien, con 20 cortes:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_histogram</span>(<span class="dt">bins =</span> <span class="dv">20</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p><br></p>
+<p>También es posible obtener una estimación de la densidad de la variable. Puede entenderse como un suavizamiento del histograma.</p>
+<p>La función de este objeto geométrico es <code>geom_density()</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(hwy)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_density</span>( <span class="dt">color =</span> <span class="st">&quot;blue&quot;</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="barras" class="section level3">
+<h3><span class="header-section-number">7.2.4</span> Barras</h3>
+<p>Las gráficas de barras se generan con el objeto <code>geom_bar()</code>.</p>
+<p>Este es uno de los objetos que hacen transformaciones estadísticas, en este caso en particular conteos.</p>
+<p>En la siguiente gráfica se obtiene el conteo de observaciones en por tipo de automóvil (class).</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(mpg, <span class="kw">aes</span>(class)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;count&quot;</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Otra forma de obtener el mismo gráfico es usando la técnica <em>split-apply-combine</em>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab &lt;-<span class="st"> </span>mpg %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(class) %&gt;%<span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">freq =</span> <span class="kw">n</span>())
+tab %&gt;%<span class="st"> </span>head</code></pre></div>
+<pre><code>## # A tibble: 6 x 2
+##        class  freq
+##        &lt;chr&gt; &lt;int&gt;
+## 1    2seater     5
+## 2    compact    47
+## 3    midsize    41
+## 4    minivan    11
+## 5     pickup    33
+## 6 subcompact    35</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(tab, <span class="kw">aes</span>(<span class="dt">x =</span> class, <span class="dt">y =</span> freq)) +
+<span class="st">  </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">&quot;identity&quot;</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="series-de-tiempo" class="section level3">
+<h3><span class="header-section-number">7.2.5</span> Series de tiempo</h3>
+<p>En este tipo de gráficos se presenta la evolución de una variable en una medida temporal, como mes, año, día.</p>
+<p>Este gráfico usa la base de datos pre cargada en <code>ggplot2</code> llamada <code>economics</code>. Esta base contiene información económica de Estados Unidos en el tiempo.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">str</span>(economics)</code></pre></div>
+<pre><code>## Classes &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;:    574 obs. of  6 variables:
+##  $ date    : Date, format: &quot;1967-07-01&quot; &quot;1967-08-01&quot; ...
+##  $ pce     : num  507 510 516 513 518 ...
+##  $ pop     : int  198712 198911 199113 199311 199498 199657 199808 199920 200056 200208 ...
+##  $ psavert : num  12.5 12.5 11.7 12.5 12.5 12.1 11.7 12.2 11.6 12.2 ...
+##  $ uempmed : num  4.5 4.7 4.6 4.9 4.7 4.8 5.1 4.5 4.1 4.6 ...
+##  $ unemploy: int  2944 2945 2958 3143 3066 3018 2878 3001 2877 2709 ...</code></pre>
+<p>Una variable debe ser la variable temporal que en este caso abarca desde el 1 de julio de 1967 hasta 1 de abril de 2015.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">class</span>(economics$date)</code></pre></div>
+<pre><code>## [1] &quot;Date&quot;</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(economics$date)</code></pre></div>
+<pre><code>##         Min.      1st Qu.       Median         Mean      3rd Qu. 
+## &quot;1967-07-01&quot; &quot;1979-06-08&quot; &quot;1991-05-16&quot; &quot;1991-05-17&quot; &quot;2003-04-23&quot; 
+##         Max. 
+## &quot;2015-04-01&quot;</code></pre>
+<p>En la siguiente gráfica se presenta la tasa de desempleo (unemploy) por población (pop) desde 1967 hasta 2015.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(economics, <span class="kw">aes</span>(date, unemploy/pop)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">geom_line</span>()</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="informacion-estadistica" class="section level3">
+<h3><span class="header-section-number">7.2.6</span> Información estadística</h3>
+<p>Los siguientes objetos <code>stat_...()</code> resumen información estadística con distintas transformaciones.</p>
+<p>A continuación se presentan los siguientes gráficos:</p>
+<ul>
+<li>Gráficos qq-plot</li>
+<li>Distribución acumulada</li>
+<li>Funciones de probabilidad</li>
+<li>Funciones auto determinadas</li>
+</ul>
+<p><br></p>
+<hr />
+<div id="qq-plot" class="section level4 unnumbered">
+<h4>QQ-Plot</h4>
+<p><code>stat_qq</code></p>
+<p>Realiza una gráfica cuantil-cuantil de una muestra y la distribución teórica. Por defecto compara los cuantiles teóricos de la distribución normal.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">tab &lt;-<span class="st">  </span><span class="kw">data.frame</span>(
+  simulació<span class="dt">n =</span> <span class="kw">rexp</span>(<span class="dv">300</span>, <span class="dt">rate =</span> <span class="dv">5</span>)
+)
+<span class="kw">ggplot</span>(tab, <span class="kw">aes</span>(<span class="dt">sample =</span> simulación)) +<span class="st"> </span>
+<span class="st">      </span><span class="kw">stat_qq</span>()</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>En el siguiente ejemplo se modifica para comparar con los cuantiles teóricos de la distribución exponencial.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(tab, <span class="kw">aes</span>(<span class="dt">sample =</span> simulación)) +<span class="st"> </span>
+<span class="st">      </span><span class="kw">stat_qq</span>(<span class="dt">distribution =</span> qexp, 
+              <span class="dt">dparams =</span> <span class="dv">5</span>) </code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="distribucion-acumulada" class="section level4 unnumbered">
+<h4>Distribución acumulada</h4>
+<p><code>stat_ecdf</code></p>
+<p>Este objeto realiza las transformaciones necesarias para presentar la distribución acumulada de una muestra.</p>
+<p>En la siguiente gráfica se compara la distribución de simulaciones normales con distintos parámetros.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(<span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">100</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">3</span>), 
+                       <span class="kw">rnorm</span>(<span class="dt">n =</span> <span class="dv">100</span>, <span class="dt">mean =</span> <span class="dv">0</span>, <span class="dt">sd =</span> <span class="dv">10</span>)),
+                 <span class="dt">g =</span> <span class="kw">gl</span>(<span class="dt">n =</span> <span class="dv">2</span>, <span class="dt">k =</span> <span class="dv">100</span>))
+<span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x, <span class="dt">colour =</span> g)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_ecdf</span>()</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p><br></p>
+<hr />
+</div>
+<div id="funcion-auto-determinada" class="section level4 unnumbered">
+<h4>Función auto determinada</h4>
+<p><code>stat_function</code></p>
+<p>Este objeto permite graficar funciones auto determinadas en un rango específico.</p>
+<p>La siguiente gráfica muestra una función predeterminada del objeto estadístico <code>dnorm</code>, que es la distribución normal con media 2 y desviación 0.5.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(-<span class="dv">5</span>, <span class="dv">7</span>)), <span class="kw">aes</span>(x)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, 
+                <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">2</span>, <span class="dt">sd =</span> .<span class="dv">5</span>))</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-41-1.png" width="672" /></p>
+</div>
+<div id="distribucion-de-funcion-especifica" class="section level4 unnumbered">
+<h4>Distribución de función específica</h4>
+<p><code>stat_function()</code></p>
+<p>Es posible graficar cualquier función en un rango específico determinado por nosotros.</p>
+<p>En este ejemplo buscamos graficar la siguiente función:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">sin_2_fun &lt;-<span class="st"> </span>function(x){
+  <span class="kw">sin</span>(x)^<span class="dv">2</span>
+}</code></pre></div>
+<p>En el rango de -10 a 10 definido como dataframe, la función <code>stat_function()</code> evaluará la función <code>sin_2_fun</code> definida antes en el rango.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(-<span class="dv">10</span>, <span class="dv">10</span>)), 
+       <span class="kw">aes</span>(<span class="dt">x =</span> x)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> sin_2_fun, <span class="dt">size =</span> <span class="dv">1</span>, <span class="dt">color =</span> <span class="st">&#39;salmon&#39;</span>)</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>O bien, con funciones predeterminadas en R, como la función <code>dnorm()</code> donde los argumentos se especifican en una lista.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">ggplot</span>(<span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">c</span>(-<span class="dv">5</span>, <span class="dv">7</span>)), <span class="kw">aes</span>(x)) +<span class="st"> </span>
+<span class="st">  </span><span class="kw">stat_function</span>(<span class="dt">fun =</span> dnorm, 
+                <span class="dt">args =</span> <span class="kw">list</span>(<span class="dt">mean =</span> <span class="dv">2</span>, <span class="dt">sd =</span> .<span class="dv">5</span>))</code></pre></div>
+<p><img src="06-visualizacion_files/figure-html/unnamed-chunk-44-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="elementos.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="quick-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+<!-- </html> -->

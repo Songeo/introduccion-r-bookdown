@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Taller de Introducción a R</title>
+  <meta name="description" content="Material del taller de introducción a R.">
+  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+
+  <meta property="og:title" content="Taller de Introducción a R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Material del taller de introducción a R." />
+  <meta name="github-repo" content="songeo/intro-r-bookdown" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Taller de Introducción a R" />
+  
+  <meta name="twitter:description" content="Material del taller de introducción a R." />
+  
+
+<meta name="author" content="Sonia Mendizábal">
+
+
+<meta name="date" content="2017-09-14">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="visualizacion.html">
+<link rel="next" href="referencias.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+<link rel="stylesheet" href="toc.css" type="text/css" />
+<link rel="stylesheet" href="font-awesome.min.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Taller de Introducción a R</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción al taller</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#programa"><i class="fa fa-check"></i>Programa</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html"><i class="fa fa-check"></i><b>2</b> Introducción a Herramientas</a><ul>
+<li class="chapter" data-level="" data-path="introduccion-a-herramientas.html"><a href="introduccion-a-herramientas.html#que-es-r"><i class="fa fa-check"></i>¿Qué es R?</a></li>
+<li class="chapter" data-level="2.1" data-path="r-console.html"><a href="r-console.html"><i class="fa fa-check"></i><b>2.1</b> R Console</a></li>
+<li class="chapter" data-level="2.2" data-path="rstudio.html"><a href="rstudio.html"><i class="fa fa-check"></i><b>2.2</b> RStudio</a></li>
+<li class="chapter" data-level="2.3" data-path="descarga.html"><a href="descarga.html"><i class="fa fa-check"></i><b>2.3</b> Descarga</a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-layout.html"><a href="rstudio-layout.html"><i class="fa fa-check"></i><b>2.4</b> RStudio Layout</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="tiposdatos.html"><a href="tiposdatos.html"><i class="fa fa-check"></i><b>3</b> Tipos de Datos</a><ul>
+<li class="chapter" data-level="3.1" data-path="vectores.html"><a href="vectores.html"><i class="fa fa-check"></i><b>3.1</b> Vectores</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="vectores.html"><a href="vectores.html#tipo-de-vectores"><i class="fa fa-check"></i><b>3.1.1</b> Tipo de vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="numeric.html"><a href="numeric.html"><i class="fa fa-check"></i><b>3.2</b> [1] “numeric”</a></li>
+<li class="chapter" data-level="3.3" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i><b>3.3</b> [1] 5</a></li>
+<li class="chapter" data-level="3.4" data-path="section-1.html"><a href="section-1.html"><i class="fa fa-check"></i><b>3.4</b> [1] 150 178 -6 166 -80 -119 -142</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="section-1.html"><a href="section-1.html#nombres-de-vectores"><i class="fa fa-check"></i><b>3.4.1</b> Nombres de vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="mon-tue-wed-thu-fri-sat-sun.html"><a href="mon-tue-wed-thu-fri-sat-sun.html"><i class="fa fa-check"></i><b>3.5</b> Mon Tue Wed Thu Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.6" data-path="section-2.html"><a href="section-2.html"><i class="fa fa-check"></i><b>3.6</b> 150 178 -6 166 -80 -119 -142</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="section-2.html"><a href="section-2.html#seleccion-de-elementos-en-vectores"><i class="fa fa-check"></i><b>3.6.1</b> Selección de elementos en vectores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="mon-fri.html"><a href="mon-fri.html"><i class="fa fa-check"></i><b>3.7</b> Mon Fri</a></li>
+<li class="chapter" data-level="3.8" data-path="section-3.html"><a href="section-3.html"><i class="fa fa-check"></i><b>3.8</b> 150 -80</a></li>
+<li class="chapter" data-level="3.9" data-path="mon-tue-wed.html"><a href="mon-tue-wed.html"><i class="fa fa-check"></i><b>3.9</b> Mon Tue Wed</a></li>
+<li class="chapter" data-level="3.10" data-path="section-4.html"><a href="section-4.html"><i class="fa fa-check"></i><b>3.10</b> 150 178 -6</a></li>
+<li class="chapter" data-level="3.11" data-path="sun-sat-fri.html"><a href="sun-sat-fri.html"><i class="fa fa-check"></i><b>3.11</b> Sun Sat Fri</a></li>
+<li class="chapter" data-level="3.12" data-path="section-5.html"><a href="section-5.html"><i class="fa fa-check"></i><b>3.12</b> -142 -119 -80</a></li>
+<li class="chapter" data-level="3.13" data-path="mon-tue.html"><a href="mon-tue.html"><i class="fa fa-check"></i><b>3.13</b> Mon Tue</a></li>
+<li class="chapter" data-level="3.14" data-path="section-6.html"><a href="section-6.html"><i class="fa fa-check"></i><b>3.14</b> 150 178</a><ul>
+<li class="chapter" data-level="3.14.1" data-path="section-6.html"><a href="section-6.html#que-pasa-si-sumamos-los-dias-de-fin-de-semana"><i class="fa fa-check"></i><b>3.14.1</b> ¿Qué pasa si sumamos los días de fin de semana?</a></li>
+</ul></li>
+<li class="chapter" data-level="3.15" data-path="fri-sat-sun.html"><a href="fri-sat-sun.html"><i class="fa fa-check"></i><b>3.15</b> Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.16" data-path="section-7.html"><a href="section-7.html"><i class="fa fa-check"></i><b>3.16</b> -80 -119 -142</a></li>
+<li class="chapter" data-level="3.17" data-path="fri-sat-sun-1.html"><a href="fri-sat-sun-1.html"><i class="fa fa-check"></i><b>3.17</b> Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.18" data-path="section-8.html"><a href="section-8.html"><i class="fa fa-check"></i><b>3.18</b> 134 -153 126</a></li>
+<li class="chapter" data-level="3.19" data-path="fri-sat-sun-2.html"><a href="fri-sat-sun-2.html"><i class="fa fa-check"></i><b>3.19</b> Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.20" data-path="section-9.html"><a href="section-9.html"><i class="fa fa-check"></i><b>3.20</b> 54 -272 -16</a></li>
+<li class="chapter" data-level="3.21" data-path="mon-tue-wed-thu-fri-sat-sun-1.html"><a href="mon-tue-wed-thu-fri-sat-sun-1.html"><i class="fa fa-check"></i><b>3.21</b> Mon Tue Wed Thu Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.22" data-path="section-10.html"><a href="section-10.html"><i class="fa fa-check"></i><b>3.22</b> 102 329 192 150 54 -272 -16</a><ul>
+<li class="chapter" data-level="3.22.1" data-path="section-10.html"><a href="section-10.html#comparacion-de-elementos"><i class="fa fa-check"></i><b>3.22.1</b> Comparación de elementos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.23" data-path="mon-tue-wed-thu-fri-sat-sun-2.html"><a href="mon-tue-wed-thu-fri-sat-sun-2.html"><i class="fa fa-check"></i><b>3.23</b> Mon Tue Wed Thu Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.24" data-path="section-11.html"><a href="section-11.html"><i class="fa fa-check"></i><b>3.24</b> 150 178 -6 166 -80 -119 -142</a></li>
+<li class="chapter" data-level="3.25" data-path="mon-tue-wed-thu-fri-sat-sun-3.html"><a href="mon-tue-wed-thu-fri-sat-sun-3.html"><i class="fa fa-check"></i><b>3.25</b> Mon Tue Wed Thu Fri Sat Sun</a></li>
+<li class="chapter" data-level="3.26" data-path="true-true-false-true-false-false-false.html"><a href="true-true-false-true-false-false-false.html"><i class="fa fa-check"></i><b>3.26</b> TRUE TRUE FALSE TRUE FALSE FALSE FALSE</a></li>
+<li class="chapter" data-level="3.27" data-path="mon-tue-thu.html"><a href="mon-tue-thu.html"><i class="fa fa-check"></i><b>3.27</b> Mon Tue Thu</a></li>
+<li class="chapter" data-level="3.28" data-path="section-12.html"><a href="section-12.html"><i class="fa fa-check"></i><b>3.28</b> 150 178 166</a></li>
+<li class="chapter" data-level="3.29" data-path="false-false-true-true-false-true-true.html"><a href="false-false-true-true-false-true-true.html"><i class="fa fa-check"></i><b>3.29</b> [1] FALSE FALSE TRUE TRUE FALSE TRUE TRUE</a></li>
+<li class="chapter" data-level="3.30" data-path="section-13.html"><a href="section-13.html"><i class="fa fa-check"></i><b>3.30</b> [1] 4</a></li>
+<li class="chapter" data-level="3.31" data-path="section-14.html"><a href="section-14.html"><i class="fa fa-check"></i><b>3.31</b> [1] 3 4 6 7</a></li>
+<li class="chapter" data-level="3.32" data-path="monterrey-monterrey-mexico-mexico.html"><a href="monterrey-monterrey-mexico-mexico.html"><i class="fa fa-check"></i><b>3.32</b> [1] “Monterrey” “Monterrey” “Mexico” “Mexico”</a><ul>
+<li class="chapter" data-level="3.32.1" data-path="monterrey-monterrey-mexico-mexico.html"><a href="monterrey-monterrey-mexico-mexico.html#grafica-de-vectores"><i class="fa fa-check"></i><b>3.32.1</b> Gráfica de vectores</a></li>
+<li class="chapter" data-level="3.32.2" data-path="monterrey-monterrey-mexico-mexico.html"><a href="monterrey-monterrey-mexico-mexico.html#vectores-de-distribuciones"><i class="fa fa-check"></i><b>3.32.2</b> Vectores de distribuciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.33" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>3.33</b> Matrices</a><ul>
+<li class="chapter" data-level="3.33.1" data-path="matrices.html"><a href="matrices.html#crear-una-matriz"><i class="fa fa-check"></i><b>3.33.1</b> Crear una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="3.34" data-path="section-15.html"><a href="section-15.html"><i class="fa fa-check"></i><b>3.34</b> [,1] [,2] [,3]</a></li>
+<li class="chapter" data-level="3.35" data-path="section-16.html"><a href="section-16.html"><i class="fa fa-check"></i><b>3.35</b> [1,] 1 4 7</a></li>
+<li class="chapter" data-level="3.36" data-path="section-17.html"><a href="section-17.html"><i class="fa fa-check"></i><b>3.36</b> [2,] 2 5 8</a></li>
+<li class="chapter" data-level="3.37" data-path="section-18.html"><a href="section-18.html"><i class="fa fa-check"></i><b>3.37</b> [3,] 3 6 9</a></li>
+<li class="chapter" data-level="3.38" data-path="section-19.html"><a href="section-19.html"><i class="fa fa-check"></i><b>3.38</b> [,1] [,2]</a></li>
+<li class="chapter" data-level="3.39" data-path="section-20.html"><a href="section-20.html"><i class="fa fa-check"></i><b>3.39</b> [1,] 497066400 141823200</a></li>
+<li class="chapter" data-level="3.40" data-path="section-21.html"><a href="section-21.html"><i class="fa fa-check"></i><b>3.40</b> [2,] 426630300 189432500</a></li>
+<li class="chapter" data-level="3.41" data-path="section-22.html"><a href="section-22.html"><i class="fa fa-check"></i><b>3.41</b> [3,] 401608200 142414700</a></li>
+<li class="chapter" data-level="3.42" data-path="section-23.html"><a href="section-23.html"><i class="fa fa-check"></i><b>3.42</b> [4,] 399302200 135197600</a></li>
+<li class="chapter" data-level="3.43" data-path="section-24.html"><a href="section-24.html"><i class="fa fa-check"></i><b>3.43</b> [5,] 377314200 99635700</a></li>
+<li class="chapter" data-level="3.44" data-path="section-25.html"><a href="section-25.html"><i class="fa fa-check"></i><b>3.44</b> [6,] 359788300 92756000</a></li>
+<li class="chapter" data-level="3.45" data-path="section-26.html"><a href="section-26.html"><i class="fa fa-check"></i><b>3.45</b> [7,] 357233500 134119300</a></li>
+<li class="chapter" data-level="3.46" data-path="section-27.html"><a href="section-27.html"><i class="fa fa-check"></i><b>3.46</b> [8,] 328833900 138752100</a></li>
+<li class="chapter" data-level="3.47" data-path="section-28.html"><a href="section-28.html"><i class="fa fa-check"></i><b>3.47</b> [1] 8 2</a></li>
+<li class="chapter" data-level="3.48" data-path="section-29.html"><a href="section-29.html"><i class="fa fa-check"></i><b>3.48</b> [1] 8</a></li>
+<li class="chapter" data-level="3.49" data-path="section-30.html"><a href="section-30.html"><i class="fa fa-check"></i><b>3.49</b> [1] 2</a><ul>
+<li class="chapter" data-level="3.49.1" data-path="section-30.html"><a href="section-30.html#nombres-de-matrices"><i class="fa fa-check"></i><b>3.49.1</b> Nombres de matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="3.50" data-path="section-31.html"><a href="section-31.html"><i class="fa fa-check"></i><b>3.50</b> [,1] [,2]</a></li>
+<li class="chapter" data-level="3.51" data-path="hp-and-the-sorcerers-stone-497066400-141823200.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200.html"><i class="fa fa-check"></i><b>3.51</b> 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.52" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500.html"><i class="fa fa-check"></i><b>3.52</b> 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.53" data-path="hp-and-the-goblet-of-fire-401608200-142414700.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700.html"><i class="fa fa-check"></i><b>3.53</b> 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.54" data-path="hp-and-the-chamber-of-secrets-399302200-135197600.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600.html"><i class="fa fa-check"></i><b>3.54</b> 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.55" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700.html"><i class="fa fa-check"></i><b>3.55</b> 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.56" data-path="hp-and-the-half-blood-prince-359788300-92756000.html"><a href="hp-and-the-half-blood-prince-359788300-92756000.html"><i class="fa fa-check"></i><b>3.56</b> 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.57" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300.html"><i class="fa fa-check"></i><b>3.57</b> 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.58" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100.html"><i class="fa fa-check"></i><b>3.58</b> 7. HP and the Deathly Hallows Part 1 328833900 138752100</a><ul>
+<li class="chapter" data-level="3.58.1" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100.html#seleccion-de-elementos-en-una-matriz"><i class="fa fa-check"></i><b>3.58.1</b> Selección de elementos en una matriz</a></li>
+</ul></li>
+<li class="chapter" data-level="3.59" data-path="total-release-date.html"><a href="total-release-date.html"><i class="fa fa-check"></i><b>3.59</b> total release_date</a></li>
+<li class="chapter" data-level="3.60" data-path="hp-and-the-sorcerers-stone-497066400-141823200-1.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-1.html"><i class="fa fa-check"></i><b>3.60</b> 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.61" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-1.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-1.html"><i class="fa fa-check"></i><b>3.61</b> 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.62" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-1.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-1.html"><i class="fa fa-check"></i><b>3.62</b> 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.63" data-path="total-release-date-1.html"><a href="total-release-date-1.html"><i class="fa fa-check"></i><b>3.63</b> total release_date</a></li>
+<li class="chapter" data-level="3.64" data-path="hp-and-the-sorcerers-stone-497066400-141823200-2.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-2.html"><i class="fa fa-check"></i><b>3.64</b> 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.65" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-2.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-2.html"><i class="fa fa-check"></i><b>3.65</b> 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.66" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-2.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-2.html"><i class="fa fa-check"></i><b>3.66</b> 3. HP and the Prisoner of Azkaban 357233500 134119300</a><ul>
+<li class="chapter" data-level="3.66.1" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-2.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-2.html#operaciones-en-matrices"><i class="fa fa-check"></i><b>3.66.1</b> Operaciones en matrices</a></li>
+</ul></li>
+<li class="chapter" data-level="3.67" data-path="total-release-date-2.html"><a href="total-release-date-2.html"><i class="fa fa-check"></i><b>3.67</b> total release_date</a></li>
+<li class="chapter" data-level="3.68" data-path="hp-and-the-sorcerers-stone-497-0664-141-8232.html"><a href="hp-and-the-sorcerers-stone-497-0664-141-8232.html"><i class="fa fa-check"></i><b>3.68</b> 1. HP and the Sorcerer’s Stone 497.0664 141.8232</a></li>
+<li class="chapter" data-level="3.69" data-path="hp-and-the-deathly-hallows-part-2-426-6303-189-4325.html"><a href="hp-and-the-deathly-hallows-part-2-426-6303-189-4325.html"><i class="fa fa-check"></i><b>3.69</b> 8. HP and the Deathly Hallows Part 2 426.6303 189.4325</a></li>
+<li class="chapter" data-level="3.70" data-path="hp-and-the-goblet-of-fire-401-6082-142-4147.html"><a href="hp-and-the-goblet-of-fire-401-6082-142-4147.html"><i class="fa fa-check"></i><b>3.70</b> 4. HP and the Goblet of Fire 401.6082 142.4147</a></li>
+<li class="chapter" data-level="3.71" data-path="hp-and-the-chamber-of-secrets-399-3022-135-1976.html"><a href="hp-and-the-chamber-of-secrets-399-3022-135-1976.html"><i class="fa fa-check"></i><b>3.71</b> 2. HP and the Chamber of Secrets 399.3022 135.1976</a></li>
+<li class="chapter" data-level="3.72" data-path="hp-and-the-order-of-the-phoenix-377-3142-99-6357.html"><a href="hp-and-the-order-of-the-phoenix-377-3142-99-6357.html"><i class="fa fa-check"></i><b>3.72</b> 5. HP and the Order of the Phoenix 377.3142 99.6357</a></li>
+<li class="chapter" data-level="3.73" data-path="hp-and-the-half-blood-prince-359-7883-92-7560.html"><a href="hp-and-the-half-blood-prince-359-7883-92-7560.html"><i class="fa fa-check"></i><b>3.73</b> 6. HP and the Half-Blood Prince 359.7883 92.7560</a></li>
+<li class="chapter" data-level="3.74" data-path="hp-and-the-prisoner-of-azkaban-357-2335-134-1193.html"><a href="hp-and-the-prisoner-of-azkaban-357-2335-134-1193.html"><i class="fa fa-check"></i><b>3.74</b> 3. HP and the Prisoner of Azkaban 357.2335 134.1193</a></li>
+<li class="chapter" data-level="3.75" data-path="hp-and-the-deathly-hallows-part-1-328-8339-138-7521.html"><a href="hp-and-the-deathly-hallows-part-1-328-8339-138-7521.html"><i class="fa fa-check"></i><b>3.75</b> 7. HP and the Deathly Hallows Part 1 328.8339 138.7521</a></li>
+<li class="chapter" data-level="3.76" data-path="section-32.html"><a href="section-32.html"><i class="fa fa-check"></i><b>3.76</b> [1] 3672 4375 3858 3682 4285 4325 3855 4125</a></li>
+<li class="chapter" data-level="3.77" data-path="total-release-date-3.html"><a href="total-release-date-3.html"><i class="fa fa-check"></i><b>3.77</b> total release_date</a></li>
+<li class="chapter" data-level="3.78" data-path="hp-and-the-sorcerers-stone-135366-67-38622-88.html"><a href="hp-and-the-sorcerers-stone-135366-67-38622-88.html"><i class="fa fa-check"></i><b>3.78</b> 1. HP and the Sorcerer’s Stone 135366.67 38622.88</a></li>
+<li class="chapter" data-level="3.79" data-path="hp-and-the-deathly-hallows-part-2-97515-50-43298-86.html"><a href="hp-and-the-deathly-hallows-part-2-97515-50-43298-86.html"><i class="fa fa-check"></i><b>3.79</b> 8. HP and the Deathly Hallows Part 2 97515.50 43298.86</a></li>
+<li class="chapter" data-level="3.80" data-path="hp-and-the-goblet-of-fire-104097-51-36914-13.html"><a href="hp-and-the-goblet-of-fire-104097-51-36914-13.html"><i class="fa fa-check"></i><b>3.80</b> 4. HP and the Goblet of Fire 104097.51 36914.13</a></li>
+<li class="chapter" data-level="3.81" data-path="hp-and-the-chamber-of-secrets-108447-09-36718-52.html"><a href="hp-and-the-chamber-of-secrets-108447-09-36718-52.html"><i class="fa fa-check"></i><b>3.81</b> 2. HP and the Chamber of Secrets 108447.09 36718.52</a></li>
+<li class="chapter" data-level="3.82" data-path="hp-and-the-order-of-the-phoenix-88054-66-23252-21.html"><a href="hp-and-the-order-of-the-phoenix-88054-66-23252-21.html"><i class="fa fa-check"></i><b>3.82</b> 5. HP and the Order of the Phoenix 88054.66 23252.21</a></li>
+<li class="chapter" data-level="3.83" data-path="hp-and-the-half-blood-prince-83188-05-21446-47.html"><a href="hp-and-the-half-blood-prince-83188-05-21446-47.html"><i class="fa fa-check"></i><b>3.83</b> 6. HP and the Half-Blood Prince 83188.05 21446.47</a></li>
+<li class="chapter" data-level="3.84" data-path="hp-and-the-prisoner-of-azkaban-92667-57-34791-00.html"><a href="hp-and-the-prisoner-of-azkaban-92667-57-34791-00.html"><i class="fa fa-check"></i><b>3.84</b> 3. HP and the Prisoner of Azkaban 92667.57 34791.00</a></li>
+<li class="chapter" data-level="3.85" data-path="hp-and-the-deathly-hallows-part-1-79717-31-33636-87.html"><a href="hp-and-the-deathly-hallows-part-1-79717-31-33636-87.html"><i class="fa fa-check"></i><b>3.85</b> 7. HP and the Deathly Hallows Part 1 79717.31 33636.87</a><ul>
+<li class="chapter" data-level="3.85.1" data-path="hp-and-the-deathly-hallows-part-1-79717-31-33636-87.html"><a href="hp-and-the-deathly-hallows-part-1-79717-31-33636-87.html#operaciones-por-dimensiones"><i class="fa fa-check"></i><b>3.85.1</b> Operaciones por dimensiones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.86" data-path="total-release-date-4.html"><a href="total-release-date-4.html"><i class="fa fa-check"></i><b>3.86</b> total release_date</a></li>
+<li class="chapter" data-level="3.87" data-path="section-33.html"><a href="section-33.html"><i class="fa fa-check"></i><b>3.87</b> 3147.777 1074.131</a></li>
+<li class="chapter" data-level="3.88" data-path="hp-and-the-sorcerers-stone-8-hp-and-the-deathly-hallows-part-2.html"><a href="hp-and-the-sorcerers-stone-8-hp-and-the-deathly-hallows-part-2.html"><i class="fa fa-check"></i><b>3.88</b> 1. HP and the Sorcerer’s Stone 8. HP and the Deathly Hallows Part 2</a></li>
+<li class="chapter" data-level="3.89" data-path="section-34.html"><a href="section-34.html"><i class="fa fa-check"></i><b>3.89</b> 638.8896 616.0628</a></li>
+<li class="chapter" data-level="3.90" data-path="hp-and-the-goblet-of-fire-2-hp-and-the-chamber-of-secrets.html"><a href="hp-and-the-goblet-of-fire-2-hp-and-the-chamber-of-secrets.html"><i class="fa fa-check"></i><b>3.90</b> 4. HP and the Goblet of Fire 2. HP and the Chamber of Secrets</a></li>
+<li class="chapter" data-level="3.91" data-path="section-35.html"><a href="section-35.html"><i class="fa fa-check"></i><b>3.91</b> 544.0229 534.4998</a></li>
+<li class="chapter" data-level="3.92" data-path="hp-and-the-order-of-the-phoenix-6-hp-and-the-half-blood-prince.html"><a href="hp-and-the-order-of-the-phoenix-6-hp-and-the-half-blood-prince.html"><i class="fa fa-check"></i><b>3.92</b> 5. HP and the Order of the Phoenix 6. HP and the Half-Blood Prince</a></li>
+<li class="chapter" data-level="3.93" data-path="section-36.html"><a href="section-36.html"><i class="fa fa-check"></i><b>3.93</b> 476.9499 452.5443</a></li>
+<li class="chapter" data-level="3.94" data-path="hp-and-the-prisoner-of-azkaban-7-hp-and-the-deathly-hallows-part-1.html"><a href="hp-and-the-prisoner-of-azkaban-7-hp-and-the-deathly-hallows-part-1.html"><i class="fa fa-check"></i><b>3.94</b> 3. HP and the Prisoner of Azkaban 7. HP and the Deathly Hallows Part 1</a></li>
+<li class="chapter" data-level="3.95" data-path="section-37.html"><a href="section-37.html"><i class="fa fa-check"></i><b>3.95</b> 491.3528 467.5860</a><ul>
+<li class="chapter" data-level="3.95.1" data-path="section-37.html"><a href="section-37.html#nuevos-valores"><i class="fa fa-check"></i><b>3.95.1</b> Nuevos valores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.96" data-path="total-release-date-theaters-vec.html"><a href="total-release-date-theaters-vec.html"><i class="fa fa-check"></i><b>3.96</b> total release_date theaters_vec</a></li>
+<li class="chapter" data-level="3.97" data-path="hp-and-the-sorcerers-stone-497-0664-141-8232-3672.html"><a href="hp-and-the-sorcerers-stone-497-0664-141-8232-3672.html"><i class="fa fa-check"></i><b>3.97</b> 1. HP and the Sorcerer’s Stone 497.0664 141.8232 3672</a></li>
+<li class="chapter" data-level="3.98" data-path="hp-and-the-deathly-hallows-part-2-426-6303-189-4325-4375.html"><a href="hp-and-the-deathly-hallows-part-2-426-6303-189-4325-4375.html"><i class="fa fa-check"></i><b>3.98</b> 8. HP and the Deathly Hallows Part 2 426.6303 189.4325 4375</a></li>
+<li class="chapter" data-level="3.99" data-path="hp-and-the-goblet-of-fire-401-6082-142-4147-3858.html"><a href="hp-and-the-goblet-of-fire-401-6082-142-4147-3858.html"><i class="fa fa-check"></i><b>3.99</b> 4. HP and the Goblet of Fire 401.6082 142.4147 3858</a></li>
+<li class="chapter" data-level="3.100" data-path="hp-and-the-chamber-of-secrets-399-3022-135-1976-3682.html"><a href="hp-and-the-chamber-of-secrets-399-3022-135-1976-3682.html"><i class="fa fa-check"></i><b>3.100</b> 2. HP and the Chamber of Secrets 399.3022 135.1976 3682</a></li>
+<li class="chapter" data-level="3.101" data-path="hp-and-the-order-of-the-phoenix-377-3142-99-6357-4285.html"><a href="hp-and-the-order-of-the-phoenix-377-3142-99-6357-4285.html"><i class="fa fa-check"></i><b>3.101</b> 5. HP and the Order of the Phoenix 377.3142 99.6357 4285</a></li>
+<li class="chapter" data-level="3.102" data-path="hp-and-the-half-blood-prince-359-7883-92-7560-4325.html"><a href="hp-and-the-half-blood-prince-359-7883-92-7560-4325.html"><i class="fa fa-check"></i><b>3.102</b> 6. HP and the Half-Blood Prince 359.7883 92.7560 4325</a></li>
+<li class="chapter" data-level="3.103" data-path="hp-and-the-prisoner-of-azkaban-357-2335-134-1193-3855.html"><a href="hp-and-the-prisoner-of-azkaban-357-2335-134-1193-3855.html"><i class="fa fa-check"></i><b>3.103</b> 3. HP and the Prisoner of Azkaban 357.2335 134.1193 3855</a></li>
+<li class="chapter" data-level="3.104" data-path="hp-and-the-deathly-hallows-part-1-328-8339-138-7521-4125.html"><a href="hp-and-the-deathly-hallows-part-1-328-8339-138-7521-4125.html"><i class="fa fa-check"></i><b>3.104</b> 7. HP and the Deathly Hallows Part 1 328.8339 138.7521 4125</a></li>
+<li class="chapter" data-level="3.105" data-path="factores.html"><a href="factores.html"><i class="fa fa-check"></i><b>3.105</b> Factores</a><ul>
+<li class="chapter" data-level="3.105.1" data-path="factores.html"><a href="factores.html#variable-categorica-nominal"><i class="fa fa-check"></i><b>3.105.1</b> Variable categórica nominal</a></li>
+</ul></li>
+<li class="chapter" data-level="3.106" data-path="f-m-m-f-m.html"><a href="f-m-m-f-m.html"><i class="fa fa-check"></i><b>3.106</b> [1] F M M F M</a></li>
+<li class="chapter" data-level="3.107" data-path="levels-f-m.html"><a href="levels-f-m.html"><i class="fa fa-check"></i><b>3.107</b> Levels: F M</a></li>
+<li class="chapter" data-level="3.108" data-path="f-m-m-f-m-1.html"><a href="f-m-m-f-m-1.html"><i class="fa fa-check"></i><b>3.108</b> [1] F M M F M</a></li>
+<li class="chapter" data-level="3.109" data-path="levels-m-f.html"><a href="levels-m-f.html"><i class="fa fa-check"></i><b>3.109</b> Levels: M F</a><ul>
+<li class="chapter" data-level="3.109.1" data-path="levels-m-f.html"><a href="levels-m-f.html#variable-categorica-ordinal"><i class="fa fa-check"></i><b>3.109.1</b> Variable categórica ordinal</a></li>
+</ul></li>
+<li class="chapter" data-level="3.110" data-path="high-low-medium-low-low-medium-high-low-medium-low.html"><a href="high-low-medium-low-low-medium-high-low-medium-low.html"><i class="fa fa-check"></i><b>3.110</b> [1] High Low Medium Low Low Medium High Low Medium Low</a></li>
+<li class="chapter" data-level="3.111" data-path="low.html"><a href="low.html"><i class="fa fa-check"></i><b>3.111</b> [11] Low</a></li>
+<li class="chapter" data-level="3.112" data-path="levels-low-medium-high.html"><a href="levels-low-medium-high.html"><i class="fa fa-check"></i><b>3.112</b> Levels: Low &lt; Medium &lt; High</a></li>
+<li class="chapter" data-level="3.113" data-path="low-medium-high.html"><a href="low-medium-high.html"><i class="fa fa-check"></i><b>3.113</b> [1] “Low” “Medium” “High”</a></li>
+<li class="chapter" data-level="3.114" data-path="h-l-m-l-l-m-h-l-m-l-l.html"><a href="h-l-m-l-l-m-h-l-m-l-l.html"><i class="fa fa-check"></i><b>3.114</b> [1] H L M L L M H L M L L</a></li>
+<li class="chapter" data-level="3.115" data-path="levels-l-m-h.html"><a href="levels-l-m-h.html"><i class="fa fa-check"></i><b>3.115</b> Levels: L &lt; M &lt; H</a><ul>
+<li class="chapter" data-level="3.115.1" data-path="levels-l-m-h.html"><a href="levels-l-m-h.html#resumen-de-factores"><i class="fa fa-check"></i><b>3.115.1</b> Resúmen de factores</a></li>
+</ul></li>
+<li class="chapter" data-level="3.116" data-path="length-class-mode.html"><a href="length-class-mode.html"><i class="fa fa-check"></i><b>3.116</b> Length Class Mode</a></li>
+<li class="chapter" data-level="3.117" data-path="character-character.html"><a href="character-character.html"><i class="fa fa-check"></i><b>3.117</b> 5 character character</a></li>
+<li class="chapter" data-level="3.118" data-path="f-m.html"><a href="f-m.html"><i class="fa fa-check"></i><b>3.118</b> F M</a></li>
+<li class="chapter" data-level="3.119" data-path="section-38.html"><a href="section-38.html"><i class="fa fa-check"></i><b>3.119</b> 2 3</a></li>
+<li class="chapter" data-level="3.120" data-path="data-frame.html"><a href="data-frame.html"><i class="fa fa-check"></i><b>3.120</b> Dataframe</a><ul>
+<li class="chapter" data-level="3.120.1" data-path="data-frame.html"><a href="data-frame.html#crear-un-dataframe"><i class="fa fa-check"></i><b>3.120.1</b> Crear un dataframe</a></li>
+</ul></li>
+<li class="chapter" data-level="3.121" data-path="secuencia-aleatorio-letras.html"><a href="secuencia-aleatorio-letras.html"><i class="fa fa-check"></i><b>3.121</b> secuencia aleatorio letras</a></li>
+<li class="chapter" data-level="3.122" data-path="a.html"><a href="a.html"><i class="fa fa-check"></i><b>3.122</b> 1 1 -0.56290278 a</a></li>
+<li class="chapter" data-level="3.123" data-path="b.html"><a href="b.html"><i class="fa fa-check"></i><b>3.123</b> 2 2 1.14120397 b</a></li>
+<li class="chapter" data-level="3.124" data-path="c.html"><a href="c.html"><i class="fa fa-check"></i><b>3.124</b> 3 3 -1.37928505 c</a></li>
+<li class="chapter" data-level="3.125" data-path="d.html"><a href="d.html"><i class="fa fa-check"></i><b>3.125</b> 4 4 -0.09001855 d</a></li>
+<li class="chapter" data-level="3.126" data-path="e.html"><a href="e.html"><i class="fa fa-check"></i><b>3.126</b> 5 5 -2.35306246 e</a></li>
+<li class="chapter" data-level="3.127" data-path="total-release-date-5.html"><a href="total-release-date-5.html"><i class="fa fa-check"></i><b>3.127</b> total release_date</a></li>
+<li class="chapter" data-level="3.128" data-path="hp-and-the-sorcerers-stone-497066400-141823200-3.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-3.html"><i class="fa fa-check"></i><b>3.128</b> 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.129" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-1.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-1.html"><i class="fa fa-check"></i><b>3.129</b> 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.130" data-path="hp-and-the-goblet-of-fire-401608200-142414700-1.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-1.html"><i class="fa fa-check"></i><b>3.130</b> 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.131" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-3.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-3.html"><i class="fa fa-check"></i><b>3.131</b> 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.132" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-1.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-1.html"><i class="fa fa-check"></i><b>3.132</b> 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.133" data-path="hp-and-the-half-blood-prince-359788300-92756000-1.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-1.html"><i class="fa fa-check"></i><b>3.133</b> 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.134" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-3.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-3.html"><i class="fa fa-check"></i><b>3.134</b> 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.135" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-1.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-1.html"><i class="fa fa-check"></i><b>3.135</b> 7. HP and the Deathly Hallows Part 1 328833900 138752100</a><ul>
+<li class="chapter" data-level="3.135.1" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-1.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-1.html#nombres-de-dimensiones"><i class="fa fa-check"></i><b>3.135.1</b> Nombres de dimensiones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.136" data-path="total-grosses-opening-grosses.html"><a href="total-grosses-opening-grosses.html"><i class="fa fa-check"></i><b>3.136</b> total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.137" data-path="hp-and-the-sorcerers-stone-497066400-141823200-4.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-4.html"><i class="fa fa-check"></i><b>3.137</b> 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.138" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-2.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-2.html"><i class="fa fa-check"></i><b>3.138</b> 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.139" data-path="hp-and-the-goblet-of-fire-401608200-142414700-2.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-2.html"><i class="fa fa-check"></i><b>3.139</b> 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.140" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-4.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-4.html"><i class="fa fa-check"></i><b>3.140</b> 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.141" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-2.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-2.html"><i class="fa fa-check"></i><b>3.141</b> 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.142" data-path="hp-and-the-half-blood-prince-359788300-92756000-2.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-2.html"><i class="fa fa-check"></i><b>3.142</b> 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.143" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-4.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-4.html"><i class="fa fa-check"></i><b>3.143</b> 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.144" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-2.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-2.html"><i class="fa fa-check"></i><b>3.144</b> 7. HP and the Deathly Hallows Part 1 328833900 138752100</a><ul>
+<li class="chapter" data-level="3.144.1" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-2.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-2.html#seleccion-de-elementos"><i class="fa fa-check"></i><b>3.144.1</b> Seleccion de elementos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.145" data-path="section-39.html"><a href="section-39.html"><i class="fa fa-check"></i><b>3.145</b> [1] 497066400 426630300 401608200 399302200 377314200 359788300 357233500</a></li>
+<li class="chapter" data-level="3.146" data-path="section-40.html"><a href="section-40.html"><i class="fa fa-check"></i><b>3.146</b> [8] 328833900</a></li>
+<li class="chapter" data-level="3.147" data-path="total-grosses-opening-grosses-1.html"><a href="total-grosses-opening-grosses-1.html"><i class="fa fa-check"></i><b>3.147</b> total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.148" data-path="hp-and-the-sorcerers-stone-497066400-141823200-5.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-5.html"><i class="fa fa-check"></i><b>3.148</b> 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.149" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-3.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-3.html"><i class="fa fa-check"></i><b>3.149</b> 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.150" data-path="hp-and-the-goblet-of-fire-401608200-142414700-3.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-3.html"><i class="fa fa-check"></i><b>3.150</b> 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.151" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-5.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-5.html"><i class="fa fa-check"></i><b>3.151</b> 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.152" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-3.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-3.html"><i class="fa fa-check"></i><b>3.152</b> 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.153" data-path="hp-and-the-half-blood-prince-359788300-92756000-3.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-3.html"><i class="fa fa-check"></i><b>3.153</b> 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.154" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-5.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-5.html"><i class="fa fa-check"></i><b>3.154</b> 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.155" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-3.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-3.html"><i class="fa fa-check"></i><b>3.155</b> 7. HP and the Deathly Hallows Part 1 328833900 138752100</a></li>
+<li class="chapter" data-level="3.156" data-path="title.html"><a href="title.html"><i class="fa fa-check"></i><b>3.156</b> title</a></li>
+<li class="chapter" data-level="3.157" data-path="hp-and-the-sorcerers-stone-1-hp-and-the-sorcerers-stone.html"><a href="hp-and-the-sorcerers-stone-1-hp-and-the-sorcerers-stone.html"><i class="fa fa-check"></i><b>3.157</b> 1. HP and the Sorcerer’s Stone 1. HP and the Sorcerer’s Stone</a></li>
+<li class="chapter" data-level="3.158" data-path="hp-and-the-deathly-hallows-part-2-8-hp-and-the-deathly-hallows-part-2.html"><a href="hp-and-the-deathly-hallows-part-2-8-hp-and-the-deathly-hallows-part-2.html"><i class="fa fa-check"></i><b>3.158</b> 8. HP and the Deathly Hallows Part 2 8. HP and the Deathly Hallows Part 2</a></li>
+<li class="chapter" data-level="3.159" data-path="hp-and-the-goblet-of-fire-4-hp-and-the-goblet-of-fire.html"><a href="hp-and-the-goblet-of-fire-4-hp-and-the-goblet-of-fire.html"><i class="fa fa-check"></i><b>3.159</b> 4. HP and the Goblet of Fire 4. HP and the Goblet of Fire</a></li>
+<li class="chapter" data-level="3.160" data-path="hp-and-the-chamber-of-secrets-2-hp-and-the-chamber-of-secrets.html"><a href="hp-and-the-chamber-of-secrets-2-hp-and-the-chamber-of-secrets.html"><i class="fa fa-check"></i><b>3.160</b> 2. HP and the Chamber of Secrets 2. HP and the Chamber of Secrets</a></li>
+<li class="chapter" data-level="3.161" data-path="hp-and-the-order-of-the-phoenix-5-hp-and-the-order-of-the-phoenix.html"><a href="hp-and-the-order-of-the-phoenix-5-hp-and-the-order-of-the-phoenix.html"><i class="fa fa-check"></i><b>3.161</b> 5. HP and the Order of the Phoenix 5. HP and the Order of the Phoenix</a></li>
+<li class="chapter" data-level="3.162" data-path="hp-and-the-half-blood-prince-6-hp-and-the-half-blood-prince.html"><a href="hp-and-the-half-blood-prince-6-hp-and-the-half-blood-prince.html"><i class="fa fa-check"></i><b>3.162</b> 6. HP and the Half-Blood Prince 6. HP and the Half-Blood Prince</a></li>
+<li class="chapter" data-level="3.163" data-path="hp-and-the-prisoner-of-azkaban-3-hp-and-the-prisoner-of-azkaban.html"><a href="hp-and-the-prisoner-of-azkaban-3-hp-and-the-prisoner-of-azkaban.html"><i class="fa fa-check"></i><b>3.163</b> 3. HP and the Prisoner of Azkaban 3. HP and the Prisoner of Azkaban</a></li>
+<li class="chapter" data-level="3.164" data-path="hp-and-the-deathly-hallows-part-1-7-hp-and-the-deathly-hallows-part-1.html"><a href="hp-and-the-deathly-hallows-part-1-7-hp-and-the-deathly-hallows-part-1.html"><i class="fa fa-check"></i><b>3.164</b> 7. HP and the Deathly Hallows Part 1 7. HP and the Deathly Hallows Part 1</a></li>
+<li class="chapter" data-level="3.165" data-path="hp-and-the-sorcerers-stone.html"><a href="hp-and-the-sorcerers-stone.html"><i class="fa fa-check"></i><b>3.165</b> [1] “1. HP and the Sorcerer’s Stone”</a></li>
+<li class="chapter" data-level="3.166" data-path="hp-and-the-chamber-of-secrets.html"><a href="hp-and-the-chamber-of-secrets.html"><i class="fa fa-check"></i><b>3.166</b> [2] “2. HP and the Chamber of Secrets”</a></li>
+<li class="chapter" data-level="3.167" data-path="hp-and-the-prisoner-of-azkaban.html"><a href="hp-and-the-prisoner-of-azkaban.html"><i class="fa fa-check"></i><b>3.167</b> [3] “3. HP and the Prisoner of Azkaban”</a></li>
+<li class="chapter" data-level="3.168" data-path="hp-and-the-goblet-of-fire.html"><a href="hp-and-the-goblet-of-fire.html"><i class="fa fa-check"></i><b>3.168</b> [4] “4. HP and the Goblet of Fire”</a></li>
+<li class="chapter" data-level="3.169" data-path="hp-and-the-order-of-the-phoenix.html"><a href="hp-and-the-order-of-the-phoenix.html"><i class="fa fa-check"></i><b>3.169</b> [5] “5. HP and the Order of the Phoenix”</a></li>
+<li class="chapter" data-level="3.170" data-path="hp-and-the-half-blood-prince.html"><a href="hp-and-the-half-blood-prince.html"><i class="fa fa-check"></i><b>3.170</b> [6] “6. HP and the Half-Blood Prince”</a></li>
+<li class="chapter" data-level="3.171" data-path="hp-and-the-deathly-hallows-part-1.html"><a href="hp-and-the-deathly-hallows-part-1.html"><i class="fa fa-check"></i><b>3.171</b> [7] “7. HP and the Deathly Hallows Part 1”</a></li>
+<li class="chapter" data-level="3.172" data-path="hp-and-the-deathly-hallows-part-2.html"><a href="hp-and-the-deathly-hallows-part-2.html"><i class="fa fa-check"></i><b>3.172</b> [8] “8. HP and the Deathly Hallows Part 2”</a></li>
+<li class="chapter" data-level="3.173" data-path="total-grosses-opening-grosses-title.html"><a href="total-grosses-opening-grosses-title.html"><i class="fa fa-check"></i><b>3.173</b> total_grosses opening_grosses title</a></li>
+<li class="chapter" data-level="3.174" data-path="hp-and-the-sorcerers-stone-1.html"><a href="hp-and-the-sorcerers-stone-1.html"><i class="fa fa-check"></i><b>3.174</b> 1 497066400 141823200 1. HP and the Sorcerer’s Stone</a></li>
+<li class="chapter" data-level="3.175" data-path="hp-and-the-deathly-hallows-part-2-1.html"><a href="hp-and-the-deathly-hallows-part-2-1.html"><i class="fa fa-check"></i><b>3.175</b> 2 426630300 189432500 8. HP and the Deathly Hallows Part 2</a></li>
+<li class="chapter" data-level="3.176" data-path="hp-and-the-goblet-of-fire-1.html"><a href="hp-and-the-goblet-of-fire-1.html"><i class="fa fa-check"></i><b>3.176</b> 3 401608200 142414700 4. HP and the Goblet of Fire</a></li>
+<li class="chapter" data-level="3.177" data-path="hp-and-the-chamber-of-secrets-1.html"><a href="hp-and-the-chamber-of-secrets-1.html"><i class="fa fa-check"></i><b>3.177</b> 4 399302200 135197600 2. HP and the Chamber of Secrets</a></li>
+<li class="chapter" data-level="3.178" data-path="hp-and-the-order-of-the-phoenix-1.html"><a href="hp-and-the-order-of-the-phoenix-1.html"><i class="fa fa-check"></i><b>3.178</b> 5 377314200 99635700 5. HP and the Order of the Phoenix</a></li>
+<li class="chapter" data-level="3.179" data-path="hp-and-the-half-blood-prince-1.html"><a href="hp-and-the-half-blood-prince-1.html"><i class="fa fa-check"></i><b>3.179</b> 6 359788300 92756000 6. HP and the Half-Blood Prince</a></li>
+<li class="chapter" data-level="3.180" data-path="hp-and-the-prisoner-of-azkaban-1.html"><a href="hp-and-the-prisoner-of-azkaban-1.html"><i class="fa fa-check"></i><b>3.180</b> 7 357233500 134119300 3. HP and the Prisoner of Azkaban</a></li>
+<li class="chapter" data-level="3.181" data-path="hp-and-the-deathly-hallows-part-1-1.html"><a href="hp-and-the-deathly-hallows-part-1-1.html"><i class="fa fa-check"></i><b>3.181</b> 8 328833900 138752100 7. HP and the Deathly Hallows Part 1</a><ul>
+<li class="chapter" data-level="3.181.1" data-path="hp-and-the-deathly-hallows-part-1-1.html"><a href="hp-and-the-deathly-hallows-part-1-1.html#orden-de-posiciones"><i class="fa fa-check"></i><b>3.181.1</b> Orden de posiciones</a></li>
+</ul></li>
+<li class="chapter" data-level="3.182" data-path="section-41.html"><a href="section-41.html"><i class="fa fa-check"></i><b>3.182</b> [1] 497066400 426630300 401608200 399302200 377314200 359788300 357233500</a></li>
+<li class="chapter" data-level="3.183" data-path="section-42.html"><a href="section-42.html"><i class="fa fa-check"></i><b>3.183</b> [8] 328833900</a></li>
+<li class="chapter" data-level="3.184" data-path="section-43.html"><a href="section-43.html"><i class="fa fa-check"></i><b>3.184</b> [1] 8 7 6 5 4 3 2 1</a></li>
+<li class="chapter" data-level="3.185" data-path="section-44.html"><a href="section-44.html"><i class="fa fa-check"></i><b>3.185</b> [1] 328833900 357233500 359788300 377314200 399302200 401608200 426630300</a></li>
+<li class="chapter" data-level="3.186" data-path="section-45.html"><a href="section-45.html"><i class="fa fa-check"></i><b>3.186</b> [8] 497066400</a></li>
+<li class="chapter" data-level="3.187" data-path="title-total-grosses-opening-grosses.html"><a href="title-total-grosses-opening-grosses.html"><i class="fa fa-check"></i><b>3.187</b> title total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.188" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-4.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-4.html"><i class="fa fa-check"></i><b>3.188</b> 8 7. HP and the Deathly Hallows Part 1 328833900 138752100</a></li>
+<li class="chapter" data-level="3.189" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-6.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-6.html"><i class="fa fa-check"></i><b>3.189</b> 7 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.190" data-path="hp-and-the-half-blood-prince-359788300-92756000-4.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-4.html"><i class="fa fa-check"></i><b>3.190</b> 6 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.191" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-4.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-4.html"><i class="fa fa-check"></i><b>3.191</b> 5 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.192" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-6.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-6.html"><i class="fa fa-check"></i><b>3.192</b> 4 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.193" data-path="hp-and-the-goblet-of-fire-401608200-142414700-4.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-4.html"><i class="fa fa-check"></i><b>3.193</b> 3 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.194" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-4.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-4.html"><i class="fa fa-check"></i><b>3.194</b> 2 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.195" data-path="hp-and-the-sorcerers-stone-497066400-141823200-6.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-6.html"><i class="fa fa-check"></i><b>3.195</b> 1 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.196" data-path="hp-and-the-sorcerers-stone-8-hp-and-the-deathly-hallows-part-2-1.html"><a href="hp-and-the-sorcerers-stone-8-hp-and-the-deathly-hallows-part-2-1.html"><i class="fa fa-check"></i><b>3.196</b> 1. HP and the Sorcerer’s Stone 8. HP and the Deathly Hallows Part 2</a></li>
+<li class="chapter" data-level="3.197" data-path="section-46.html"><a href="section-46.html"><i class="fa fa-check"></i><b>3.197</b> “11/16/01” “7/15/11”</a></li>
+<li class="chapter" data-level="3.198" data-path="hp-and-the-goblet-of-fire-2-hp-and-the-chamber-of-secrets-1.html"><a href="hp-and-the-goblet-of-fire-2-hp-and-the-chamber-of-secrets-1.html"><i class="fa fa-check"></i><b>3.198</b> 4. HP and the Goblet of Fire 2. HP and the Chamber of Secrets</a></li>
+<li class="chapter" data-level="3.199" data-path="section-47.html"><a href="section-47.html"><i class="fa fa-check"></i><b>3.199</b> “11/18/05” “11/15/02”</a></li>
+<li class="chapter" data-level="3.200" data-path="hp-and-the-order-of-the-phoenix-6-hp-and-the-half-blood-prince-1.html"><a href="hp-and-the-order-of-the-phoenix-6-hp-and-the-half-blood-prince-1.html"><i class="fa fa-check"></i><b>3.200</b> 5. HP and the Order of the Phoenix 6. HP and the Half-Blood Prince</a></li>
+<li class="chapter" data-level="3.201" data-path="section-48.html"><a href="section-48.html"><i class="fa fa-check"></i><b>3.201</b> “7/11/07” “7/15/09”</a></li>
+<li class="chapter" data-level="3.202" data-path="hp-and-the-prisoner-of-azkaban-7-hp-and-the-deathly-hallows-part-1-1.html"><a href="hp-and-the-prisoner-of-azkaban-7-hp-and-the-deathly-hallows-part-1-1.html"><i class="fa fa-check"></i><b>3.202</b> 3. HP and the Prisoner of Azkaban 7. HP and the Deathly Hallows Part 1</a></li>
+<li class="chapter" data-level="3.203" data-path="section-49.html"><a href="section-49.html"><i class="fa fa-check"></i><b>3.203</b> “6/4/04” “11/19/10”</a></li>
+<li class="chapter" data-level="3.204" data-path="title-total-grosses-opening-grosses-1.html"><a href="title-total-grosses-opening-grosses-1.html"><i class="fa fa-check"></i><b>3.204</b> title total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.205" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-5.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-5.html"><i class="fa fa-check"></i><b>3.205</b> 8 7. HP and the Deathly Hallows Part 1 328833900 138752100</a></li>
+<li class="chapter" data-level="3.206" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-7.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-7.html"><i class="fa fa-check"></i><b>3.206</b> 7 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.207" data-path="hp-and-the-half-blood-prince-359788300-92756000-5.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-5.html"><i class="fa fa-check"></i><b>3.207</b> 6 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.208" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-5.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-5.html"><i class="fa fa-check"></i><b>3.208</b> 5 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.209" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-7.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-7.html"><i class="fa fa-check"></i><b>3.209</b> 4 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.210" data-path="hp-and-the-goblet-of-fire-401608200-142414700-5.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-5.html"><i class="fa fa-check"></i><b>3.210</b> 3 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.211" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-5.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-5.html"><i class="fa fa-check"></i><b>3.211</b> 2 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.212" data-path="hp-and-the-sorcerers-stone-497066400-141823200-7.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-7.html"><i class="fa fa-check"></i><b>3.212</b> 1 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.213" data-path="release-date.html"><a href="release-date.html"><i class="fa fa-check"></i><b>3.213</b> release_date</a></li>
+<li class="chapter" data-level="3.214" data-path="section-50.html"><a href="section-50.html"><i class="fa fa-check"></i><b>3.214</b> 8 11/19/10</a></li>
+<li class="chapter" data-level="3.215" data-path="section-51.html"><a href="section-51.html"><i class="fa fa-check"></i><b>3.215</b> 7 6/4/04</a></li>
+<li class="chapter" data-level="3.216" data-path="section-52.html"><a href="section-52.html"><i class="fa fa-check"></i><b>3.216</b> 6 7/15/09</a></li>
+<li class="chapter" data-level="3.217" data-path="section-53.html"><a href="section-53.html"><i class="fa fa-check"></i><b>3.217</b> 5 7/11/07</a></li>
+<li class="chapter" data-level="3.218" data-path="section-54.html"><a href="section-54.html"><i class="fa fa-check"></i><b>3.218</b> 4 11/15/02</a></li>
+<li class="chapter" data-level="3.219" data-path="section-55.html"><a href="section-55.html"><i class="fa fa-check"></i><b>3.219</b> 3 11/18/05</a></li>
+<li class="chapter" data-level="3.220" data-path="section-56.html"><a href="section-56.html"><i class="fa fa-check"></i><b>3.220</b> 2 7/15/11</a></li>
+<li class="chapter" data-level="3.221" data-path="section-57.html"><a href="section-57.html"><i class="fa fa-check"></i><b>3.221</b> 1 11/16/01</a><ul>
+<li class="chapter" data-level="3.221.1" data-path="section-57.html"><a href="section-57.html#funciones-utiles-para-data-frames"><i class="fa fa-check"></i><b>3.221.1</b> Funciones útiles para data frames</a></li>
+</ul></li>
+<li class="chapter" data-level="3.222" data-path="title-total-grosses-opening-grosses-2.html"><a href="title-total-grosses-opening-grosses-2.html"><i class="fa fa-check"></i><b>3.222</b> title total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.223" data-path="hp-and-the-deathly-hallows-part-1-328833900-138752100-6.html"><a href="hp-and-the-deathly-hallows-part-1-328833900-138752100-6.html"><i class="fa fa-check"></i><b>3.223</b> 8 7. HP and the Deathly Hallows Part 1 328833900 138752100</a></li>
+<li class="chapter" data-level="3.224" data-path="hp-and-the-prisoner-of-azkaban-357233500-134119300-8.html"><a href="hp-and-the-prisoner-of-azkaban-357233500-134119300-8.html"><i class="fa fa-check"></i><b>3.224</b> 7 3. HP and the Prisoner of Azkaban 357233500 134119300</a></li>
+<li class="chapter" data-level="3.225" data-path="hp-and-the-half-blood-prince-359788300-92756000-6.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-6.html"><i class="fa fa-check"></i><b>3.225</b> 6 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.226" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-6.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-6.html"><i class="fa fa-check"></i><b>3.226</b> 5 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.227" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-8.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-8.html"><i class="fa fa-check"></i><b>3.227</b> 4 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.228" data-path="hp-and-the-goblet-of-fire-401608200-142414700-6.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-6.html"><i class="fa fa-check"></i><b>3.228</b> 3 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.229" data-path="release-date-1.html"><a href="release-date-1.html"><i class="fa fa-check"></i><b>3.229</b> release_date</a></li>
+<li class="chapter" data-level="3.230" data-path="section-58.html"><a href="section-58.html"><i class="fa fa-check"></i><b>3.230</b> 8 11/19/10</a></li>
+<li class="chapter" data-level="3.231" data-path="section-59.html"><a href="section-59.html"><i class="fa fa-check"></i><b>3.231</b> 7 6/4/04</a></li>
+<li class="chapter" data-level="3.232" data-path="section-60.html"><a href="section-60.html"><i class="fa fa-check"></i><b>3.232</b> 6 7/15/09</a></li>
+<li class="chapter" data-level="3.233" data-path="section-61.html"><a href="section-61.html"><i class="fa fa-check"></i><b>3.233</b> 5 7/11/07</a></li>
+<li class="chapter" data-level="3.234" data-path="section-62.html"><a href="section-62.html"><i class="fa fa-check"></i><b>3.234</b> 4 11/15/02</a></li>
+<li class="chapter" data-level="3.235" data-path="section-63.html"><a href="section-63.html"><i class="fa fa-check"></i><b>3.235</b> 3 11/18/05</a></li>
+<li class="chapter" data-level="3.236" data-path="title-total-grosses-opening-grosses-3.html"><a href="title-total-grosses-opening-grosses-3.html"><i class="fa fa-check"></i><b>3.236</b> title total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.237" data-path="hp-and-the-half-blood-prince-359788300-92756000-7.html"><a href="hp-and-the-half-blood-prince-359788300-92756000-7.html"><i class="fa fa-check"></i><b>3.237</b> 6 6. HP and the Half-Blood Prince 359788300 92756000</a></li>
+<li class="chapter" data-level="3.238" data-path="hp-and-the-order-of-the-phoenix-377314200-99635700-7.html"><a href="hp-and-the-order-of-the-phoenix-377314200-99635700-7.html"><i class="fa fa-check"></i><b>3.238</b> 5 5. HP and the Order of the Phoenix 377314200 99635700</a></li>
+<li class="chapter" data-level="3.239" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-9.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-9.html"><i class="fa fa-check"></i><b>3.239</b> 4 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.240" data-path="hp-and-the-goblet-of-fire-401608200-142414700-7.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-7.html"><i class="fa fa-check"></i><b>3.240</b> 3 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.241" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-6.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-6.html"><i class="fa fa-check"></i><b>3.241</b> 2 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.242" data-path="hp-and-the-sorcerers-stone-497066400-141823200-8.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-8.html"><i class="fa fa-check"></i><b>3.242</b> 1 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.243" data-path="release-date-2.html"><a href="release-date-2.html"><i class="fa fa-check"></i><b>3.243</b> release_date</a></li>
+<li class="chapter" data-level="3.244" data-path="section-64.html"><a href="section-64.html"><i class="fa fa-check"></i><b>3.244</b> 6 7/15/09</a></li>
+<li class="chapter" data-level="3.245" data-path="section-65.html"><a href="section-65.html"><i class="fa fa-check"></i><b>3.245</b> 5 7/11/07</a></li>
+<li class="chapter" data-level="3.246" data-path="section-66.html"><a href="section-66.html"><i class="fa fa-check"></i><b>3.246</b> 4 11/15/02</a></li>
+<li class="chapter" data-level="3.247" data-path="section-67.html"><a href="section-67.html"><i class="fa fa-check"></i><b>3.247</b> 3 11/18/05</a></li>
+<li class="chapter" data-level="3.248" data-path="section-68.html"><a href="section-68.html"><i class="fa fa-check"></i><b>3.248</b> 2 7/15/11</a></li>
+<li class="chapter" data-level="3.249" data-path="section-69.html"><a href="section-69.html"><i class="fa fa-check"></i><b>3.249</b> 1 11/16/01</a></li>
+<li class="chapter" data-level="3.250" data-path="data-frame-8-obs-of-4-variables.html"><a href="data-frame-8-obs-of-4-variables.html"><i class="fa fa-check"></i><b>3.250</b> ‘data.frame’: 8 obs. of 4 variables:</a></li>
+<li class="chapter" data-level="3.251" data-path="title-factor-w-8-levels-1-hp-and-the-sorcerers-stone-7-3-6-5-2-4-8-1.html"><a href="title-factor-w-8-levels-1-hp-and-the-sorcerers-stone-7-3-6-5-2-4-8-1.html"><i class="fa fa-check"></i><b>3.251</b> $ title : Factor w/ 8 levels “1. HP and the Sorcerer’s Stone”,..: 7 3 6 5 2 4 8 1</a></li>
+<li class="chapter" data-level="3.252" data-path="total-grosses-num-3-29e08-3-57e08-3-60e08-3-77e08-3-99e08.html"><a href="total-grosses-num-3-29e08-3-57e08-3-60e08-3-77e08-3-99e08.html"><i class="fa fa-check"></i><b>3.252</b> $ total_grosses : num 3.29e+08 3.57e+08 3.60e+08 3.77e+08 3.99e+08 …</a></li>
+<li class="chapter" data-level="3.253" data-path="opening-grosses-num-1-39e08-1-34e08-9-28e07-9-96e07-1-35e08.html"><a href="opening-grosses-num-1-39e08-1-34e08-9-28e07-9-96e07-1-35e08.html"><i class="fa fa-check"></i><b>3.253</b> $ opening_grosses: num 1.39e+08 1.34e+08 9.28e+07 9.96e+07 1.35e+08 …</a></li>
+<li class="chapter" data-level="3.254" data-path="release-date-chr-111910-6404-71509-71107.html"><a href="release-date-chr-111910-6404-71509-71107.html"><i class="fa fa-check"></i><b>3.254</b> $ release_date : chr “11/19/10” “6/4/04” “7/15/09” “7/11/07” …</a></li>
+<li class="chapter" data-level="3.255" data-path="section-70.html"><a href="section-70.html"><i class="fa fa-check"></i><b>3.255</b> [1] 8</a></li>
+<li class="chapter" data-level="3.256" data-path="title-total-grosses-opening-grosses-4.html"><a href="title-total-grosses-opening-grosses-4.html"><i class="fa fa-check"></i><b>3.256</b> title total_grosses opening_grosses</a></li>
+<li class="chapter" data-level="3.257" data-path="hp-and-the-chamber-of-secrets-399302200-135197600-10.html"><a href="hp-and-the-chamber-of-secrets-399302200-135197600-10.html"><i class="fa fa-check"></i><b>3.257</b> 4 2. HP and the Chamber of Secrets 399302200 135197600</a></li>
+<li class="chapter" data-level="3.258" data-path="hp-and-the-goblet-of-fire-401608200-142414700-8.html"><a href="hp-and-the-goblet-of-fire-401608200-142414700-8.html"><i class="fa fa-check"></i><b>3.258</b> 3 4. HP and the Goblet of Fire 401608200 142414700</a></li>
+<li class="chapter" data-level="3.259" data-path="hp-and-the-deathly-hallows-part-2-426630300-189432500-7.html"><a href="hp-and-the-deathly-hallows-part-2-426630300-189432500-7.html"><i class="fa fa-check"></i><b>3.259</b> 2 8. HP and the Deathly Hallows Part 2 426630300 189432500</a></li>
+<li class="chapter" data-level="3.260" data-path="hp-and-the-sorcerers-stone-497066400-141823200-9.html"><a href="hp-and-the-sorcerers-stone-497066400-141823200-9.html"><i class="fa fa-check"></i><b>3.260</b> 1 1. HP and the Sorcerer’s Stone 497066400 141823200</a></li>
+<li class="chapter" data-level="3.261" data-path="release-date-3.html"><a href="release-date-3.html"><i class="fa fa-check"></i><b>3.261</b> release_date</a></li>
+<li class="chapter" data-level="3.262" data-path="section-71.html"><a href="section-71.html"><i class="fa fa-check"></i><b>3.262</b> 4 11/15/02</a></li>
+<li class="chapter" data-level="3.263" data-path="section-72.html"><a href="section-72.html"><i class="fa fa-check"></i><b>3.263</b> 3 11/18/05</a></li>
+<li class="chapter" data-level="3.264" data-path="section-73.html"><a href="section-73.html"><i class="fa fa-check"></i><b>3.264</b> 2 7/15/11</a></li>
+<li class="chapter" data-level="3.265" data-path="section-74.html"><a href="section-74.html"><i class="fa fa-check"></i><b>3.265</b> 1 11/16/01</a></li>
+<li class="chapter" data-level="3.266" data-path="listas.html"><a href="listas.html"><i class="fa fa-check"></i><b>3.266</b> Listas</a><ul>
+<li class="chapter" data-level="3.266.1" data-path="listas.html"><a href="listas.html#crear-una-lista"><i class="fa fa-check"></i><b>3.266.1</b> Crear una lista</a></li>
+</ul></li>
+<li class="chapter" data-level="3.267" data-path="vector.html"><a href="vector.html"><i class="fa fa-check"></i><b>3.267</b> $vector</a></li>
+<li class="chapter" data-level="3.268" data-path="section-75.html"><a href="section-75.html"><i class="fa fa-check"></i><b>3.268</b> [1] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.269" data-path="section-76.html"><a href="section-76.html"><i class="fa fa-check"></i><b>3.269</b> </a></li>
+<li class="chapter" data-level="3.270" data-path="matriz.html"><a href="matriz.html"><i class="fa fa-check"></i><b>3.270</b> $matriz</a></li>
+<li class="chapter" data-level="3.271" data-path="section-77.html"><a href="section-77.html"><i class="fa fa-check"></i><b>3.271</b> [,1] [,2] [,3]</a></li>
+<li class="chapter" data-level="3.272" data-path="section-78.html"><a href="section-78.html"><i class="fa fa-check"></i><b>3.272</b> [1,] 1 4 7</a></li>
+<li class="chapter" data-level="3.273" data-path="section-79.html"><a href="section-79.html"><i class="fa fa-check"></i><b>3.273</b> [2,] 2 5 8</a></li>
+<li class="chapter" data-level="3.274" data-path="section-80.html"><a href="section-80.html"><i class="fa fa-check"></i><b>3.274</b> [3,] 3 6 9</a></li>
+<li class="chapter" data-level="3.275" data-path="section-81.html"><a href="section-81.html"><i class="fa fa-check"></i><b>3.275</b> </a></li>
+<li class="chapter" data-level="3.276" data-path="dataframe.html"><a href="dataframe.html"><i class="fa fa-check"></i><b>3.276</b> $dataframe</a></li>
+<li class="chapter" data-level="3.277" data-path="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb.html"><a href="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb.html"><i class="fa fa-check"></i><b>3.277</b> mpg cyl disp hp drat wt qsec vs am gear carb</a></li>
+<li class="chapter" data-level="3.278" data-path="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4.html"><a href="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4.html"><i class="fa fa-check"></i><b>3.278</b> Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4</a></li>
+<li class="chapter" data-level="3.279" data-path="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4.html"><a href="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4.html"><i class="fa fa-check"></i><b>3.279</b> Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4</a></li>
+<li class="chapter" data-level="3.280" data-path="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1.html"><a href="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1.html"><i class="fa fa-check"></i><b>3.280</b> Datsun 710 22.8 4 108 93 3.85 2.320 18.61 1 1 4 1</a></li>
+<li class="chapter" data-level="3.281" data-path="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1.html"><a href="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1.html"><i class="fa fa-check"></i><b>3.281</b> Hornet 4 Drive 21.4 6 258 110 3.08 3.215 19.44 1 0 3 1</a></li>
+<li class="chapter" data-level="3.282" data-path="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2.html"><a href="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2.html"><i class="fa fa-check"></i><b>3.282</b> Hornet Sportabout 18.7 8 360 175 3.15 3.440 17.02 0 0 3 2</a><ul>
+<li class="chapter" data-level="3.282.1" data-path="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2.html"><a href="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2.html#nombres-de-elementos"><i class="fa fa-check"></i><b>3.282.1</b> Nombres de elementos</a></li>
+</ul></li>
+<li class="chapter" data-level="3.283" data-path="vector-matriz-dataframe.html"><a href="vector-matriz-dataframe.html"><i class="fa fa-check"></i><b>3.283</b> [1] “vector” “matriz” “dataframe”</a></li>
+<li class="chapter" data-level="3.284" data-path="vec.html"><a href="vec.html"><i class="fa fa-check"></i><b>3.284</b> $vec</a></li>
+<li class="chapter" data-level="3.285" data-path="section-82.html"><a href="section-82.html"><i class="fa fa-check"></i><b>3.285</b> [1] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.286" data-path="section-83.html"><a href="section-83.html"><i class="fa fa-check"></i><b>3.286</b> </a></li>
+<li class="chapter" data-level="3.287" data-path="mat.html"><a href="mat.html"><i class="fa fa-check"></i><b>3.287</b> $mat</a></li>
+<li class="chapter" data-level="3.288" data-path="section-84.html"><a href="section-84.html"><i class="fa fa-check"></i><b>3.288</b> [,1] [,2] [,3]</a></li>
+<li class="chapter" data-level="3.289" data-path="section-85.html"><a href="section-85.html"><i class="fa fa-check"></i><b>3.289</b> [1,] 1 4 7</a></li>
+<li class="chapter" data-level="3.290" data-path="section-86.html"><a href="section-86.html"><i class="fa fa-check"></i><b>3.290</b> [2,] 2 5 8</a></li>
+<li class="chapter" data-level="3.291" data-path="section-87.html"><a href="section-87.html"><i class="fa fa-check"></i><b>3.291</b> [3,] 3 6 9</a></li>
+<li class="chapter" data-level="3.292" data-path="section-88.html"><a href="section-88.html"><i class="fa fa-check"></i><b>3.292</b> </a></li>
+<li class="chapter" data-level="3.293" data-path="df.html"><a href="df.html"><i class="fa fa-check"></i><b>3.293</b> $df</a></li>
+<li class="chapter" data-level="3.294" data-path="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb-1.html"><a href="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb-1.html"><i class="fa fa-check"></i><b>3.294</b> mpg cyl disp hp drat wt qsec vs am gear carb</a></li>
+<li class="chapter" data-level="3.295" data-path="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4-1.html"><a href="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4-1.html"><i class="fa fa-check"></i><b>3.295</b> Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4</a></li>
+<li class="chapter" data-level="3.296" data-path="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4-1.html"><a href="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4-1.html"><i class="fa fa-check"></i><b>3.296</b> Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4</a></li>
+<li class="chapter" data-level="3.297" data-path="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1-1.html"><a href="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1-1.html"><i class="fa fa-check"></i><b>3.297</b> Datsun 710 22.8 4 108 93 3.85 2.320 18.61 1 1 4 1</a></li>
+<li class="chapter" data-level="3.298" data-path="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1-1.html"><a href="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1-1.html"><i class="fa fa-check"></i><b>3.298</b> Hornet 4 Drive 21.4 6 258 110 3.08 3.215 19.44 1 0 3 1</a></li>
+<li class="chapter" data-level="3.299" data-path="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2-1.html"><a href="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2-1.html"><i class="fa fa-check"></i><b>3.299</b> Hornet Sportabout 18.7 8 360 175 3.15 3.440 17.02 0 0 3 2</a></li>
+<li class="chapter" data-level="3.300" data-path="section-89.html"><a href="section-89.html"><i class="fa fa-check"></i><b>3.300</b> [1] 3</a><ul>
+<li class="chapter" data-level="3.300.1" data-path="section-89.html"><a href="section-89.html#seleccion-de-elementos-en-una-lista"><i class="fa fa-check"></i><b>3.300.1</b> Selección de elementos en una lista</a></li>
+</ul></li>
+<li class="chapter" data-level="3.301" data-path="vec-1.html"><a href="vec-1.html"><i class="fa fa-check"></i><b>3.301</b> $vec</a></li>
+<li class="chapter" data-level="3.302" data-path="section-90.html"><a href="section-90.html"><i class="fa fa-check"></i><b>3.302</b> [1] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.303" data-path="section-91.html"><a href="section-91.html"><i class="fa fa-check"></i><b>3.303</b> [1] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.304" data-path="null.html"><a href="null.html"><i class="fa fa-check"></i><b>3.304</b> NULL</a><ul>
+<li class="chapter" data-level="3.304.1" data-path="null.html"><a href="null.html#nuevos-valores-a-la-lista"><i class="fa fa-check"></i><b>3.304.1</b> Nuevos valores a la lista</a></li>
+</ul></li>
+<li class="chapter" data-level="3.305" data-path="section-92.html"><a href="section-92.html"><i class="fa fa-check"></i><b>3.305</b> [1] 0.7589467</a></li>
+<li class="chapter" data-level="3.306" data-path="vec-2.html"><a href="vec-2.html"><i class="fa fa-check"></i><b>3.306</b> $vec</a></li>
+<li class="chapter" data-level="3.307" data-path="section-93.html"><a href="section-93.html"><i class="fa fa-check"></i><b>3.307</b> [1] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.308" data-path="section-94.html"><a href="section-94.html"><i class="fa fa-check"></i><b>3.308</b> </a></li>
+<li class="chapter" data-level="3.309" data-path="mat-1.html"><a href="mat-1.html"><i class="fa fa-check"></i><b>3.309</b> $mat</a></li>
+<li class="chapter" data-level="3.310" data-path="section-95.html"><a href="section-95.html"><i class="fa fa-check"></i><b>3.310</b> [,1] [,2] [,3]</a></li>
+<li class="chapter" data-level="3.311" data-path="section-96.html"><a href="section-96.html"><i class="fa fa-check"></i><b>3.311</b> [1,] 1 4 7</a></li>
+<li class="chapter" data-level="3.312" data-path="section-97.html"><a href="section-97.html"><i class="fa fa-check"></i><b>3.312</b> [2,] 2 5 8</a></li>
+<li class="chapter" data-level="3.313" data-path="section-98.html"><a href="section-98.html"><i class="fa fa-check"></i><b>3.313</b> [3,] 3 6 9</a></li>
+<li class="chapter" data-level="3.314" data-path="section-99.html"><a href="section-99.html"><i class="fa fa-check"></i><b>3.314</b> </a></li>
+<li class="chapter" data-level="3.315" data-path="df-1.html"><a href="df-1.html"><i class="fa fa-check"></i><b>3.315</b> $df</a></li>
+<li class="chapter" data-level="3.316" data-path="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb-2.html"><a href="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb-2.html"><i class="fa fa-check"></i><b>3.316</b> mpg cyl disp hp drat wt qsec vs am gear carb</a></li>
+<li class="chapter" data-level="3.317" data-path="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4-2.html"><a href="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4-2.html"><i class="fa fa-check"></i><b>3.317</b> Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4</a></li>
+<li class="chapter" data-level="3.318" data-path="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4-2.html"><a href="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4-2.html"><i class="fa fa-check"></i><b>3.318</b> Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4</a></li>
+<li class="chapter" data-level="3.319" data-path="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1-2.html"><a href="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1-2.html"><i class="fa fa-check"></i><b>3.319</b> Datsun 710 22.8 4 108 93 3.85 2.320 18.61 1 1 4 1</a></li>
+<li class="chapter" data-level="3.320" data-path="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1-2.html"><a href="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1-2.html"><i class="fa fa-check"></i><b>3.320</b> Hornet 4 Drive 21.4 6 258 110 3.08 3.215 19.44 1 0 3 1</a></li>
+<li class="chapter" data-level="3.321" data-path="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2-2.html"><a href="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2-2.html"><i class="fa fa-check"></i><b>3.321</b> Hornet Sportabout 18.7 8 360 175 3.15 3.440 17.02 0 0 3 2</a></li>
+<li class="chapter" data-level="3.322" data-path="section-100.html"><a href="section-100.html"><i class="fa fa-check"></i><b>3.322</b> </a></li>
+<li class="chapter" data-level="3.323" data-path="random.html"><a href="random.html"><i class="fa fa-check"></i><b>3.323</b> $random</a></li>
+<li class="chapter" data-level="3.324" data-path="section-101.html"><a href="section-101.html"><i class="fa fa-check"></i><b>3.324</b> [1] 0.7589467</a></li>
+<li class="chapter" data-level="3.325" data-path="vec-3.html"><a href="vec-3.html"><i class="fa fa-check"></i><b>3.325</b> $vec</a></li>
+<li class="chapter" data-level="3.326" data-path="section-102.html"><a href="section-102.html"><i class="fa fa-check"></i><b>3.326</b> [1] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.327" data-path="section-103.html"><a href="section-103.html"><i class="fa fa-check"></i><b>3.327</b> </a></li>
+<li class="chapter" data-level="3.328" data-path="mat-2.html"><a href="mat-2.html"><i class="fa fa-check"></i><b>3.328</b> $mat</a></li>
+<li class="chapter" data-level="3.329" data-path="section-104.html"><a href="section-104.html"><i class="fa fa-check"></i><b>3.329</b> [,1] [,2] [,3]</a></li>
+<li class="chapter" data-level="3.330" data-path="section-105.html"><a href="section-105.html"><i class="fa fa-check"></i><b>3.330</b> [1,] 1 4 7</a></li>
+<li class="chapter" data-level="3.331" data-path="section-106.html"><a href="section-106.html"><i class="fa fa-check"></i><b>3.331</b> [2,] 2 5 8</a></li>
+<li class="chapter" data-level="3.332" data-path="section-107.html"><a href="section-107.html"><i class="fa fa-check"></i><b>3.332</b> [3,] 3 6 9</a></li>
+<li class="chapter" data-level="3.333" data-path="section-108.html"><a href="section-108.html"><i class="fa fa-check"></i><b>3.333</b> </a></li>
+<li class="chapter" data-level="3.334" data-path="df-2.html"><a href="df-2.html"><i class="fa fa-check"></i><b>3.334</b> $df</a></li>
+<li class="chapter" data-level="3.335" data-path="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb-3.html"><a href="mpg-cyl-disp-hp-drat-wt-qsec-vs-am-gear-carb-3.html"><i class="fa fa-check"></i><b>3.335</b> mpg cyl disp hp drat wt qsec vs am gear carb</a></li>
+<li class="chapter" data-level="3.336" data-path="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4-3.html"><a href="mazda-rx4-21-0-6-160-110-3-90-2-620-16-46-0-1-4-4-3.html"><i class="fa fa-check"></i><b>3.336</b> Mazda RX4 21.0 6 160 110 3.90 2.620 16.46 0 1 4 4</a></li>
+<li class="chapter" data-level="3.337" data-path="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4-3.html"><a href="mazda-rx4-wag-21-0-6-160-110-3-90-2-875-17-02-0-1-4-4-3.html"><i class="fa fa-check"></i><b>3.337</b> Mazda RX4 Wag 21.0 6 160 110 3.90 2.875 17.02 0 1 4 4</a></li>
+<li class="chapter" data-level="3.338" data-path="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1-3.html"><a href="datsun-710-22-8-4-108-93-3-85-2-320-18-61-1-1-4-1-3.html"><i class="fa fa-check"></i><b>3.338</b> Datsun 710 22.8 4 108 93 3.85 2.320 18.61 1 1 4 1</a></li>
+<li class="chapter" data-level="3.339" data-path="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1-3.html"><a href="hornet-4-drive-21-4-6-258-110-3-08-3-215-19-44-1-0-3-1-3.html"><i class="fa fa-check"></i><b>3.339</b> Hornet 4 Drive 21.4 6 258 110 3.08 3.215 19.44 1 0 3 1</a></li>
+<li class="chapter" data-level="3.340" data-path="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2-3.html"><a href="hornet-sportabout-18-7-8-360-175-3-15-3-440-17-02-0-0-3-2-3.html"><i class="fa fa-check"></i><b>3.340</b> Hornet Sportabout 18.7 8 360 175 3.15 3.440 17.02 0 0 3 2</a></li>
+<li class="chapter" data-level="3.341" data-path="section-109.html"><a href="section-109.html"><i class="fa fa-check"></i><b>3.341</b> </a></li>
+<li class="chapter" data-level="3.342" data-path="random-1.html"><a href="random-1.html"><i class="fa fa-check"></i><b>3.342</b> $random</a></li>
+<li class="chapter" data-level="3.343" data-path="section-110.html"><a href="section-110.html"><i class="fa fa-check"></i><b>3.343</b> [1] 0.7589467</a></li>
+<li class="chapter" data-level="3.344" data-path="section-111.html"><a href="section-111.html"><i class="fa fa-check"></i><b>3.344</b> </a></li>
+<li class="chapter" data-level="3.345" data-path="random-num.html"><a href="random-num.html"><i class="fa fa-check"></i><b>3.345</b> $random_num</a></li>
+<li class="chapter" data-level="3.346" data-path="section-112.html"><a href="section-112.html"><i class="fa fa-check"></i><b>3.346</b> [1] 0.7589467</a><ul>
+<li class="chapter" data-level="3.346.1" data-path="section-112.html"><a href="section-112.html#funciones-utiles-para-listas"><i class="fa fa-check"></i><b>3.346.1</b> Funciones útiles para listas</a></li>
+</ul></li>
+<li class="chapter" data-level="3.347" data-path="vec1-vec2-vec3-vec4-vec5-vec6-vec7-vec8.html"><a href="vec1-vec2-vec3-vec4-vec5-vec6-vec7-vec8.html"><i class="fa fa-check"></i><b>3.347</b> vec1 vec2 vec3 vec4 vec5 vec6 vec7 vec8</a></li>
+<li class="chapter" data-level="3.348" data-path="section-113.html"><a href="section-113.html"><i class="fa fa-check"></i><b>3.348</b> 1.000 2.000 3.000 4.000 5.000 6.000 7.000 8.000</a></li>
+<li class="chapter" data-level="3.349" data-path="vec9-vec10-mat1-mat2-mat3-mat4-mat5-mat6.html"><a href="vec9-vec10-mat1-mat2-mat3-mat4-mat5-mat6.html"><i class="fa fa-check"></i><b>3.349</b> vec9 vec10 mat1 mat2 mat3 mat4 mat5 mat6</a></li>
+<li class="chapter" data-level="3.350" data-path="section-114.html"><a href="section-114.html"><i class="fa fa-check"></i><b>3.350</b> 9.000 10.000 1.000 2.000 3.000 4.000 5.000 6.000</a></li>
+<li class="chapter" data-level="3.351" data-path="mat7-mat8-mat9-df-mpg1-df-mpg2-df-mpg3-df-mpg4-df-mpg5.html"><a href="mat7-mat8-mat9-df-mpg1-df-mpg2-df-mpg3-df-mpg4-df-mpg5.html"><i class="fa fa-check"></i><b>3.351</b> mat7 mat8 mat9 df.mpg1 df.mpg2 df.mpg3 df.mpg4 df.mpg5</a></li>
+<li class="chapter" data-level="3.352" data-path="section-115.html"><a href="section-115.html"><i class="fa fa-check"></i><b>3.352</b> 7.000 8.000 9.000 21.000 21.000 22.800 21.400 18.700</a></li>
+<li class="chapter" data-level="3.353" data-path="df-cyl1-df-cyl2-df-cyl3-df-cyl4-df-cyl5-df-disp1-df-disp2-df-disp3.html"><a href="df-cyl1-df-cyl2-df-cyl3-df-cyl4-df-cyl5-df-disp1-df-disp2-df-disp3.html"><i class="fa fa-check"></i><b>3.353</b> df.cyl1 df.cyl2 df.cyl3 df.cyl4 df.cyl5 df.disp1 df.disp2 df.disp3</a></li>
+<li class="chapter" data-level="3.354" data-path="section-116.html"><a href="section-116.html"><i class="fa fa-check"></i><b>3.354</b> 6.000 6.000 4.000 6.000 8.000 160.000 160.000 108.000</a></li>
+<li class="chapter" data-level="3.355" data-path="df-disp4-df-disp5-df-hp1-df-hp2-df-hp3-df-hp4-df-hp5-df-drat1.html"><a href="df-disp4-df-disp5-df-hp1-df-hp2-df-hp3-df-hp4-df-hp5-df-drat1.html"><i class="fa fa-check"></i><b>3.355</b> df.disp4 df.disp5 df.hp1 df.hp2 df.hp3 df.hp4 df.hp5 df.drat1</a></li>
+<li class="chapter" data-level="3.356" data-path="section-117.html"><a href="section-117.html"><i class="fa fa-check"></i><b>3.356</b> 258.000 360.000 110.000 110.000 93.000 110.000 175.000 3.900</a></li>
+<li class="chapter" data-level="3.357" data-path="df-drat2-df-drat3-df-drat4-df-drat5-df-wt1-df-wt2-df-wt3-df-wt4.html"><a href="df-drat2-df-drat3-df-drat4-df-drat5-df-wt1-df-wt2-df-wt3-df-wt4.html"><i class="fa fa-check"></i><b>3.357</b> df.drat2 df.drat3 df.drat4 df.drat5 df.wt1 df.wt2 df.wt3 df.wt4</a></li>
+<li class="chapter" data-level="3.358" data-path="section-118.html"><a href="section-118.html"><i class="fa fa-check"></i><b>3.358</b> 3.900 3.850 3.080 3.150 2.620 2.875 2.320 3.215</a></li>
+<li class="chapter" data-level="3.359" data-path="df-wt5-df-qsec1-df-qsec2-df-qsec3-df-qsec4-df-qsec5-df-vs1-df-vs2.html"><a href="df-wt5-df-qsec1-df-qsec2-df-qsec3-df-qsec4-df-qsec5-df-vs1-df-vs2.html"><i class="fa fa-check"></i><b>3.359</b> df.wt5 df.qsec1 df.qsec2 df.qsec3 df.qsec4 df.qsec5 df.vs1 df.vs2</a></li>
+<li class="chapter" data-level="3.360" data-path="section-119.html"><a href="section-119.html"><i class="fa fa-check"></i><b>3.360</b> 3.440 16.460 17.020 18.610 19.440 17.020 0.000 0.000</a></li>
+<li class="chapter" data-level="3.361" data-path="df-vs3-df-vs4-df-vs5-df-am1-df-am2-df-am3-df-am4-df-am5.html"><a href="df-vs3-df-vs4-df-vs5-df-am1-df-am2-df-am3-df-am4-df-am5.html"><i class="fa fa-check"></i><b>3.361</b> df.vs3 df.vs4 df.vs5 df.am1 df.am2 df.am3 df.am4 df.am5</a></li>
+<li class="chapter" data-level="3.362" data-path="section-120.html"><a href="section-120.html"><i class="fa fa-check"></i><b>3.362</b> 1.000 1.000 0.000 1.000 1.000 1.000 0.000 0.000</a></li>
+<li class="chapter" data-level="3.363" data-path="df-gear1-df-gear2-df-gear3-df-gear4-df-gear5-df-carb1-df-carb2-df-carb3.html"><a href="df-gear1-df-gear2-df-gear3-df-gear4-df-gear5-df-carb1-df-carb2-df-carb3.html"><i class="fa fa-check"></i><b>3.363</b> df.gear1 df.gear2 df.gear3 df.gear4 df.gear5 df.carb1 df.carb2 df.carb3</a></li>
+<li class="chapter" data-level="3.364" data-path="section-121.html"><a href="section-121.html"><i class="fa fa-check"></i><b>3.364</b> 4.000 4.000 4.000 3.000 3.000 4.000 4.000 1.000</a></li>
+<li class="chapter" data-level="3.365" data-path="df-carb4-df-carb5.html"><a href="df-carb4-df-carb5.html"><i class="fa fa-check"></i><b>3.365</b> df.carb4 df.carb5</a></li>
+<li class="chapter" data-level="3.366" data-path="section-122.html"><a href="section-122.html"><i class="fa fa-check"></i><b>3.366</b> 1.000 2.000</a></li>
+<li class="chapter" data-level="3.367" data-path="list-of-3.html"><a href="list-of-3.html"><i class="fa fa-check"></i><b>3.367</b> List of 3</a></li>
+<li class="chapter" data-level="3.368" data-path="vec-int-110-1-2-3-4-5-6-7-8-9-10.html"><a href="vec-int-110-1-2-3-4-5-6-7-8-9-10.html"><i class="fa fa-check"></i><b>3.368</b> $ vec: int [1:10] 1 2 3 4 5 6 7 8 9 10</a></li>
+<li class="chapter" data-level="3.369" data-path="mat-int-13-13-1-2-3-4-5-6-7-8-9.html"><a href="mat-int-13-13-1-2-3-4-5-6-7-8-9.html"><i class="fa fa-check"></i><b>3.369</b> $ mat: int [1:3, 1:3] 1 2 3 4 5 6 7 8 9</a></li>
+<li class="chapter" data-level="3.370" data-path="df-data-frame-5-obs-of-11-variables.html"><a href="df-data-frame-5-obs-of-11-variables.html"><i class="fa fa-check"></i><b>3.370</b> $ df :‘data.frame’: 5 obs. of 11 variables:</a></li>
+<li class="chapter" data-level="3.371" data-path="mpg-num-15-21-21-22-8-21-4-18-7.html"><a href="mpg-num-15-21-21-22-8-21-4-18-7.html"><i class="fa fa-check"></i><b>3.371</b> ..$ mpg : num [1:5] 21 21 22.8 21.4 18.7</a></li>
+<li class="chapter" data-level="3.372" data-path="cyl-num-15-6-6-4-6-8.html"><a href="cyl-num-15-6-6-4-6-8.html"><i class="fa fa-check"></i><b>3.372</b> ..$ cyl : num [1:5] 6 6 4 6 8</a></li>
+<li class="chapter" data-level="3.373" data-path="disp-num-15-160-160-108-258-360.html"><a href="disp-num-15-160-160-108-258-360.html"><i class="fa fa-check"></i><b>3.373</b> ..$ disp: num [1:5] 160 160 108 258 360</a></li>
+<li class="chapter" data-level="3.374" data-path="hp-num-15-110-110-93-110-175.html"><a href="hp-num-15-110-110-93-110-175.html"><i class="fa fa-check"></i><b>3.374</b> ..$ hp : num [1:5] 110 110 93 110 175</a></li>
+<li class="chapter" data-level="3.375" data-path="drat-num-15-3-9-3-9-3-85-3-08-3-15.html"><a href="drat-num-15-3-9-3-9-3-85-3-08-3-15.html"><i class="fa fa-check"></i><b>3.375</b> ..$ drat: num [1:5] 3.9 3.9 3.85 3.08 3.15</a></li>
+<li class="chapter" data-level="3.376" data-path="wt-num-15-2-62-2-88-2-32-3-21-3-44.html"><a href="wt-num-15-2-62-2-88-2-32-3-21-3-44.html"><i class="fa fa-check"></i><b>3.376</b> ..$ wt : num [1:5] 2.62 2.88 2.32 3.21 3.44</a></li>
+<li class="chapter" data-level="3.377" data-path="qsec-num-15-16-5-17-18-6-19-4-17.html"><a href="qsec-num-15-16-5-17-18-6-19-4-17.html"><i class="fa fa-check"></i><b>3.377</b> ..$ qsec: num [1:5] 16.5 17 18.6 19.4 17</a></li>
+<li class="chapter" data-level="3.378" data-path="vs-num-15-0-0-1-1-0.html"><a href="vs-num-15-0-0-1-1-0.html"><i class="fa fa-check"></i><b>3.378</b> ..$ vs : num [1:5] 0 0 1 1 0</a></li>
+<li class="chapter" data-level="3.379" data-path="am-num-15-1-1-1-0-0.html"><a href="am-num-15-1-1-1-0-0.html"><i class="fa fa-check"></i><b>3.379</b> ..$ am : num [1:5] 1 1 1 0 0</a></li>
+<li class="chapter" data-level="3.380" data-path="gear-num-15-4-4-4-3-3.html"><a href="gear-num-15-4-4-4-3-3.html"><i class="fa fa-check"></i><b>3.380</b> ..$ gear: num [1:5] 4 4 4 3 3</a></li>
+<li class="chapter" data-level="3.381" data-path="carb-num-15-4-4-1-1-2.html"><a href="carb-num-15-4-4-1-1-2.html"><i class="fa fa-check"></i><b>3.381</b> ..$ carb: num [1:5] 4 4 1 1 2</a></li>
+<li class="chapter" data-level="3.382" data-path="ejercicios.html"><a href="ejercicios.html"><i class="fa fa-check"></i><b>3.382</b> Ejercicios</a><ul>
+<li class="chapter" data-level="3.382.1" data-path="ejercicios.html"><a href="ejercicios.html#ej-hidden-figures-imdb"><i class="fa fa-check"></i><b>3.382.1</b> Ej: Hidden Figures IMDB</a></li>
+<li class="chapter" data-level="3.382.2" data-path="ejercicios.html"><a href="ejercicios.html#ej-calificacion-promedio"><i class="fa fa-check"></i><b>3.382.2</b> Ej: Calificación promedio</a></li>
+<li class="chapter" data-level="3.382.3" data-path="ejercicios.html"><a href="ejercicios.html#ej-pesos-a-dolares"><i class="fa fa-check"></i><b>3.382.3</b> Ej: Pesos a dolares</a></li>
+</ul></li>
+<li class="chapter" data-level="3.383" data-path="section-123.html"><a href="section-123.html"><i class="fa fa-check"></i><b>3.383</b> [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="funciones.html"><a href="funciones.html"><i class="fa fa-check"></i><b>4</b> Funciones</a><ul>
+<li class="chapter" data-level="" data-path="funciones.html"><a href="funciones.html#una-caja-negra"><i class="fa fa-check"></i>Una caja negra</a></li>
+<li class="chapter" data-level="4.1" data-path="section-124.html"><a href="section-124.html"><i class="fa fa-check"></i><b>4.1</b> [1] 3</a></li>
+<li class="chapter" data-level="4.2" data-path="escibir-una-funcion.html"><a href="escibir-una-funcion.html"><i class="fa fa-check"></i><b>4.2</b> Escibir una función</a></li>
+<li class="chapter" data-level="4.3" data-path="section-125.html"><a href="section-125.html"><i class="fa fa-check"></i><b>4.3</b> [1] 6</a></li>
+<li class="chapter" data-level="4.4" data-path="input-output-suma-uno-fun.html"><a href="input-output-suma-uno-fun.html"><i class="fa fa-check"></i><b>4.4</b> [1] “input” “output” “suma_uno_fun”</a></li>
+<li class="chapter" data-level="4.5" data-path="argumentos-de-funciones.html"><a href="argumentos-de-funciones.html"><i class="fa fa-check"></i><b>4.5</b> Argumentos de funciones</a></li>
+<li class="chapter" data-level="4.6" data-path="section-126.html"><a href="section-126.html"><i class="fa fa-check"></i><b>4.6</b> [1] 8</a></li>
+<li class="chapter" data-level="4.7" data-path="section-127.html"><a href="section-127.html"><i class="fa fa-check"></i><b>4.7</b> [1] 9</a><ul>
+<li class="chapter" data-level="4.7.1" data-path="section-127.html"><a href="section-127.html#argumentos-predeterminados"><i class="fa fa-check"></i><b>4.7.1</b> Argumentos predeterminados</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="section-128.html"><a href="section-128.html"><i class="fa fa-check"></i><b>4.8</b> [1] 4</a><ul>
+<li class="chapter" data-level="4.8.1" data-path="section-128.html"><a href="section-128.html#argumentos-nulos"><i class="fa fa-check"></i><b>4.8.1</b> Argumentos nulos</a></li>
+</ul></li>
+<li class="chapter" data-level="4.9" data-path="section-129.html"><a href="section-129.html"><i class="fa fa-check"></i><b>4.9</b> [1] 6</a></li>
+<li class="chapter" data-level="4.10" data-path="section-130.html"><a href="section-130.html"><i class="fa fa-check"></i><b>4.10</b> [1] 4</a></li>
+<li class="chapter" data-level="4.11" data-path="valores-faltantes.html"><a href="valores-faltantes.html"><i class="fa fa-check"></i><b>4.11</b> Valores faltantes</a></li>
+<li class="chapter" data-level="4.12" data-path="false-false-true.html"><a href="false-false-true.html"><i class="fa fa-check"></i><b>4.12</b> [1] FALSE FALSE TRUE</a></li>
+<li class="chapter" data-level="4.13" data-path="na.html"><a href="na.html"><i class="fa fa-check"></i><b>4.13</b> [1] NA</a></li>
+<li class="chapter" data-level="4.14" data-path="na-1.html"><a href="na-1.html"><i class="fa fa-check"></i><b>4.14</b> [1] NA</a></li>
+<li class="chapter" data-level="4.15" data-path="na-2.html"><a href="na-2.html"><i class="fa fa-check"></i><b>4.15</b> [1] NA</a></li>
+<li class="chapter" data-level="4.16" data-path="na-3.html"><a href="na-3.html"><i class="fa fa-check"></i><b>4.16</b> [1] NA</a></li>
+<li class="chapter" data-level="4.17" data-path="section-131.html"><a href="section-131.html"><i class="fa fa-check"></i><b>4.17</b> [1] 6</a></li>
+<li class="chapter" data-level="4.18" data-path="section-132.html"><a href="section-132.html"><i class="fa fa-check"></i><b>4.18</b> [1] 3</a></li>
+<li class="chapter" data-level="4.19" data-path="alcance-de-la-funcion.html"><a href="alcance-de-la-funcion.html"><i class="fa fa-check"></i><b>4.19</b> Alcance de la función</a></li>
+<li class="chapter" data-level="4.20" data-path="section-133.html"><a href="section-133.html"><i class="fa fa-check"></i><b>4.20</b> [1] 4</a></li>
+<li class="chapter" data-level="4.21" data-path="section-134.html"><a href="section-134.html"><i class="fa fa-check"></i><b>4.21</b> [1] 20</a></li>
+<li class="chapter" data-level="4.22" data-path="section-135.html"><a href="section-135.html"><i class="fa fa-check"></i><b>4.22</b> [1] 3</a></li>
+<li class="chapter" data-level="4.23" data-path="funciones-para-funciones.html"><a href="funciones-para-funciones.html"><i class="fa fa-check"></i><b>4.23</b> Funciones para funciones</a></li>
+<li class="chapter" data-level="4.24" data-path="section-136.html"><a href="section-136.html"><i class="fa fa-check"></i><b>4.24</b> {</a></li>
+<li class="chapter" data-level="4.25" data-path="y-x-1.html"><a href="y-x-1.html"><i class="fa fa-check"></i><b>4.25</b> y = x + 1</a></li>
+<li class="chapter" data-level="4.26" data-path="returny.html"><a href="returny.html"><i class="fa fa-check"></i><b>4.26</b> return(y)</a></li>
+<li class="chapter" data-level="4.27" data-path="section-137.html"><a href="section-137.html"><i class="fa fa-check"></i><b>4.27</b> }</a></li>
+<li class="chapter" data-level="4.28" data-path="function-x-trim-0-na-rm-false.html"><a href="function-x-trim-0-na-rm-false.html"><i class="fa fa-check"></i><b>4.28</b> function (x, trim = 0, na.rm = FALSE, …)</a></li>
+<li class="chapter" data-level="4.29" data-path="null-1.html"><a href="null-1.html"><i class="fa fa-check"></i><b>4.29</b> NULL</a></li>
+<li class="chapter" data-level="4.30" data-path="denominador-es-cero.html"><a href="denominador-es-cero.html"><i class="fa fa-check"></i><b>4.30</b> [1] “Denominador es cero”</a></li>
+<li class="chapter" data-level="4.31" data-path="section-138.html"><a href="section-138.html"><i class="fa fa-check"></i><b>4.31</b> [1] 5</a></li>
+<li class="chapter" data-level="4.32" data-path="r-packages.html"><a href="r-packages.html"><i class="fa fa-check"></i><b>4.32</b> R Packages</a><ul>
+<li class="chapter" data-level="4.32.1" data-path="r-packages.html"><a href="r-packages.html#paquetes-predeterminados"><i class="fa fa-check"></i><b>4.32.1</b> Paquetes predeterminados</a></li>
+</ul></li>
+<li class="chapter" data-level="4.33" data-path="globalenv-packagestats-packagegraphics.html"><a href="globalenv-packagestats-packagegraphics.html"><i class="fa fa-check"></i><b>4.33</b> [1] “.GlobalEnv” “package:stats” “package:graphics”</a></li>
+<li class="chapter" data-level="4.34" data-path="packagegrdevices-packageutils-packagedatasets.html"><a href="packagegrdevices-packageutils-packagedatasets.html"><i class="fa fa-check"></i><b>4.34</b> [4] “package:grDevices” “package:utils” “package:datasets”</a></li>
+<li class="chapter" data-level="4.35" data-path="autoloads-packagebase.html"><a href="autoloads-packagebase.html"><i class="fa fa-check"></i><b>4.35</b> [7] “Autoloads” “package:base”</a><ul>
+<li class="chapter" data-level="4.35.1" data-path="autoloads-packagebase.html"><a href="autoloads-packagebase.html#instalar-paquetes"><i class="fa fa-check"></i><b>4.35.1</b> Instalar paquetes</a></li>
+<li class="chapter" data-level="4.35.2" data-path="autoloads-packagebase.html"><a href="autoloads-packagebase.html#cargar-paquetes"><i class="fa fa-check"></i><b>4.35.2</b> Cargar paquetes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.36" data-path="ayuda-en-r.html"><a href="ayuda-en-r.html"><i class="fa fa-check"></i><b>4.36</b> Ayuda en R</a><ul>
+<li class="chapter" data-level="4.36.1" data-path="ayuda-en-r.html"><a href="ayuda-en-r.html#vignettes"><i class="fa fa-check"></i><b>4.36.1</b> Vignettes</a></li>
+<li class="chapter" data-level="4.36.2" data-path="ayuda-en-r.html"><a href="ayuda-en-r.html#mas-referencias"><i class="fa fa-check"></i><b>4.36.2</b> Más referencias</a></li>
+</ul></li>
+<li class="chapter" data-level="4.37" data-path="ejercicios-1.html"><a href="ejercicios-1.html"><i class="fa fa-check"></i><b>4.37</b> Ejercicios</a><ul>
+<li class="chapter" data-level="4.37.1" data-path="ejercicios-1.html"><a href="ejercicios-1.html#ej-suma-de-valores-absolutos"><i class="fa fa-check"></i><b>4.37.1</b> Ej: Suma de valores absolutos</a></li>
+</ul></li>
+<li class="chapter" data-level="4.38" data-path="section-139.html"><a href="section-139.html"><i class="fa fa-check"></i><b>4.38</b> [1] 6</a><ul>
+<li class="chapter" data-level="4.38.1" data-path="section-139.html"><a href="section-139.html#ej-likes"><i class="fa fa-check"></i><b>4.38.1</b> Ej: Likes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.39" data-path="mon-tue-wed-thu-fri-sat-sun-4.html"><a href="mon-tue-wed-thu-fri-sat-sun-4.html"><i class="fa fa-check"></i><b>4.39</b> Mon Tue Wed Thu Fri Sat Sun</a></li>
+<li class="chapter" data-level="4.40" data-path="section-140.html"><a href="section-140.html"><i class="fa fa-check"></i><b>4.40</b> 16 7 9 20 2 17 11</a><ul>
+<li class="chapter" data-level="4.40.1" data-path="section-140.html"><a href="section-140.html#ej-grafica-de-gasolina"><i class="fa fa-check"></i><b>4.40.1</b> Ej: Grafica de gasolina</a></li>
+</ul></li>
+<li class="chapter" data-level="4.41" data-path="section-141.html"><a href="section-141.html"><i class="fa fa-check"></i><b>4.41</b> [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55</a><ul>
+<li class="chapter" data-level="4.41.1" data-path="section-141.html"><a href="section-141.html#ej-instala-y-carga"><i class="fa fa-check"></i><b>4.41.1</b> Ej: Instala y carga</a></li>
+<li class="chapter" data-level="4.41.2" data-path="section-141.html"><a href="section-141.html#ej-search"><i class="fa fa-check"></i><b>4.41.2</b> Ej: Search</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="iteraciones.html"><a href="iteraciones.html"><i class="fa fa-check"></i><b>5</b> Iteraciones</a><ul>
+<li class="chapter" data-level="5.1" data-path="iteracion-1.html"><a href="iteracion-1.html"><i class="fa fa-check"></i><b>5.1</b> [1] “Iteración 1”</a></li>
+<li class="chapter" data-level="5.2" data-path="iteracion-2.html"><a href="iteracion-2.html"><i class="fa fa-check"></i><b>5.2</b> [1] “Iteración 2”</a></li>
+<li class="chapter" data-level="5.3" data-path="iteracion-3.html"><a href="iteracion-3.html"><i class="fa fa-check"></i><b>5.3</b> [1] “Iteración 3”</a></li>
+<li class="chapter" data-level="5.4" data-path="iteracion-4.html"><a href="iteracion-4.html"><i class="fa fa-check"></i><b>5.4</b> [1] “Iteración 4”</a></li>
+<li class="chapter" data-level="5.5" data-path="iteracion-5.html"><a href="iteracion-5.html"><i class="fa fa-check"></i><b>5.5</b> [1] “Iteración 5”</a></li>
+<li class="chapter" data-level="5.6" data-path="iteracion-1-1.html"><a href="iteracion-1-1.html"><i class="fa fa-check"></i><b>5.6</b> [1] “Iteración 1”</a></li>
+<li class="chapter" data-level="5.7" data-path="iteracion-2-1.html"><a href="iteracion-2-1.html"><i class="fa fa-check"></i><b>5.7</b> [1] “Iteración 2”</a></li>
+<li class="chapter" data-level="5.8" data-path="iteracion-3-1.html"><a href="iteracion-3-1.html"><i class="fa fa-check"></i><b>5.8</b> [1] “Iteración 3”</a></li>
+<li class="chapter" data-level="5.9" data-path="iteracion-4-1.html"><a href="iteracion-4-1.html"><i class="fa fa-check"></i><b>5.9</b> [1] “Iteración 4”</a></li>
+<li class="chapter" data-level="5.10" data-path="iteracion-5-1.html"><a href="iteracion-5-1.html"><i class="fa fa-check"></i><b>5.10</b> [1] “Iteración 5”</a></li>
+<li class="chapter" data-level="5.11" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html"><i class="fa fa-check"></i><b>5.11</b> For loop y familia Apply</a><ul>
+<li class="chapter" data-level="5.11.1" data-path="for-loop-y-familia-apply.html"><a href="for-loop-y-familia-apply.html#apply"><i class="fa fa-check"></i><b>5.11.1</b> apply()</a></li>
+</ul></li>
+<li class="chapter" data-level="5.12" data-path="section-142.html"><a href="section-142.html"><i class="fa fa-check"></i><b>5.12</b> [,1] [,2] [,3] [,4] [,5] [,6]</a></li>
+<li class="chapter" data-level="5.13" data-path="section-143.html"><a href="section-143.html"><i class="fa fa-check"></i><b>5.13</b> [1,] -0.6264538 0.3295078 0.5757814 -0.62124058 -0.01619026 0.91897737</a></li>
+<li class="chapter" data-level="5.14" data-path="section-144.html"><a href="section-144.html"><i class="fa fa-check"></i><b>5.14</b> [2,] 0.1836433 -0.8204684 -0.3053884 -2.21469989 0.94383621 0.78213630</a></li>
+<li class="chapter" data-level="5.15" data-path="section-145.html"><a href="section-145.html"><i class="fa fa-check"></i><b>5.15</b> [3,] -0.8356286 0.4874291 1.5117812 1.12493092 0.82122120 0.07456498</a></li>
+<li class="chapter" data-level="5.16" data-path="section-146.html"><a href="section-146.html"><i class="fa fa-check"></i><b>5.16</b> [4,] 1.5952808 0.7383247 0.3898432 -0.04493361 0.59390132 -1.98935170</a></li>
+<li class="chapter" data-level="5.17" data-path="section-147.html"><a href="section-147.html"><i class="fa fa-check"></i><b>5.17</b> [1] 0.3168417 0.7347931 2.1720174 -1.7559432 2.3427685 -0.2136730</a></li>
+<li class="chapter" data-level="5.18" data-path="section-148.html"><a href="section-148.html"><i class="fa fa-check"></i><b>5.18</b> [1] 0.3168417 0.7347931 2.1720174 -1.7559432 2.3427685 -0.2136730</a></li>
+<li class="chapter" data-level="5.19" data-path="section-149.html"><a href="section-149.html"><i class="fa fa-check"></i><b>5.19</b> [1] 0.3168417 0.7347931 2.1720174 -1.7559432 2.3427685 -0.2136730</a></li>
+<li class="chapter" data-level="5.20" data-path="section-150.html"><a href="section-150.html"><i class="fa fa-check"></i><b>5.20</b> [1] 0.3168417 0.7347931 2.1720174 -1.7559432 2.3427685 -0.2136730</a></li>
+<li class="chapter" data-level="5.21" data-path="section-151.html"><a href="section-151.html"><i class="fa fa-check"></i><b>5.21</b> [1] 0.5603818 -1.4309408 3.1842987 1.2830648</a></li>
+<li class="chapter" data-level="5.22" data-path="section-152.html"><a href="section-152.html"><i class="fa fa-check"></i><b>5.22</b> [1] 0.5603818 -1.4309408 3.1842987 1.2830648</a></li>
+<li class="chapter" data-level="5.23" data-path="section-153.html"><a href="section-153.html"><i class="fa fa-check"></i><b>5.23</b> [1] 0.6341809 1.1718660 0.8338847 1.2066403</a></li>
+<li class="chapter" data-level="5.24" data-path="section-154.html"><a href="section-154.html"><i class="fa fa-check"></i><b>5.24</b> [1] 0.1472718 -0.2035131 0.6364386 0.1772228</a><ul>
+<li class="chapter" data-level="5.24.1" data-path="section-154.html"><a href="section-154.html#lapply"><i class="fa fa-check"></i><b>5.24.1</b> lapply()</a></li>
+</ul></li>
+<li class="chapter" data-level="5.25" data-path="aguascalientes-monterrey-guadalajara-mexico.html"><a href="aguascalientes-monterrey-guadalajara-mexico.html"><i class="fa fa-check"></i><b>5.25</b> [1] “Aguascalientes” “Monterrey” “Guadalajara” “México”</a></li>
+<li class="chapter" data-level="5.26" data-path="section-155.html"><a href="section-155.html"><i class="fa fa-check"></i><b>5.26</b> [[1]]</a></li>
+<li class="chapter" data-level="5.27" data-path="section-156.html"><a href="section-156.html"><i class="fa fa-check"></i><b>5.27</b> [1] 14</a></li>
+<li class="chapter" data-level="5.28" data-path="section-157.html"><a href="section-157.html"><i class="fa fa-check"></i><b>5.28</b> </a></li>
+<li class="chapter" data-level="5.29" data-path="section-158.html"><a href="section-158.html"><i class="fa fa-check"></i><b>5.29</b> [[2]]</a></li>
+<li class="chapter" data-level="5.30" data-path="section-159.html"><a href="section-159.html"><i class="fa fa-check"></i><b>5.30</b> [1] 9</a></li>
+<li class="chapter" data-level="5.31" data-path="section-160.html"><a href="section-160.html"><i class="fa fa-check"></i><b>5.31</b> </a></li>
+<li class="chapter" data-level="5.32" data-path="section-161.html"><a href="section-161.html"><i class="fa fa-check"></i><b>5.32</b> [[3]]</a></li>
+<li class="chapter" data-level="5.33" data-path="section-162.html"><a href="section-162.html"><i class="fa fa-check"></i><b>5.33</b> [1] 11</a></li>
+<li class="chapter" data-level="5.34" data-path="section-163.html"><a href="section-163.html"><i class="fa fa-check"></i><b>5.34</b> </a></li>
+<li class="chapter" data-level="5.35" data-path="section-164.html"><a href="section-164.html"><i class="fa fa-check"></i><b>5.35</b> [[4]]</a></li>
+<li class="chapter" data-level="5.36" data-path="section-165.html"><a href="section-165.html"><i class="fa fa-check"></i><b>5.36</b> [1] 6</a></li>
+<li class="chapter" data-level="5.37" data-path="section-166.html"><a href="section-166.html"><i class="fa fa-check"></i><b>5.37</b> [[1]]</a></li>
+<li class="chapter" data-level="5.38" data-path="section-167.html"><a href="section-167.html"><i class="fa fa-check"></i><b>5.38</b> [1] 1</a></li>
+<li class="chapter" data-level="5.39" data-path="section-168.html"><a href="section-168.html"><i class="fa fa-check"></i><b>5.39</b> </a></li>
+<li class="chapter" data-level="5.40" data-path="section-169.html"><a href="section-169.html"><i class="fa fa-check"></i><b>5.40</b> [[2]]</a></li>
+<li class="chapter" data-level="5.41" data-path="section-170.html"><a href="section-170.html"><i class="fa fa-check"></i><b>5.41</b> [1] 3</a></li>
+<li class="chapter" data-level="5.42" data-path="section-171.html"><a href="section-171.html"><i class="fa fa-check"></i><b>5.42</b> </a></li>
+<li class="chapter" data-level="5.43" data-path="section-172.html"><a href="section-172.html"><i class="fa fa-check"></i><b>5.43</b> [[3]]</a></li>
+<li class="chapter" data-level="5.44" data-path="section-173.html"><a href="section-173.html"><i class="fa fa-check"></i><b>5.44</b> [1] 4</a></li>
+<li class="chapter" data-level="5.45" data-path="section-174.html"><a href="section-174.html"><i class="fa fa-check"></i><b>5.45</b> [[1]]</a></li>
+<li class="chapter" data-level="5.46" data-path="section-175.html"><a href="section-175.html"><i class="fa fa-check"></i><b>5.46</b> [1] 1</a></li>
+<li class="chapter" data-level="5.47" data-path="section-176.html"><a href="section-176.html"><i class="fa fa-check"></i><b>5.47</b> </a></li>
+<li class="chapter" data-level="5.48" data-path="section-177.html"><a href="section-177.html"><i class="fa fa-check"></i><b>5.48</b> [[2]]</a></li>
+<li class="chapter" data-level="5.49" data-path="section-178.html"><a href="section-178.html"><i class="fa fa-check"></i><b>5.49</b> [1] 27</a></li>
+<li class="chapter" data-level="5.50" data-path="section-179.html"><a href="section-179.html"><i class="fa fa-check"></i><b>5.50</b> </a></li>
+<li class="chapter" data-level="5.51" data-path="section-180.html"><a href="section-180.html"><i class="fa fa-check"></i><b>5.51</b> [[3]]</a></li>
+<li class="chapter" data-level="5.52" data-path="section-181.html"><a href="section-181.html"><i class="fa fa-check"></i><b>5.52</b> [1] 64</a></li>
+<li class="chapter" data-level="5.53" data-path="section-182.html"><a href="section-182.html"><i class="fa fa-check"></i><b>5.53</b> [1] 1 27 64</a><ul>
+<li class="chapter" data-level="5.53.1" data-path="section-182.html"><a href="section-182.html#sapply"><i class="fa fa-check"></i><b>5.53.1</b> sapply()</a></li>
+</ul></li>
+<li class="chapter" data-level="5.54" data-path="aguascalientes-monterrey-guadalajara-mexico-1.html"><a href="aguascalientes-monterrey-guadalajara-mexico-1.html"><i class="fa fa-check"></i><b>5.54</b> Aguascalientes Monterrey Guadalajara México</a></li>
+<li class="chapter" data-level="5.55" data-path="section-183.html"><a href="section-183.html"><i class="fa fa-check"></i><b>5.55</b> 14 9 11 6</a></li>
+<li class="chapter" data-level="5.56" data-path="while-loop.html"><a href="while-loop.html"><i class="fa fa-check"></i><b>5.56</b> While Loop</a></li>
+<li class="chapter" data-level="5.57" data-path="el-valor-de-ctr-0.html"><a href="el-valor-de-ctr-0.html"><i class="fa fa-check"></i><b>5.57</b> [1] “El valor de ctr 0”</a></li>
+<li class="chapter" data-level="5.58" data-path="el-resultado-de-la-condicion-true.html"><a href="el-resultado-de-la-condicion-true.html"><i class="fa fa-check"></i><b>5.58</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.59" data-path="section-184.html"><a href="section-184.html"><i class="fa fa-check"></i><b>5.59</b> [1] 0</a></li>
+<li class="chapter" data-level="5.60" data-path="el-valor-de-ctr-1.html"><a href="el-valor-de-ctr-1.html"><i class="fa fa-check"></i><b>5.60</b> [1] “El valor de ctr 1”</a></li>
+<li class="chapter" data-level="5.61" data-path="el-resultado-de-la-condicion-true-1.html"><a href="el-resultado-de-la-condicion-true-1.html"><i class="fa fa-check"></i><b>5.61</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.62" data-path="section-185.html"><a href="section-185.html"><i class="fa fa-check"></i><b>5.62</b> [1] 1</a></li>
+<li class="chapter" data-level="5.63" data-path="el-valor-de-ctr-2.html"><a href="el-valor-de-ctr-2.html"><i class="fa fa-check"></i><b>5.63</b> [1] “El valor de ctr 2”</a></li>
+<li class="chapter" data-level="5.64" data-path="el-resultado-de-la-condicion-true-2.html"><a href="el-resultado-de-la-condicion-true-2.html"><i class="fa fa-check"></i><b>5.64</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.65" data-path="section-186.html"><a href="section-186.html"><i class="fa fa-check"></i><b>5.65</b> [1] 2</a></li>
+<li class="chapter" data-level="5.66" data-path="el-valor-de-ctr-3.html"><a href="el-valor-de-ctr-3.html"><i class="fa fa-check"></i><b>5.66</b> [1] “El valor de ctr 3”</a></li>
+<li class="chapter" data-level="5.67" data-path="el-resultado-de-la-condicion-true-3.html"><a href="el-resultado-de-la-condicion-true-3.html"><i class="fa fa-check"></i><b>5.67</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.68" data-path="section-187.html"><a href="section-187.html"><i class="fa fa-check"></i><b>5.68</b> [1] 3</a></li>
+<li class="chapter" data-level="5.69" data-path="el-valor-de-ctr-4.html"><a href="el-valor-de-ctr-4.html"><i class="fa fa-check"></i><b>5.69</b> [1] “El valor de ctr 4”</a></li>
+<li class="chapter" data-level="5.70" data-path="el-resultado-de-la-condicion-true-4.html"><a href="el-resultado-de-la-condicion-true-4.html"><i class="fa fa-check"></i><b>5.70</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.71" data-path="section-188.html"><a href="section-188.html"><i class="fa fa-check"></i><b>5.71</b> [1] 4</a></li>
+<li class="chapter" data-level="5.72" data-path="el-valor-de-ctr-5.html"><a href="el-valor-de-ctr-5.html"><i class="fa fa-check"></i><b>5.72</b> [1] “El valor de ctr 5”</a></li>
+<li class="chapter" data-level="5.73" data-path="el-resultado-de-la-condicion-true-5.html"><a href="el-resultado-de-la-condicion-true-5.html"><i class="fa fa-check"></i><b>5.73</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.74" data-path="section-189.html"><a href="section-189.html"><i class="fa fa-check"></i><b>5.74</b> [1] 5</a></li>
+<li class="chapter" data-level="5.75" data-path="el-valor-de-ctr-6.html"><a href="el-valor-de-ctr-6.html"><i class="fa fa-check"></i><b>5.75</b> [1] “El valor de ctr 6”</a></li>
+<li class="chapter" data-level="5.76" data-path="el-resultado-de-la-condicion-true-6.html"><a href="el-resultado-de-la-condicion-true-6.html"><i class="fa fa-check"></i><b>5.76</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.77" data-path="section-190.html"><a href="section-190.html"><i class="fa fa-check"></i><b>5.77</b> [1] 6</a></li>
+<li class="chapter" data-level="5.78" data-path="el-valor-de-ctr-7.html"><a href="el-valor-de-ctr-7.html"><i class="fa fa-check"></i><b>5.78</b> [1] “El valor de ctr 7”</a></li>
+<li class="chapter" data-level="5.79" data-path="el-resultado-de-la-condicion-true-7.html"><a href="el-resultado-de-la-condicion-true-7.html"><i class="fa fa-check"></i><b>5.79</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.80" data-path="section-191.html"><a href="section-191.html"><i class="fa fa-check"></i><b>5.80</b> [1] 7</a></li>
+<li class="chapter" data-level="5.81" data-path="el-valor-de-ctr-1-1.html"><a href="el-valor-de-ctr-1-1.html"><i class="fa fa-check"></i><b>5.81</b> [1] “El valor de ctr 1”</a></li>
+<li class="chapter" data-level="5.82" data-path="el-resultado-de-la-condicion-true-8.html"><a href="el-resultado-de-la-condicion-true-8.html"><i class="fa fa-check"></i><b>5.82</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.83" data-path="el-valor-de-ctr-2-1.html"><a href="el-valor-de-ctr-2-1.html"><i class="fa fa-check"></i><b>5.83</b> [1] “El valor de ctr 2”</a></li>
+<li class="chapter" data-level="5.84" data-path="el-resultado-de-la-condicion-true-9.html"><a href="el-resultado-de-la-condicion-true-9.html"><i class="fa fa-check"></i><b>5.84</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.85" data-path="el-valor-de-ctr-3-1.html"><a href="el-valor-de-ctr-3-1.html"><i class="fa fa-check"></i><b>5.85</b> [1] “El valor de ctr 3”</a></li>
+<li class="chapter" data-level="5.86" data-path="el-resultado-de-la-condicion-true-10.html"><a href="el-resultado-de-la-condicion-true-10.html"><i class="fa fa-check"></i><b>5.86</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.87" data-path="el-valor-de-ctr-4-1.html"><a href="el-valor-de-ctr-4-1.html"><i class="fa fa-check"></i><b>5.87</b> [1] “El valor de ctr 4”</a></li>
+<li class="chapter" data-level="5.88" data-path="el-resultado-de-la-condicion-true-11.html"><a href="el-resultado-de-la-condicion-true-11.html"><i class="fa fa-check"></i><b>5.88</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.89" data-path="el-valor-de-ctr-5-1.html"><a href="el-valor-de-ctr-5-1.html"><i class="fa fa-check"></i><b>5.89</b> [1] “El valor de ctr 5”</a></li>
+<li class="chapter" data-level="5.90" data-path="el-resultado-de-la-condicion-true-12.html"><a href="el-resultado-de-la-condicion-true-12.html"><i class="fa fa-check"></i><b>5.90</b> [1] “El resultado de la condicion TRUE”</a></li>
+<li class="chapter" data-level="5.91" data-path="ejercicios-2.html"><a href="ejercicios-2.html"><i class="fa fa-check"></i><b>5.91</b> Ejercicios</a><ul>
+<li class="chapter" data-level="5.91.1" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-ciudad-de-mexico"><i class="fa fa-check"></i><b>5.91.1</b> Ej: Ciudad de México</a></li>
+<li class="chapter" data-level="5.91.2" data-path="ejercicios-2.html"><a href="ejercicios-2.html#ej-minimo-y-maximo"><i class="fa fa-check"></i><b>5.91.2</b> Ej: Mínimo y máximo</a></li>
+</ul></li>
+<li class="chapter" data-level="5.92" data-path="minimo-maximo.html"><a href="minimo-maximo.html"><i class="fa fa-check"></i><b>5.92</b> minimo maximo</a></li>
+<li class="chapter" data-level="5.93" data-path="a-z.html"><a href="a-z.html"><i class="fa fa-check"></i><b>5.93</b> “a” “z”</a><ul>
+<li class="chapter" data-level="5.93.1" data-path="a-z.html"><a href="a-z.html#ej-precio-de-la-gasolina"><i class="fa fa-check"></i><b>5.93.1</b> Ej: Precio de la gasolina</a></li>
+</ul></li>
+<li class="chapter" data-level="5.94" data-path="section-192.html"><a href="section-192.html"><i class="fa fa-check"></i><b>5.94</b> [1] 15.82 15.77 15.83 15.23 14.95 15.42 15.55</a><ul>
+<li class="chapter" data-level="5.94.1" data-path="section-192.html"><a href="section-192.html#ej-estadisticos-importantes"><i class="fa fa-check"></i><b>5.94.1</b> Ej: Estadísticos importantes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.95" data-path="section-193.html"><a href="section-193.html"><i class="fa fa-check"></i><b>5.95</b> [[1]]</a></li>
+<li class="chapter" data-level="5.96" data-path="gauss-1777.html"><a href="gauss-1777.html"><i class="fa fa-check"></i><b>5.96</b> [1] “GAUSS” “1777”</a></li>
+<li class="chapter" data-level="5.97" data-path="section-194.html"><a href="section-194.html"><i class="fa fa-check"></i><b>5.97</b> </a></li>
+<li class="chapter" data-level="5.98" data-path="section-195.html"><a href="section-195.html"><i class="fa fa-check"></i><b>5.98</b> [[2]]</a></li>
+<li class="chapter" data-level="5.99" data-path="bayes-1702.html"><a href="bayes-1702.html"><i class="fa fa-check"></i><b>5.99</b> [1] “BAYES” “1702”</a></li>
+<li class="chapter" data-level="5.100" data-path="section-196.html"><a href="section-196.html"><i class="fa fa-check"></i><b>5.100</b> </a></li>
+<li class="chapter" data-level="5.101" data-path="section-197.html"><a href="section-197.html"><i class="fa fa-check"></i><b>5.101</b> [[3]]</a></li>
+<li class="chapter" data-level="5.102" data-path="fisher-1890.html"><a href="fisher-1890.html"><i class="fa fa-check"></i><b>5.102</b> [1] “FISHER” “1890”</a></li>
+<li class="chapter" data-level="5.103" data-path="section-198.html"><a href="section-198.html"><i class="fa fa-check"></i><b>5.103</b> </a></li>
+<li class="chapter" data-level="5.104" data-path="section-199.html"><a href="section-199.html"><i class="fa fa-check"></i><b>5.104</b> [[4]]</a></li>
+<li class="chapter" data-level="5.105" data-path="pearson-1857.html"><a href="pearson-1857.html"><i class="fa fa-check"></i><b>5.105</b> [1] “PEARSON” “1857”</a><ul>
+<li class="chapter" data-level="5.105.1" data-path="pearson-1857.html"><a href="pearson-1857.html#ej-nombres-y-fechas"><i class="fa fa-check"></i><b>5.105.1</b> Ej: Nombres y fechas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.106" data-path="list-of-4.html"><a href="list-of-4.html"><i class="fa fa-check"></i><b>5.106</b> List of 4</a></li>
+<li class="chapter" data-level="5.107" data-path="chr-12-gauss-1777.html"><a href="chr-12-gauss-1777.html"><i class="fa fa-check"></i><b>5.107</b> $ : chr [1:2] “GAUSS” “1777”</a></li>
+<li class="chapter" data-level="5.108" data-path="chr-12-bayes-1702.html"><a href="chr-12-bayes-1702.html"><i class="fa fa-check"></i><b>5.108</b> $ : chr [1:2] “BAYES” “1702”</a></li>
+<li class="chapter" data-level="5.109" data-path="chr-12-fisher-1890.html"><a href="chr-12-fisher-1890.html"><i class="fa fa-check"></i><b>5.109</b> $ : chr [1:2] “FISHER” “1890”</a></li>
+<li class="chapter" data-level="5.110" data-path="chr-12-pearson-1857.html"><a href="chr-12-pearson-1857.html"><i class="fa fa-check"></i><b>5.110</b> $ : chr [1:2] “PEARSON” “1857”</a><ul>
+<li class="chapter" data-level="5.110.1" data-path="chr-12-pearson-1857.html"><a href="chr-12-pearson-1857.html#ej-funcion-anonima"><i class="fa fa-check"></i><b>5.110.1</b> Ej: Función anónima</a></li>
+<li class="chapter" data-level="5.110.2" data-path="chr-12-pearson-1857.html"><a href="chr-12-pearson-1857.html#ej-tempraturas"><i class="fa fa-check"></i><b>5.110.2</b> Ej: Tempraturas</a></li>
+</ul></li>
+<li class="chapter" data-level="5.111" data-path="list-of-3-1.html"><a href="list-of-3-1.html"><i class="fa fa-check"></i><b>5.111</b> List of 3</a></li>
+<li class="chapter" data-level="5.112" data-path="cdmx-num-15-13-15-19-22-20.html"><a href="cdmx-num-15-13-15-19-22-20.html"><i class="fa fa-check"></i><b>5.112</b> $ cdmx : num [1:5] 13 15 19 22 20</a></li>
+<li class="chapter" data-level="5.113" data-path="guadalajara-num-15-18-18-22-26-27.html"><a href="guadalajara-num-15-18-18-22-26-27.html"><i class="fa fa-check"></i><b>5.113</b> $ guadalajara: num [1:5] 18 18 22 26 27</a></li>
+<li class="chapter" data-level="5.114" data-path="tuxtla-gtz-num-15-22-24-29-32-28.html"><a href="tuxtla-gtz-num-15-22-24-29-32-28.html"><i class="fa fa-check"></i><b>5.114</b> $ tuxtla_gtz : num [1:5] 22 24 29 32 28</a><ul>
+<li class="chapter" data-level="5.114.1" data-path="tuxtla-gtz-num-15-22-24-29-32-28.html"><a href="tuxtla-gtz-num-15-22-24-29-32-28.html#ej-demasiado-rapido"><i class="fa fa-check"></i><b>5.114.1</b> Ej: ¡Demasiado Rápido!</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="visualizacion.html"><a href="visualizacion.html"><i class="fa fa-check"></i><b>6</b> Visualización</a><ul>
+<li class="chapter" data-level="" data-path="visualizacion.html"><a href="visualizacion.html#the-grammar-of-graphics-gg"><i class="fa fa-check"></i>The Grammar of Graphics (gg)</a></li>
+<li class="chapter" data-level="6.1" data-path="section-200.html"><a href="section-200.html"><i class="fa fa-check"></i><b>6.1</b> </a></li>
+<li class="chapter" data-level="6.2" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i><b>6.2</b> Referencias</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Taller de Introducción a R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="section-200" class="section level2">
+<h2><span class="header-section-number">6.1</span> </h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">include_graphics</span>(<span class="st">&quot;figures/ggplot-component1.png&quot;</span>)</code></pre></div>
+<p><img src="figures/ggplot-component1.png" /><!-- --></p>
+<hr />
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="visualizacion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="referencias.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+<!-- </html> -->
