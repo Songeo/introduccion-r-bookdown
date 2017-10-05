@@ -675,7 +675,7 @@ qplot(x = mpg$displ, y = mpg$hwy)
 - Recrea el código de R para generar las siguientes
 gráficas.
 
-```{r fig.keep='all', echo=F, fig.width=4, fig.height=2.5, fig.align='center'}
+```{r fig.keep='all', echo=F, fig.width=4, fig.height=2.5, fig.align='center', message=FALSE}
 ggplot(mpg, aes(displ, hwy)) + 
   geom_point() + 
   geom_smooth() + 

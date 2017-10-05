@@ -219,7 +219,7 @@ lanza_dado()
 ```
 
 ```
-## [1] 6
+## [1] 1
 ```
 
 **Segundo lanzamiento:**

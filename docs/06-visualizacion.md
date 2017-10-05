@@ -797,24 +797,7 @@ qplot(x = mpg$displ, y = mpg$hwy)
 - Recrea el código de R para generar las siguientes
 gráficas.
 
-
-```
-## `geom_smooth()` using method = 'loess'
-```
-
-<img src="06-visualizacion_files/figure-html/unnamed-chunk-48-1.png" width="384" style="display: block; margin: auto;" />
-
-```
-## `geom_smooth()` using method = 'loess'
-```
-
-<img src="06-visualizacion_files/figure-html/unnamed-chunk-48-2.png" width="384" style="display: block; margin: auto;" />
-
-```
-## `geom_smooth()` using method = 'loess'
-```
-
-<img src="06-visualizacion_files/figure-html/unnamed-chunk-48-3.png" width="384" style="display: block; margin: auto;" /><img src="06-visualizacion_files/figure-html/unnamed-chunk-48-4.png" width="384" style="display: block; margin: auto;" />
+<img src="06-visualizacion_files/figure-html/unnamed-chunk-48-1.png" width="384" style="display: block; margin: auto;" /><img src="06-visualizacion_files/figure-html/unnamed-chunk-48-2.png" width="384" style="display: block; margin: auto;" /><img src="06-visualizacion_files/figure-html/unnamed-chunk-48-3.png" width="384" style="display: block; margin: auto;" /><img src="06-visualizacion_files/figure-html/unnamed-chunk-48-4.png" width="384" style="display: block; margin: auto;" />
 
 
 ---
